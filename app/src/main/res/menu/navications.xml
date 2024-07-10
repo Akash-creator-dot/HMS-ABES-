@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/profile"
+        />
+    <item android:id="@+id/leave"
+        android:title="Leave"
+        android:icon="@drawable/ic_leave"
+        />
+    <item android:id="@+id/complains"
+        android:title="Ticket"
+        android:icon="@drawable/ic_complains"
+        />
+    <item android:id="@+id/allotment"
+        android:title="Allotment"
+        android:icon="@drawable/ic_allotment"
+        />
+</menu>
