@@ -14,10 +14,13 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.techgiants.hmsabes.databinding.ActivitySignUpBinding;
 
+import java.util.regex.Pattern;
+
 public class SignupActivity extends AppCompatActivity {
 
     private ActivitySignUpBinding binding;
     private FirebaseAuth auth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +63,8 @@ public class SignupActivity extends AppCompatActivity {
                                         Toast.makeText(SignupActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
                                         startActivity(new Intent(SignupActivity.this, LoginActivityJava.class));
                                         finish();
-                                    } else {
+                                    }
+                                    else {
                                         String errorMessage = task.getException().getMessage();
                                         Toast.makeText(SignupActivity.this, "Registration Failed: " + errorMessage, Toast.LENGTH_SHORT).show();
                                     }
@@ -70,4 +74,5 @@ public class SignupActivity extends AppCompatActivity {
             }
         });
     }
+
 }
