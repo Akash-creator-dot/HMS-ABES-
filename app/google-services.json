@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "460367545046",
+    "firebase_url": "https://hms-abes-default-rtdb.firebaseio.com",
     "project_id": "hms-abes",
     "storage_bucket": "hms-abes.appspot.com"
   },
