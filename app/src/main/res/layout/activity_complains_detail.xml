@@ -38,38 +38,6 @@
                     android:text=""
                     android:textColor="#0F1975"
                     android:textSize="50sp" />
-                <EditText
-                    android:layout_marginStart="32dp"
-                    android:layout_width="300dp"
-                    android:layout_marginTop="70dp"
-                    android:textColorHint="#000000"
-                    android:layout_height="50dp"
-                    android:textColor="#000000"
-                    android:id="@+id/complainsadmission"
-                    android:hint="Enter the admission number"
-                    android:layout_marginBottom="20dp"
-                    />
-                <EditText
-                    android:inputType="textEmailAddress"
-                    android:layout_marginStart="32dp"
-                    android:layout_width="300dp"
-                    android:layout_height="50dp"
-                    android:textColor="#000000"
-                    android:textColorHint="#000000"
-                    android:id="@+id/complainsid"
-                    android:hint="Enter the Email Id"
-                    />
-                <EditText
-                    android:layout_marginStart="32dp"
-                    android:layout_width="300dp"
-                    android:layout_marginTop="25dp"
-                    android:textColorHint="#000000"
-                    android:layout_height="50dp"
-                    android:textColor="#000000"
-                    android:id="@+id/complainsroomno"
-                    android:hint="Enter the Room number"
-                    android:layout_marginBottom="20dp"
-                    />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

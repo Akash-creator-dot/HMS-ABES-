@@ -24,23 +24,6 @@ import java.util.Locale;
 import java.util.TimeZone;
 
 public class LeaveFragment extends Fragment {
-
-    String[] department = {
-            "Computer Science and Engineering",
-            "CSE (Artificial Intelligence & Machine Learning)",
-            "CSE (Data Science)",
-            "Electrical and Computer Engineering",
-            "Electronics and Communication Engineering",
-            "Mechanical Engineering",
-            "Computer Science",
-            "Information Technology",
-            "Computer Engineering",
-            "Electrical and Electronics Engineering"
-    };
-
-    String[] boysBlockName = {"VKB", "CKB", "DNB", "ABB"};
-
-    AutoCompleteTextView departmentTxt, blockNameTxt;
     EditText dateOfLeaveTxt, dateOfReturnTxt, timeOfLeaveTxt, timeOfReturnTxt;
 
     final Calendar myCalendar = Calendar.getInstance();
@@ -49,21 +32,6 @@ public class LeaveFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_leave, container, false);
-
-        // Set title if needed
-        // getActivity().setTitle("Leave Page");
-
-        // Initialize department and block name AutoCompleteTextViews
-        departmentTxt = view.findViewById(R.id.auto_complete_txt);
-        blockNameTxt = view.findViewById(R.id.blockName_txt);
-
-        // Set adapters for AutoCompleteTextViews
-        ArrayAdapter<String> departmentAdapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_dropdown_item_1line, department);
-        departmentTxt.setAdapter(departmentAdapter);
-        ArrayAdapter<String> blockNameAdapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_dropdown_item_1line, boysBlockName);
-        blockNameTxt.setAdapter(blockNameAdapter);
-
-        // Initialize date and time EditText fields
         dateOfLeaveTxt = view.findViewById(R.id.dateOfLeaveTxt);
         dateOfReturnTxt = view.findViewById(R.id.dateOfReturnTxt);
         timeOfLeaveTxt = view.findViewById(R.id.timeOfLeaveTxt);
