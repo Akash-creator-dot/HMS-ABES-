@@ -41,10 +41,13 @@ public class SignupActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String email = binding.emailIdSignUp.getText().toString().trim();
                 String admn = binding.admnNo.getText().toString().trim();
+                String retypeAdmn = binding.retypeAdmn.getText().toString().trim();
                 String password = binding.passwordSignUp.getText().toString().trim();
                 String retypePassword = binding.retypePasswordSignUp.getText().toString().trim();
+                String dept = binding.dept.getText().toString().trim();
+                String roomno = binding.roomNO.getText().toString().trim();
 
-                if (email.isEmpty() || admn.isEmpty() || password.isEmpty() || retypePassword.isEmpty()) {
+                if (email.isEmpty() || admn.isEmpty() || password.isEmpty() || retypePassword.isEmpty()||retypeAdmn.isEmpty()||roomno.isEmpty()||dept.isEmpty()) {
                     Toast.makeText(SignupActivity.this, "Please fill all the details", Toast.LENGTH_SHORT).show();
                 } else if (!password.equals(retypePassword)) {
                     Toast.makeText(SignupActivity.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
