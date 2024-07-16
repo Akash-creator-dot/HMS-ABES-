@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 public class ProfileFragment extends Fragment {
@@ -46,6 +47,21 @@ public class ProfileFragment extends Fragment {
                 logout();
             }
         });
+        Bundle bundle = getArguments();
+        String gmail = bundle.getString("gmail");
+        String adm = bundle.getString("adm");
+        String pass = bundle.getString("pass");
+        String room = bundle.getString("room");
+        String dept = bundle.getString("dept");
+        TextView name,admission,roomno,block;
+        name=view.findViewById(R.id.profilename);
+        admission=view.findViewById(R.id.profileadm);
+        roomno=view.findViewById(R.id.profileroomno);
+        block=view.findViewById(R.id.profileblockname);
+        name.setText(gmail);
+        admission.setText(adm);
+        roomno.setText(room);
+        block.setText(dept);
         return view;
     }
 

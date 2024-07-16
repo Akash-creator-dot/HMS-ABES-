@@ -1,6 +1,7 @@
 package com.techgiants.hmsabes;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -14,13 +15,10 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.techgiants.hmsabes.databinding.ActivitySignUpBinding;
 
-import java.util.regex.Pattern;
-
 public class SignupActivity extends AppCompatActivity {
 
     private ActivitySignUpBinding binding;
     private FirebaseAuth auth;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,32 +45,46 @@ public class SignupActivity extends AppCompatActivity {
                 String retypeAdmn = binding.retypeAdmn.getText().toString().trim();
                 String password = binding.passwordSignUp.getText().toString().trim();
                 String retypePassword = binding.retypePasswordSignUp.getText().toString().trim();
-                String dept = binding.dept.getText().toString().trim();
                 String roomno = binding.roomNO.getText().toString().trim();
+                String department = binding.dept.getText().toString().trim();
 
-                if (email.isEmpty() || admn.isEmpty() || password.isEmpty() || retypePassword.isEmpty()||retypeAdmn.isEmpty()||roomno.isEmpty()||dept.isEmpty()) {
+                if (email.isEmpty() || admn.isEmpty() || retypeAdmn.isEmpty() || password.isEmpty() || retypePassword.isEmpty() || roomno.isEmpty() || department.isEmpty()) {
                     Toast.makeText(SignupActivity.this, "Please fill all the details", Toast.LENGTH_SHORT).show();
-                } else if (!password.equals(retypePassword)) {
-                    Toast.makeText(SignupActivity.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
-                } else {
-                    auth.createUserWithEmailAndPassword(email, password)
-                            .addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
-                                    if (task.isSuccessful()) {
-                                        Toast.makeText(SignupActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(SignupActivity.this, LoginActivityJava.class));
-                                        finish();
-                                    }
-                                    else {
-                                        String errorMessage = task.getException().getMessage();
-                                        Toast.makeText(SignupActivity.this, "Registration Failed: " + errorMessage, Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-                            });
+                    return;
                 }
+
+                if (!password.equals(retypePassword)) {
+                    Toast.makeText(SignupActivity.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                auth.createUserWithEmailAndPassword(email, password)
+                        .addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    SharedPreferences sharedPreferences = getSharedPreferences("UserDetails", MODE_PRIVATE);
+                                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                                    editor.putString("gmail", email);
+                                    editor.putString("adm", admn);
+                                    editor.putString("readm", retypeAdmn);
+                                    editor.putString("pass", password);
+                                    editor.putString("repas", retypePassword);
+                                    editor.putString("roomno", roomno);
+                                    editor.putString("dept", department);
+                                    editor.apply();
+
+                                    Toast.makeText(SignupActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(SignupActivity.this, MainActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                } else {
+                                    String errorMessage = task.getException().getMessage();
+                                    Toast.makeText(SignupActivity.this, "Registration Failed: " + errorMessage, Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
             }
         });
     }
-
 }

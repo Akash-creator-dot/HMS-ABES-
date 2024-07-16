@@ -2,17 +2,16 @@ package com.techgiants.hmsabes;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
-import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,11 +20,9 @@ import androidx.fragment.app.Fragment;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
-import java.util.TimeZone;
 
 public class LeaveFragment extends Fragment {
     EditText dateOfLeaveTxt, dateOfReturnTxt, timeOfLeaveTxt, timeOfReturnTxt;
-
     final Calendar myCalendar = Calendar.getInstance();
 
     @Nullable
@@ -42,7 +39,7 @@ public class LeaveFragment extends Fragment {
         setupDateTimePicker(dateOfReturnTxt);
         setupTimePicker(timeOfLeaveTxt);
         setupTimePicker(timeOfReturnTxt);
-
+        TextView txt = view.findViewById(R.id.complainsheadingtxt);
         return view;
     }
 
@@ -51,8 +48,7 @@ public class LeaveFragment extends Fragment {
         editText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final DatePickerDialog datePickerDialog = new DatePickerDialog(requireContext());
-                datePickerDialog.setOnDateSetListener(new DatePickerDialog.OnDateSetListener() {
+                final DatePickerDialog datePickerDialog = new DatePickerDialog(requireContext(), new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                         myCalendar.set(Calendar.YEAR, year);
@@ -60,7 +56,7 @@ public class LeaveFragment extends Fragment {
                         myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
                         updateLabel(editText, myCalendar);
                     }
-                });
+                }, myCalendar.get(Calendar.YEAR), myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH));
                 datePickerDialog.show();
             }
         });
