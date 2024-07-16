@@ -40,11 +40,11 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String email = binding.emailIdSignUp.getText().toString().trim();
-                String username = binding.usernameSignUp.getText().toString().trim();
+                String admn = binding.admnNo.getText().toString().trim();
                 String password = binding.passwordSignUp.getText().toString().trim();
                 String retypePassword = binding.retypePasswordSignUp.getText().toString().trim();
 
-                if (email.isEmpty() || username.isEmpty() || password.isEmpty() || retypePassword.isEmpty()) {
+                if (email.isEmpty() || admn.isEmpty() || password.isEmpty() || retypePassword.isEmpty()) {
                     Toast.makeText(SignupActivity.this, "Please fill all the details", Toast.LENGTH_SHORT).show();
                 } else if (!password.equals(retypePassword)) {
                     Toast.makeText(SignupActivity.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
