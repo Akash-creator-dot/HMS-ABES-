@@ -45,10 +45,16 @@ public class SignupActivity extends AppCompatActivity {
                 String retypeAdmn = binding.retypeAdmn.getText().toString().trim();
                 String password = binding.passwordSignUp.getText().toString().trim();
                 String retypePassword = binding.retypePasswordSignUp.getText().toString().trim();
+<<<<<<< HEAD
                 String roomno = binding.roomNO.getText().toString().trim();
                 String department = binding.dept.getText().toString().trim();
 
                 if (email.isEmpty() || admn.isEmpty() || retypeAdmn.isEmpty() || password.isEmpty() || retypePassword.isEmpty() || roomno.isEmpty() || department.isEmpty()) {
+=======
+
+
+                if (email.isEmpty() || admn.isEmpty() || password.isEmpty() || retypePassword.isEmpty()||retypeAdmn.isEmpty()) {
+>>>>>>> origin/master
                     Toast.makeText(SignupActivity.this, "Please fill all the details", Toast.LENGTH_SHORT).show();
                     return;
                 }
