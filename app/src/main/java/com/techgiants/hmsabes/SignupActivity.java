@@ -49,46 +49,46 @@ public class SignupActivity extends AppCompatActivity {
                 String department = binding.dept.getText().toString().trim();
 
                 if (email.isEmpty() || admn.isEmpty() || retypeAdmn.isEmpty() || password.isEmpty() || retypePassword.isEmpty() || roomno.isEmpty() || department.isEmpty()) {
-                    Toast.makeText(SignupActivity.this, "Please fill all the details", Toast.LENGTH_SHORT).show();
-                    return;
-                }
 
-                if (!password.equals(retypePassword)) {
-                    Toast.makeText(SignupActivity.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if (!admn.equals(retypeAdmn)) {
-                    Toast.makeText(SignupActivity.this, "Admission number do not match", Toast.LENGTH_SHORT).show();
-                    return;
-                }
 
-                auth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (task.isSuccessful()) {
-                                    SharedPreferences sharedPreferences = getSharedPreferences("UserDetails", MODE_PRIVATE);
-                                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                                    editor.putString("gmail", email);
-                                    editor.putString("adm", admn);
-                                    editor.putString("readm", retypeAdmn);
-                                    editor.putString("pass", password);
-                                    editor.putString("repas", retypePassword);
-                                    editor.putString("roomno", roomno);
-                                    editor.putString("dept", department);
-                                    editor.apply();
+                    if (email.isEmpty() || admn.isEmpty() || password.isEmpty() || retypePassword.isEmpty() || retypeAdmn.isEmpty()) {
+                        Toast.makeText(SignupActivity.this, "Please fill all the details", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
 
-                                    Toast.makeText(SignupActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(SignupActivity.this, LoginActivityJava.class);
-                                    startActivity(intent);
-                                    finish();
-                                } else {
-                                    String errorMessage = task.getException().getMessage();
-                                    Toast.makeText(SignupActivity.this, "Registration Failed: " + errorMessage, Toast.LENGTH_SHORT).show();
+                    if (!password.equals(retypePassword)) {
+                        Toast.makeText(SignupActivity.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
+                    auth.createUserWithEmailAndPassword(email, password)
+                            .addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        SharedPreferences sharedPreferences = getSharedPreferences("UserDetails", MODE_PRIVATE);
+                                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                                        editor.putString("gmail", email);
+                                        editor.putString("adm", admn);
+                                        editor.putString("readm", retypeAdmn);
+                                        editor.putString("pass", password);
+                                        editor.putString("repas", retypePassword);
+                                        editor.putString("roomno", roomno);
+                                        editor.putString("dept", department);
+                                        editor.apply();
+
+                                        Toast.makeText(SignupActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(SignupActivity.this, MainActivity.class);
+                                        startActivity(intent);
+                                        finish();
+                                    } else {
+                                        String errorMessage = task.getException().getMessage();
+                                        Toast.makeText(SignupActivity.this, "Registration Failed: " + errorMessage, Toast.LENGTH_SHORT).show();
+                                    }
                                 }
-                            }
-                        });
-            }
+                            });
+                }
+        }
         });
     }
 }
