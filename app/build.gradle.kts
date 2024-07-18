@@ -52,4 +52,6 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation (libs.tedimagepicker)
+    implementation (libs.play.services.auth)
+
 }
