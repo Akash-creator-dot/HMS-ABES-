@@ -38,33 +38,34 @@
                 android:text="Akash Solanki"/>
 
             <TextView
-                android:layout_width="match_parent"
                 android:id="@+id/profileadm"
+                android:layout_width="213dp"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_marginTop="12dp"
+                android:gravity="center_horizontal"
+                android:text="2022B0101141"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:text="2022B0101141"/>
+                android:textStyle="bold" />
 
             <TextView
-                android:layout_width="match_parent"
                 android:id="@+id/profileroomno"
+                android:layout_width="212dp"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_marginTop="12dp"
+                android:gravity="center_horizontal"
+                android:text="Room No. G-02-S"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:text="Room No. G-02-S"/>
+                android:textStyle="bold" />
+
             <TextView
-                android:layout_width="match_parent"
-                android:id="@+id/profileblockname"
+                android:id="@+id/profiledeptname"
+                android:layout_width="214dp"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_marginTop="12dp"
+                android:gravity="center_horizontal"
+                android:text="Dept. name. ABB"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:text="Block name. ABB"/>
+                android:textStyle="bold" />
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
@@ -120,6 +121,8 @@
                     android:background="@drawable/button_bg"
                     android:paddingHorizontal="12dp"
                     android:text="Logout" />
+
+
 
 
         </LinearLayout>

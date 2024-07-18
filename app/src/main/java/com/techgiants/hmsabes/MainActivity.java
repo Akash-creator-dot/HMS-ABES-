@@ -18,7 +18,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView navigation;
-    String gmails, adm, retyadm, pas, retypas, romno, dept;
+    String gmails, adm, retyadm, pas, retypas, romno, dept,blockname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
         String retypepass = sharedPreferences.getString("repas", null);
         String roomno = sharedPreferences.getString("roomno", null);
         String department = sharedPreferences.getString("dept", null);
+        String block = sharedPreferences.getString("blockname", null);
+
+
 
         gmails = gmail;
         adm = admission;
@@ -48,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         retypas = retypepass;
         romno = roomno;
         dept = department;
+        blockname=block;
 
         navigation = findViewById(R.id.bottomnavigation);
         navigation.setItemIconTintList(null);
