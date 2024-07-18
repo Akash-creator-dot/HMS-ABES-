@@ -51,4 +51,5 @@ dependencies {
     implementation(libs.circleimageview)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation (libs.tedimagepicker)
 }

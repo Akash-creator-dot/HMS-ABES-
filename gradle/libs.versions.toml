@@ -15,6 +15,7 @@ firebaseDatabase = "21.0.0"
 firebaseAnalytics = "22.0.2"
 smoothbottombar = "1.7.7"
 smoothbottombarVersion = "1.7.9"
+tedimagepicker = "1.2.8"
 
 [libraries]
 circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circleimageview" }
@@ -30,6 +31,7 @@ firebase-database = { group = "com.google.firebase", name = "firebase-database",
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics", version.ref = "firebaseAnalytics" }
 smoothbottombar = { module = "com.github.ibrahimsn98:SmoothBottomBar", version.ref = "smoothbottombar" }
 smoothbottombar-v179 = { module = "com.github.ibrahimsn98:SmoothBottomBar", version.ref = "smoothbottombarVersion" }
+tedimagepicker = { module = "gun0912.ted:tedimagepicker", version.ref = "tedimagepicker" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
