@@ -20,7 +20,7 @@ public class LoginActivityJava extends AppCompatActivity {
 
     private ActivityLoginBinding binding;
     private FirebaseAuth auth;
-    ProgressBar progressBar;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,8 @@ public class LoginActivityJava extends AppCompatActivity {
 
         // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance();
+        progressBar = binding.progressBarLogin;
+        progressBar.setVisibility(View.GONE);
 
         // Check if user already logged in
         FirebaseUser currentUser = auth.getCurrentUser();
@@ -48,11 +50,13 @@ public class LoginActivityJava extends AppCompatActivity {
                 if (username.isEmpty() || password.isEmpty()) {
                     Toast.makeText(LoginActivityJava.this, "Please fill all the details.", Toast.LENGTH_SHORT).show();
                 } else {
+                    progressBar.setVisibility(View.VISIBLE);
                     auth.signInWithEmailAndPassword(username, password)
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
+                                        progressBar.setVisibility(View.GONE);
                                         Toast.makeText(LoginActivityJava.this, "Sign-in Successful.", Toast.LENGTH_SHORT).show();
                                         startActivity(new Intent(LoginActivityJava.this, MainActivity.class));
                                         finish();
