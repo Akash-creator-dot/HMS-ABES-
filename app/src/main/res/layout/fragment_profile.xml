@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="12dp"
-                android:textSize="28sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:text="Akash Solanki"/>
 
