@@ -117,4 +117,13 @@
       app:layout_constraintStart_toStartOf="@+id/passwordLogIn"
       app:layout_constraintTop_toBottomOf="@+id/passwordLogIn" />
 
+  <ProgressBar
+      android:id="@+id/progressBarLOgin"
+      style="?android:attr/progressBarStyle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="50dp"
+      app:layout_constraintTop_toBottomOf="@+id/passwordLogIn"
+      tools:layout_editor_absoluteX="181dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
