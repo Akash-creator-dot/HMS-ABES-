@@ -5,6 +5,7 @@ plugins {
 }
 
 android {
+
     namespace = "com.techgiants.hmsabes"
     compileSdk = 34
 
@@ -40,18 +41,17 @@ android {
 }
 
 dependencies {
-    implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
-    implementation(libs.constraintlayout)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
     implementation(libs.firebase.analytics)
-    testImplementation(libs.junit)
+    implementation(libs.firebase.firestore)
     implementation(libs.circleimageview)
     androidTestImplementation(libs.ext.junit)
-    androidTestImplementation(libs.espresso.core)
-    implementation (libs.tedimagepicker)
-    implementation (libs.play.services.auth)
-
+    implementation (libs.play.services.auth) {
+        exclude ("com.google.android.gms", "play-services-auth")
+    }
+    implementation (libs.core)
+    implementation(libs.appcompat.v151)
 }

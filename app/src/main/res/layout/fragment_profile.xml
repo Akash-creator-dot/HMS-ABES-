@@ -14,28 +14,27 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                xmlns:app="http://schemas.android.com/apk/res-auto"
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/profile_image"
                 android:layout_width="96dp"
                 android:layout_height="96dp"
-                android:src="@drawable/profile"
-                app:civ_border_width="2dp"
                 android:layout_marginTop="24dp"
-                app:civ_border_color="#FF000000"/>
+                android:src="@drawable/profile"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp" />
 
             <TextView
-                android:layout_width="match_parent"
                 android:id="@+id/profilename"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_marginTop="12dp"
+                android:gravity="center_horizontal"
+                android:text="Akash Solanki"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:text="Akash Solanki"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/profileadm"
@@ -80,15 +79,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
-                    android:layout_marginHorizontal="16dp"
                     android:background="@drawable/button_bg"
                     android:paddingHorizontal="12dp"
                     android:text="Leave History" />
 
 
             </com.google.android.material.card.MaterialCardView>
+
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -98,31 +98,49 @@
 
                 <!--                Submit Button-->
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/profilecomplain"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/profilecomplain"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
                     android:background="@drawable/button_bg"
+                    android:paddingVertical="12dp"
                     android:paddingHorizontal="12dp"
                     android:text="Complaint History" />
 
             </com.google.android.material.card.MaterialCardView>
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="wrap_content"
 
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="16dp"
-                    android:id="@+id/profilelogutbtn"
-                    android:layout_marginBottom="16dp"
-                    android:background="@drawable/button_bg"
-                    android:paddingHorizontal="12dp"
-                    android:text="Logout" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/profilelogutbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/button_bg"
+                android:paddingHorizontal="12dp"
+                android:text="Logout" />
 
+            <TextView
+                android:id="@+id/emailVerificationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Email Not Verified!"
+                android:textColor="#FF0000"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
 
+            <Button
+                android:id="@+id/verifyBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Verify Now"
+                android:visibility="gone" />
 
 
         </LinearLayout>
