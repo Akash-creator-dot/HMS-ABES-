@@ -43,7 +43,8 @@
                 android:layout_marginTop="12dp"
                 android:gravity="center_horizontal"
                 android:text="2022B0101141"
-                android:textSize="18sp"
+                android:autoSizeMinTextSize="18sp"
+                android:autoSizeMaxTextSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -140,6 +141,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Verify Now"
+
                 android:visibility="gone" />
 
 

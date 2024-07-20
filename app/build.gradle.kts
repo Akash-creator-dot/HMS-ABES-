@@ -48,10 +48,12 @@ dependencies {
     implementation(libs.firebase.analytics)
     implementation(libs.firebase.firestore)
     implementation(libs.circleimageview)
+    implementation(libs.firebase.storage)
     androidTestImplementation(libs.ext.junit)
     implementation (libs.play.services.auth) {
         exclude ("com.google.android.gms", "play-services-auth")
     }
     implementation (libs.core)
     implementation(libs.appcompat.v151)
+    implementation (libs.picasso)
 }
