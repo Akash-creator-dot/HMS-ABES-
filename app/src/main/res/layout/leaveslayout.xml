@@ -25,8 +25,6 @@
                     android:layout_height="wrap_content"
                     android:text="1."
                     android:id="@+id/leaveposition"
-                    android:autoSizeMinTextSize="30sp"
-                    android:autoSizeMaxTextSize="45sp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="160dp"
                     />
