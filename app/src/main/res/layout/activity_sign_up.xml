@@ -16,7 +16,7 @@
         />
 
     <TextView
-        android:id="@+id/loginText"
+        android:id="@+id/signupText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -48,7 +48,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginText" />
+        app:layout_constraintTop_toBottomOf="@+id/signupText" />
+    <EditText
+        android:layout_width="325dp"
+        android:layout_height="50dp"
+        android:background="@drawable/edit_text_shape"
+        android:paddingLeft="18dp"
+        android:ems="10"
+        android:fontFamily="@font/kurale"
+        android:elevation="10dp"
+        android:id="@+id/usernameSignup"
+        android:hint="Username"
+        android:layout_marginTop="20dp"
+        android:shadowDx="0"
+        android:inputType="text"
+        app:layout_constraintHorizontal_bias="0.36"
+        android:shadowDy="4"
+        android:textColorHint="#777777"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/emailIdSignUp"
+        app:layout_constraintStart_toStartOf="@id/emailIdSignUp"
+        app:layout_constraintTop_toBottomOf="@id/emailIdSignUp"
+        />
 
     <EditText
         android:id="@+id/passwordSignUp"
@@ -156,6 +177,7 @@
         app:layout_constraintStart_toStartOf="@+id/roomNO"
         app:layout_constraintTop_toBottomOf="@+id/roomNO" />
 
+
     <EditText
         android:id="@+id/admnNo"
         android:layout_width="325dp"
@@ -172,9 +194,9 @@
         android:shadowDy="4"
         android:textColor="@color/black"
         android:textColorHint="#777777"
-        app:layout_constraintEnd_toEndOf="@+id/emailIdSignUp"
-        app:layout_constraintStart_toStartOf="@+id/emailIdSignUp"
-        app:layout_constraintTop_toBottomOf="@+id/emailIdSignUp" />
+        app:layout_constraintEnd_toEndOf="@+id/usernameSignup"
+        app:layout_constraintStart_toStartOf="@+id/usernameSignup"
+        app:layout_constraintTop_toBottomOf="@+id/usernameSignup" />
     <EditText
         android:id="@+id/retypeAdmn"
         android:layout_width="325dp"

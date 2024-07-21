@@ -51,14 +51,16 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String email = binding.emailIdSignUp.getText().toString().trim();
+                String usernm=binding.usernameSignup.getText().toString().trim();
                 String admn = binding.admnNo.getText().toString().trim();
                 String retypeAdmn = binding.retypeAdmn.getText().toString().trim();
                 String password = binding.passwordSignUp.getText().toString().trim();
                 String retypePassword = binding.retypePasswordSignUp.getText().toString().trim();
                 String roomno = binding.roomNO.getText().toString().trim();
                 String department = binding.dept.getText().toString().trim();
+                String blocknm=binding.block.getText().toString().trim();
 
-                if (email.isEmpty() || admn.isEmpty() || retypeAdmn.isEmpty() || password.isEmpty() || retypePassword.isEmpty() || roomno.isEmpty() || department.isEmpty()) {
+                if (email.isEmpty() || admn.isEmpty() || retypeAdmn.isEmpty() || password.isEmpty() || retypePassword.isEmpty() || roomno.isEmpty() || department.isEmpty()||usernm.isEmpty()) {
                     Toast.makeText(SignupActivity.this, "Please fill all the details", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -95,12 +97,14 @@ public class SignupActivity extends AppCompatActivity {
                                     SharedPreferences sharedPreferences = getSharedPreferences("UserDetails", MODE_PRIVATE);
                                     SharedPreferences.Editor editor = sharedPreferences.edit();
                                     editor.putString("gmail", email);
+                                    editor.putString("username",usernm);
                                     editor.putString("adm", admn);
                                     editor.putString("readm", retypeAdmn);
                                     editor.putString("pass", password);
                                     editor.putString("repas", retypePassword);
                                     editor.putString("roomno", roomno);
                                     editor.putString("dept", department);
+                                    editor.putString("block",blocknm);
                                     editor.apply();
                                     Toast.makeText(SignupActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(SignupActivity.this, MainActivity.class);
