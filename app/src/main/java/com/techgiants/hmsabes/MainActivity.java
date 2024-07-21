@@ -21,7 +21,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView navigation;
-    String gmails, adm, retyadm, pas, retypas, romno, dept,blockname,name;
+    String gmails, adm, retyadm, pas, retypas, romno, dept,blockname;
     private FirebaseFirestore firestore;
     private FirebaseAuth auth;
 
@@ -45,15 +45,39 @@ public class MainActivity extends AppCompatActivity {
                     .addOnSuccessListener(documentSnapshot -> {
                                 if (documentSnapshot.exists()) {
                                     gmails = documentSnapshot.getString("email");
-                                    name=documentSnapshot.getString("name");
                                     adm = documentSnapshot.getString("admission_no");
+                                    retyadm = documentSnapshot.getString("retype_admission_no");
                                     pas = documentSnapshot.getString("password");
+                                    retypas = documentSnapshot.getString("retype_password");
                                     romno = documentSnapshot.getString("room_no");
                                     dept = documentSnapshot.getString("department");
                                     blockname = documentSnapshot.getString("block");
                                 }
                     });
         }
+
+        // Retrieve values from SharedPreferences
+        SharedPreferences sharedPreferences = getSharedPreferences("UserDetails", MODE_PRIVATE);
+        String gmail = sharedPreferences.getString("gmail", null);
+        String admission = sharedPreferences.getString("adm", null);
+        String retypeadm = sharedPreferences.getString("readm", null);
+        String pass = sharedPreferences.getString("pass", null);
+        String retypepass = sharedPreferences.getString("repas", null);
+        String roomno = sharedPreferences.getString("roomno", null);
+        String department = sharedPreferences.getString("dept", null);
+        String block = sharedPreferences.getString("blockname", null);
+
+
+
+        gmails = gmail;
+        adm = admission;
+        retyadm = retypeadm;
+        pas = pass;
+        retypas = retypepass;
+        romno = roomno;
+        dept = department;
+        blockname=block;
+
         navigation = findViewById(R.id.bottomnavigation);
         navigation.setItemIconTintList(null);
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

@@ -28,11 +28,12 @@
 
             <TextView
                 android:id="@+id/profilename"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:gravity="center_horizontal"
-                android:text="Akash Solanki"
+                android:text=""
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -42,7 +43,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:gravity="center_horizontal"
-                android:text="2022B0101141"
+                android:text=""
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -52,7 +54,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:gravity="center_horizontal"
-                android:text="Room No. G-02-S"
+                android:text=""
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -62,7 +65,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:gravity="center_horizontal"
-                android:text="Dept. name. CSE"
+                android:text=""
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 

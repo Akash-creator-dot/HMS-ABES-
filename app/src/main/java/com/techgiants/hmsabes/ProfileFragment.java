@@ -28,17 +28,21 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
+import java.util.Map;
+
 public class ProfileFragment extends Fragment {
     private FirebaseAuth auth;
     private FirebaseFirestore fstore;
     private ImageView profileimageview;
     StorageReference storageReference;
+    private TextView nm, admission, roomno, depart;
 
 
 
@@ -56,6 +60,11 @@ public class ProfileFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         auth=FirebaseAuth.getInstance();
         userId=auth.getCurrentUser().getUid();
+        FirebaseUser currentUser = auth.getCurrentUser();
+        nm = view.findViewById(R.id.profilename);
+        admission = view.findViewById(R.id.profileadm);
+        roomno = view.findViewById(R.id.profileroomno);
+        depart = view.findViewById(R.id.profiledeptname);
         final FirebaseUser user =auth.getCurrentUser();
         fstore= FirebaseFirestore.getInstance();
         storageReference= FirebaseStorage.getInstance().getReference();
@@ -66,6 +75,27 @@ public class ProfileFragment extends Fragment {
                 Picasso.get().load(uri).into(profileimageview);
             }
         });
+        fstore.collection("users").document(currentUser.getUid()).get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        if (documentSnapshot.exists()) {
+                            Map<String, Object> userDetails = documentSnapshot.getData();
+                            if (userDetails != null) {
+                                nm.setText(userDetails.get("name").toString());
+                                admission.setText("Admission No.: " + userDetails.get("admission_no").toString());
+                                roomno.setText("Room No.: " + userDetails.get("block").toString() + " " + userDetails.get("room_no").toString());
+                                depart.setText("Department: " + userDetails.get("department").toString());
+                            }
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.e(TAG, "Failed to fetch user details: ", e);
+                    }
+                });
         btnLeave = view.findViewById(R.id.profileleave);
         btnComplain = view.findViewById(R.id.profilecomplain);
         btnLogout = view.findViewById(R.id.profilelogutbtn);
@@ -95,35 +125,9 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        Bundle bundle = getArguments();
-        if (bundle != null) {
-            String gmail = bundle.getString("gmail");
-            String adm = bundle.getString("adm");
-            String pass = bundle.getString("pass");
-            String room = bundle.getString("room");
-            String dept = bundle.getString("dept");
-            String block=bundle.getString("block");
-            String name=bundle.getString("nam");
 
 
-            TextView nm = view.findViewById(R.id.profilename);
-            TextView admission = view.findViewById(R.id.profileadm);
-            TextView roomno = view.findViewById(R.id.profileroomno);
-            TextView depart = view.findViewById(R.id.profiledeptname);
-            nm.setText(name);
-            if (adm != null) {
-                String customText = "Admission No.: " + adm;
-                admission.setText(customText);
-            }
-            if (room != null) {
-                String customText = "Room No.: "+block+" "+ room;
-                roomno.setText(customText);
-            }
-            if (dept != null) {
-                String customText = "Department: " + dept;
-                depart.setText(customText);
-            }
-        }
+
 
 
         profileimageview=view.findViewById(R.id.profile_image);

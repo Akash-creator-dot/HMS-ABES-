@@ -53,8 +53,8 @@ public class LoginActivityJava extends AppCompatActivity {
         binding.logInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = binding.usernameLogin.getText().toString();
-                String password = binding.passwordLogIn.getText().toString();
+                String username = binding.usernameLogin.getText().toString().trim();
+                String password = binding.passwordLogIn.getText().toString().trim();
                 if (username.isEmpty() || password.isEmpty()) {
                     Toast.makeText(LoginActivityJava.this, "Please fill all the details.", Toast.LENGTH_SHORT).show();
                 } else {
@@ -65,14 +65,9 @@ public class LoginActivityJava extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     progressBar.setVisibility(View.GONE);
                                     if (task.isSuccessful()) {
-                                        FirebaseUser user = auth.getCurrentUser();
-                                        if (user != null && user.isEmailVerified()) {
-                                            Toast.makeText(LoginActivityJava.this, "Sign-in Successful.", Toast.LENGTH_SHORT).show();
-                                            startActivity(new Intent(LoginActivityJava.this, ProfileFragment.class));
-                                            finish();
-                                        } else {
-                                            Toast.makeText(LoginActivityJava.this, "Please verify your email.", Toast.LENGTH_SHORT).show();
-                                        }
+                                        Toast.makeText(LoginActivityJava.this, "Sign-in Successful.", Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(LoginActivityJava.this, MainActivity.class));
+                                        finish();
                                     } else {
                                         Toast.makeText(LoginActivityJava.this, "Sign-in Failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                                     }
@@ -101,8 +96,12 @@ public class LoginActivityJava extends AppCompatActivity {
                 passwordResetDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //extract the mail and set reset link
-                        String mail = resetMail.getText().toString();
+                        // Extract the mail and set reset link
+                        String mail = resetMail.getText().toString().trim();
+                        if (mail.isEmpty()) {
+                            Toast.makeText(LoginActivityJava.this, "Please enter your email.", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
                         auth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
@@ -119,7 +118,7 @@ public class LoginActivityJava extends AppCompatActivity {
                 passwordResetDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //close the dialog
+                        // Close the dialog
                     }
                 });
                 passwordResetDialog.create().show();
@@ -133,7 +132,7 @@ public class LoginActivityJava extends AppCompatActivity {
         // Check if user already logged in
         FirebaseUser currentUser = auth.getCurrentUser();
         if (currentUser != null) {
-            startActivity(new Intent(this, ProfileFragment.class));
+            startActivity(new Intent(this, MainActivity.class));
             finish();
         }
     }
