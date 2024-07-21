@@ -43,8 +43,7 @@
                 android:layout_marginTop="12dp"
                 android:gravity="center_horizontal"
                 android:text="2022B0101141"
-                android:autoSizeMinTextSize="18sp"
-                android:autoSizeMaxTextSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
