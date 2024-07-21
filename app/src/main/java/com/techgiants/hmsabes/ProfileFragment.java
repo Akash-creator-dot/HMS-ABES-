@@ -123,19 +123,20 @@ public class ProfileFragment extends Fragment {
             String pass = bundle.getString("pass");
             String room = bundle.getString("room");
             String dept = bundle.getString("dept");
+            String block=bundle.getString("block");
+
 
             TextView name = view.findViewById(R.id.profilename);
             TextView admission = view.findViewById(R.id.profileadm);
             TextView roomno = view.findViewById(R.id.profileroomno);
             TextView depart = view.findViewById(R.id.profiledeptname);
-
             name.setText(gmail);
             if (adm != null) {
                 String customText = "Admission No.: " + adm;
                 admission.setText(customText);
             }
             if (room != null) {
-                String customText = "Room No.: " + room;
+                String customText = "Room No.: "+block+" "+ room;
                 roomno.setText(customText);
             }
             if (dept != null) {
@@ -168,8 +169,6 @@ public class ProfileFragment extends Fragment {
                 }
             }
         }
-
-
     private void uploadImageToFirebase(Uri imageUri) {
         StorageReference fileRef=storageReference.child("users/"+auth.getCurrentUser().getUid()+"profile.jpg" );
         fileRef.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
