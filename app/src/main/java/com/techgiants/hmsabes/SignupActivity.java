@@ -91,23 +91,8 @@ public class SignupActivity extends AppCompatActivity {
                                             Log.d(TAG, "onFailure: Email not sent"+ e.getMessage());
                                         }
                                     });
-
-
-
-                                    SharedPreferences sharedPreferences = getSharedPreferences("UserDetails", MODE_PRIVATE);
-                                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                                    editor.putString("gmail", email);
-                                    editor.putString("username",usernm);
-                                    editor.putString("adm", admn);
-                                    editor.putString("readm", retypeAdmn);
-                                    editor.putString("pass", password);
-                                    editor.putString("repas", retypePassword);
-                                    editor.putString("roomno", roomno);
-                                    editor.putString("dept", department);
-                                    editor.putString("block",blocknm);
-                                    editor.apply();
                                     Toast.makeText(SignupActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(SignupActivity.this, MainActivity.class);
+                                    Intent intent = new Intent(SignupActivity.this, LoginActivityJava.class);
                                     startActivity(intent);
                                     finish();
                                 } else {

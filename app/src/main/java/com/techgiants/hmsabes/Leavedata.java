@@ -2,23 +2,52 @@ package com.techgiants.hmsabes;
 
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
 
 public class Leavedata extends AppCompatActivity {
+    ArrayList<LeaveHistoryStracture> arrleave = new ArrayList<>();
+    LeaveHistoryAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_leavedata);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        RecyclerView recyclerView = findViewById(R.id.recyclerleaves);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        // Adding sample leave history entries
+        arrleave.add(new LeaveHistoryStracture("12/05/2024", "2:00 PM"));
+        arrleave.add(new LeaveHistoryStracture("14/05/2024", "3:00 PM"));
+        arrleave.add(new LeaveHistoryStracture("12/05/2024","2:00 PM"));
+        arrleave.add(new LeaveHistoryStracture("14/05/2024","3:00 PM"));
+        arrleave.add(new LeaveHistoryStracture("30/05/2024","2:13 PM"));
+        arrleave.add(new LeaveHistoryStracture("11/06/2024","4:50 PM"));
+        arrleave.add(new LeaveHistoryStracture("22/06/2024","7:20 PM"));
+        arrleave.add(new LeaveHistoryStracture("31/06/2024","2:10 PM"));
+        arrleave.add(new LeaveHistoryStracture("12/07/2024","3:00 PM"));
+        arrleave.add(new LeaveHistoryStracture("01/08/2024","6:00 PM"));
+        arrleave.add(new LeaveHistoryStracture("12/05/2024","2:00 PM"));
+        arrleave.add(new LeaveHistoryStracture("14/05/2024","3:00 PM"));
+        arrleave.add(new LeaveHistoryStracture("30/05/2024","2:13 PM"));
+        arrleave.add(new LeaveHistoryStracture("11/06/2024","4:50 PM"));
+        arrleave.add(new LeaveHistoryStracture("22/06/2024","7:20 PM"));
+        arrleave.add(new LeaveHistoryStracture("31/06/2024","2:10 PM"));
+        arrleave.add(new LeaveHistoryStracture("12/07/2024","3:00 PM"));
+        arrleave.add(new LeaveHistoryStracture("01/08/2024","6:00 PM"));
+        adapter = new LeaveHistoryAdapter(this, arrleave);
+        recyclerView.setAdapter(adapter);
     }
 }

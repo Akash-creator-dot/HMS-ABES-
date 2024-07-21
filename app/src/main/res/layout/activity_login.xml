@@ -9,6 +9,15 @@
     tools:context=".LoginActivityJava">
 
   <ImageView
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+
+      android:layout_gravity="right"
+      android:src="@drawable/abeslogo1"
+      tools:layout_editor_absoluteX="365dp"
+      tools:layout_editor_absoluteY="16dp" />
+
+  <ImageView
       android:id="@+id/imageView"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"

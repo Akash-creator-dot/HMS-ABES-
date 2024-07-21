@@ -7,6 +7,16 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_bg"
     tools:context=".SignupActivity">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:layout_gravity="right"
+        android:src="@drawable/abeslogo1"
+        tools:layout_editor_absoluteX="381dp"
+        tools:layout_editor_absoluteY="7dp" />
+
     <ImageView
         android:id="@+id/signUpImage"
         android:layout_width="wrap_content"

@@ -33,6 +33,8 @@ public class RoomDetailsAdapter extends RecyclerView.Adapter<RoomDetailsAdapter.
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.txtName.setText(arrrooms.get(position).getname());
+        holder.txtvacant.setText(arrrooms.get(position).getvacant());
+        holder.txtseater.setText(arrrooms.get(position).getseater());
     }
 
     @Override
@@ -40,13 +42,17 @@ public class RoomDetailsAdapter extends RecyclerView.Adapter<RoomDetailsAdapter.
         return arrrooms.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView txtName;
+        TextView txtseater;
+        TextView txtvacant;
         LinearLayout ll;
 
         public ViewHolder(View itemView) {
             super(itemView);
             txtName = itemView.findViewById(R.id.allotmentroomdetailttftxt);
+            txtvacant=itemView.findViewById(R.id.allotmentvacant);
+            txtseater=itemView.findViewById(R.id.allotmentseater);
             ll = itemView.findViewById(R.id.contactrowlayout);
         }
     }

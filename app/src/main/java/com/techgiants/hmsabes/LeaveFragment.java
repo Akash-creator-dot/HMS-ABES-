@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -33,7 +34,12 @@ public class LeaveFragment extends Fragment {
         dateOfReturnTxt = view.findViewById(R.id.dateOfReturnTxt);
         timeOfLeaveTxt = view.findViewById(R.id.timeOfLeaveTxt);
         timeOfReturnTxt = view.findViewById(R.id.timeOfReturnTxt);
-
+        Button btn=view.findViewById(R.id.leavefragmentbtn);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
         // Set listeners for date and time pickers
         setupDateTimePicker(dateOfLeaveTxt);
         setupDateTimePicker(dateOfReturnTxt);

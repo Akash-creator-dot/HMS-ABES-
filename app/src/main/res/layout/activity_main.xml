@@ -8,11 +8,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
     <FrameLayout
         android:layout_width="match_parent"
         android:id="@+id/containeer"
         android:layout_height="match_parent"
-        android:layout_marginBottom="68dp"/>
+        android:layout_marginBottom="68dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:layout_gravity="right"
+            android:src="@drawable/abeslogo1" />
+    </FrameLayout>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_alignParentBottom="true"

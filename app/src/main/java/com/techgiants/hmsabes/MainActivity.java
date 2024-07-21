@@ -77,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
     public void frag(Fragment fragment, boolean flag) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
         Bundle bundle = new Bundle();
         bundle.putString("gmail", gmails);
         bundle.putString("adm", adm);
