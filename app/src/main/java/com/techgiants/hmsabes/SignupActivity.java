@@ -34,20 +34,16 @@ public class SignupActivity extends AppCompatActivity {
     private FirebaseFirestore firestore;
     private ProgressBar progressBar;
     private TextView nm, admission, roomno, depart;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivitySignUpBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
-
         auth = FirebaseAuth.getInstance();
         firestore = FirebaseFirestore.getInstance();
         progressBar = binding.progressBarSignup;
         progressBar.setVisibility(View.GONE);
-
-
         binding.logInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,19 +64,15 @@ public class SignupActivity extends AppCompatActivity {
                 String roomno = binding.roomNO.getText().toString().trim();
                 String department = binding.dept.getText().toString().trim();
                 String blocknm = binding.block.getText().toString().trim();
-
                 if (email.isEmpty() || admn.isEmpty() || retypeAdmn.isEmpty() || password.isEmpty() || retypePassword.isEmpty() || roomno.isEmpty() || department.isEmpty() || nm.isEmpty()) {
                     Toast.makeText(SignupActivity.this, "Please fill all the details", Toast.LENGTH_SHORT).show();
                     return;
                 }
-
                 if (!password.equals(retypePassword)) {
                     Toast.makeText(SignupActivity.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
                     return;
                 }
-
                 progressBar.setVisibility(View.VISIBLE);
-
                 auth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
@@ -99,7 +91,6 @@ public class SignupActivity extends AppCompatActivity {
                                             Log.d(TAG, "onFailure: Email not sent" + e.getMessage());
                                         }
                                     });
-
                                     Map<String, Object> userDetails = new HashMap<>();
                                     userDetails.put("email", email);
                                     userDetails.put("name", nm);
@@ -107,7 +98,6 @@ public class SignupActivity extends AppCompatActivity {
                                     userDetails.put("room_no", roomno);
                                     userDetails.put("department", department);
                                     userDetails.put("block", blocknm);
-
                                     firestore.collection("users").document(user.getUid()).set(userDetails)
                                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                                 @Override
