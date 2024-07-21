@@ -2,8 +2,8 @@ package com.techgiants.hmsabes;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +24,8 @@ import java.util.Locale;
 
 public class LeaveFragment extends Fragment {
     EditText dateOfLeaveTxt, dateOfReturnTxt, timeOfLeaveTxt, timeOfReturnTxt;
-    final Calendar myCalendar = Calendar.getInstance();
+    final Calendar dateCalendar = Calendar.getInstance();
+    final Calendar timeCalendar = Calendar.getInstance();
 
     @Nullable
     @Override
@@ -34,15 +35,34 @@ public class LeaveFragment extends Fragment {
         dateOfReturnTxt = view.findViewById(R.id.dateOfReturnTxt);
         timeOfLeaveTxt = view.findViewById(R.id.timeOfLeaveTxt);
         timeOfReturnTxt = view.findViewById(R.id.timeOfReturnTxt);
-        Button btn=view.findViewById(R.id.leavefragmentbtn);
+        Button btn = view.findViewById(R.id.leavefragmentbtn);
+        Bundle bundle = getArguments();
+            String gmail = bundle.getString("gmail");
+            String adm = bundle.getString("adm");
+            String pass = bundle.getString("pass");
+            String room = bundle.getString("room");
+            String dept = bundle.getString("dept");
+            String block = bundle.getString("block");
+            String name = bundle.getString("name");
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction("com.techgiants.admin.RECEIVE_DATA");
+                intent.setPackage("com.techgiants.admin");
+                intent.putExtra("gmail", gmail);
+                intent.putExtra("adm", adm);
+                intent.putExtra("pass", pass);
+                intent.putExtra("room", room);
+                intent.putExtra("dept", dept);
+                intent.putExtra("block", block);
+                intent.putExtra("name", name);
+                startActivity(intent);
             }
         });
         // Set listeners for date and time pickers
-        setupDateTimePicker(dateOfLeaveTxt);
-        setupDateTimePicker(dateOfReturnTxt);
+        setupDatePicker(dateOfLeaveTxt);
+        setupDatePicker(dateOfReturnTxt);
         setupTimePicker(timeOfLeaveTxt);
         setupTimePicker(timeOfReturnTxt);
         TextView txt = view.findViewById(R.id.complainsheadingtxt);
@@ -50,19 +70,19 @@ public class LeaveFragment extends Fragment {
     }
 
     // Helper method to set up Date Picker dialog
-    private void setupDateTimePicker(final EditText editText) {
+    private void setupDatePicker(final EditText editText) {
         editText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final DatePickerDialog datePickerDialog = new DatePickerDialog(requireContext(), new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                        myCalendar.set(Calendar.YEAR, year);
-                        myCalendar.set(Calendar.MONTH, monthOfYear);
-                        myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-                        updateLabel(editText, myCalendar);
+                        dateCalendar.set(Calendar.YEAR, year);
+                        dateCalendar.set(Calendar.MONTH, monthOfYear);
+                        dateCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                        updateDateLabel(editText, dateCalendar);
                     }
-                }, myCalendar.get(Calendar.YEAR), myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH));
+                }, dateCalendar.get(Calendar.YEAR), dateCalendar.get(Calendar.MONTH), dateCalendar.get(Calendar.DAY_OF_MONTH));
                 datePickerDialog.show();
             }
         });
@@ -76,19 +96,25 @@ public class LeaveFragment extends Fragment {
                 final TimePickerDialog timePickerDialog = new TimePickerDialog(requireContext(), new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                        myCalendar.set(Calendar.HOUR_OF_DAY, hourOfDay);
-                        myCalendar.set(Calendar.MINUTE, minute);
-                        updateLabel(editText, myCalendar);
+                        timeCalendar.set(Calendar.HOUR_OF_DAY, hourOfDay);
+                        timeCalendar.set(Calendar.MINUTE, minute);
+                        updateTimeLabel(editText, timeCalendar);
                     }
-                }, myCalendar.get(Calendar.HOUR_OF_DAY), myCalendar.get(Calendar.MINUTE), false);
+                }, timeCalendar.get(Calendar.HOUR_OF_DAY), timeCalendar.get(Calendar.MINUTE), false);
                 timePickerDialog.show();
             }
         });
     }
 
-    // Helper method to update EditText with selected date/time
-    private void updateLabel(EditText editText, Calendar calendar) {
+    // Helper method to update EditText with selected date
+    private void updateDateLabel(EditText editText, Calendar calendar) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+        editText.setText(sdf.format(calendar.getTime()));
+    }
+
+    // Helper method to update EditText with selected time
+    private void updateTimeLabel(EditText editText, Calendar calendar) {
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
         editText.setText(sdf.format(calendar.getTime()));
     }
 }
