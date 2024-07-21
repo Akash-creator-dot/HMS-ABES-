@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -32,6 +33,7 @@ public class SignupActivity extends AppCompatActivity {
     private FirebaseAuth auth;
     private FirebaseFirestore firestore;
     private ProgressBar progressBar;
+    private TextView nm, admission, roomno, depart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +46,7 @@ public class SignupActivity extends AppCompatActivity {
         firestore = FirebaseFirestore.getInstance();
         progressBar = binding.progressBarSignup;
         progressBar.setVisibility(View.GONE);
+
 
         binding.logInButton.setOnClickListener(new View.OnClickListener() {
             @Override
