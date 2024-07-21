@@ -15,10 +15,16 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView navigation;
     String gmails, adm, retyadm, pas, retypas, romno, dept,blockname;
+    private FirebaseFirestore firestore;
+    private FirebaseAuth auth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +36,25 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        auth=FirebaseAuth.getInstance();
+        firestore=FirebaseFirestore.getInstance();
+        FirebaseUser user=auth.getCurrentUser();
+        if(user !=null){
+            String userId=user.getUid();
+            firestore.collection("users").document(userId).get()
+                    .addOnSuccessListener(documentSnapshot -> {
+                                if (documentSnapshot.exists()) {
+                                    gmails = documentSnapshot.getString("email");
+                                    adm = documentSnapshot.getString("admission_no");
+                                    retyadm = documentSnapshot.getString("retype_admission_no");
+                                    pas = documentSnapshot.getString("password");
+                                    retypas = documentSnapshot.getString("retype_password");
+                                    romno = documentSnapshot.getString("room_no");
+                                    dept = documentSnapshot.getString("department");
+                                    blockname = documentSnapshot.getString("block");
+                                }
+                    });
+        }
 
         // Retrieve values from SharedPreferences
         SharedPreferences sharedPreferences = getSharedPreferences("UserDetails", MODE_PRIVATE);

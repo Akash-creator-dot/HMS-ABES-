@@ -69,28 +69,7 @@ public class ProfileFragment extends Fragment {
         btnLeave = view.findViewById(R.id.profileleave);
         btnComplain = view.findViewById(R.id.profilecomplain);
         btnLogout = view.findViewById(R.id.profilelogutbtn);
-        verifyBtn=view.findViewById(R.id.verifyBtn);
-        emailVerificationText=view.findViewById(R.id.emailVerificationText);
-        if(!user.isEmailVerified()){
-            emailVerificationText.setVisibility(View.VISIBLE);
-            verifyBtn.setVisibility(View.VISIBLE);
-            verifyBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(final View v) {
-                    user.sendEmailVerification().addOnSuccessListener((new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void aVoid) {
-                            Toast.makeText(v.getContext(), "Verification Email has been sent.", Toast.LENGTH_SHORT).show();
-                        }
-                    })).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Log.d(TAG, "onFailure: Email not sent"+ e.getMessage());
-                        }
-                    });
-                }
-            });
-        }
+
 
         Intent iLeave = new Intent(getActivity(), Leavedata.class);
         Intent iComplain = new Intent(getActivity(), Complaindata.class);
@@ -124,13 +103,14 @@ public class ProfileFragment extends Fragment {
             String room = bundle.getString("room");
             String dept = bundle.getString("dept");
             String block=bundle.getString("block");
+            String name=bundle.getString("nam");
 
 
-            TextView name = view.findViewById(R.id.profilename);
+            TextView nm = view.findViewById(R.id.profilename);
             TextView admission = view.findViewById(R.id.profileadm);
             TextView roomno = view.findViewById(R.id.profileroomno);
             TextView depart = view.findViewById(R.id.profiledeptname);
-            name.setText(gmail);
+            nm.setText(name);
             if (adm != null) {
                 String customText = "Admission No.: " + adm;
                 admission.setText(customText);

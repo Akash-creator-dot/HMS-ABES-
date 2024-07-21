@@ -124,25 +124,8 @@
                 android:paddingHorizontal="12dp"
                 android:text="Logout" />
 
-            <TextView
-                android:id="@+id/emailVerificationText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Email Not Verified!"
-                android:textColor="#FF0000"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                android:visibility="gone" />
 
-            <Button
-                android:id="@+id/verifyBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Verify Now"
 
-                android:visibility="gone" />
         </LinearLayout>
     </ScrollView>
 </FrameLayout>

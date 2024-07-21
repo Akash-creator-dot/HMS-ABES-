@@ -65,11 +65,14 @@ public class LoginActivityJava extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
                                         progressBar.setVisibility(View.GONE);
-                                        Toast.makeText(LoginActivityJava.this, "Sign-in Successful.", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(LoginActivityJava.this, MainActivity.class));
-                                        finish();
-                                    } else {
-                                        Toast.makeText(LoginActivityJava.this, "Sign-in Failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                        if (currentUser.isEmailVerified()) {
+                                            Toast.makeText(LoginActivityJava.this, "Sign-in Successful.", Toast.LENGTH_SHORT).show();
+                                            startActivity(new Intent(LoginActivityJava.this, MainActivity.class));
+                                            finish();
+                                        }
+                                        else {
+                                            Toast.makeText(LoginActivityJava.this, "Sign-in Failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                        }
                                     }
                                 }
                             });
