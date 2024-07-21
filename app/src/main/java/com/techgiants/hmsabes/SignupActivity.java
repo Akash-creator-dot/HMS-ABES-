@@ -51,7 +51,6 @@ public class SignupActivity extends AppCompatActivity {
                 finish();
             }
         });
-
         binding.registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

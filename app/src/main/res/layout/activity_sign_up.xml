@@ -12,19 +12,13 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_gravity="right"
-        android:layout_marginLeft="385dp"
+        android:layout_marginStart="385dp"
         android:src="@drawable/abeslogo1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/signUpImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+
 
     <TextView
         android:id="@+id/signupText"
@@ -38,6 +32,20 @@
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signupText"
+        app:layout_constraintBottom_toTopOf="@id/progressBarSignup">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
 
     <EditText
         android:id="@+id/emailIdSignUp"
@@ -166,68 +174,69 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/dept"
         app:layout_constraintTop_toBottomOf="@+id/dept" />
+        <EditText
+            android:id="@+id/dept"
+            android:layout_width="325dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/edit_text_shape"
+            android:elevation="10dp"
+            android:fontFamily="@font/kurale"
+            android:hint="Department"
+            android:inputType="text"
+            android:paddingLeft="18dp"
+            android:shadowColor="@color/black"
+            android:shadowDx="0"
+            android:shadowDy="4"
+            android:textColor="@color/black"
+            android:textColorHint="#777777"
+            app:layout_constraintEnd_toEndOf="@+id/roomNO"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/roomNO"
+            app:layout_constraintTop_toBottomOf="@+id/roomNO" />
 
-    <EditText
-        android:id="@+id/dept"
-        android:layout_width="325dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/edit_text_shape"
-        android:elevation="10dp"
-        android:fontFamily="@font/kurale"
-        android:hint="Department"
-        android:inputType="text"
-        android:paddingLeft="18dp"
-        android:shadowColor="@color/black"
-        android:shadowDx="0"
-        android:shadowDy="4"
-        android:textColor="@color/black"
-        android:textColorHint="#777777"
-        app:layout_constraintEnd_toEndOf="@+id/roomNO"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/roomNO"
-        app:layout_constraintTop_toBottomOf="@+id/roomNO" />
 
-
-    <EditText
-        android:id="@+id/admnNo"
-        android:layout_width="325dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/edit_text_shape"
-        android:elevation="10dp"
-        android:fontFamily="@font/kurale"
-        android:hint="Admn. No."
-        android:inputType="text"
-        android:paddingLeft="18dp"
-        android:shadowColor="@color/black"
-        android:shadowDx="0"
-        android:shadowDy="4"
-        android:textColor="@color/black"
-        android:textColorHint="#777777"
-        app:layout_constraintEnd_toEndOf="@+id/nameSignup"
-        app:layout_constraintStart_toStartOf="@+id/nameSignup"
-        app:layout_constraintTop_toBottomOf="@+id/nameSignup" />
-    <EditText
-        android:id="@+id/retypeAdmn"
-        android:layout_width="325dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/edit_text_shape"
-        android:elevation="10dp"
-        android:fontFamily="@font/kurale"
-        android:hint="Retype Admn. No."
-        android:inputType="text"
-        android:textColor="@color/black"
-        android:paddingLeft="18dp"
-        android:shadowColor="@color/black"
-        android:shadowDx="0"
-        android:shadowDy="4"
-        android:textColorHint="#777777"
-        app:layout_constraintEnd_toEndOf="@+id/admnNo"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/admnNo"
-        app:layout_constraintTop_toBottomOf="@+id/admnNo" />
+        <EditText
+            android:id="@+id/admnNo"
+            android:layout_width="325dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/edit_text_shape"
+            android:elevation="10dp"
+            android:fontFamily="@font/kurale"
+            android:hint="Admn. No."
+            android:inputType="text"
+            android:paddingLeft="18dp"
+            android:shadowColor="@color/black"
+            android:shadowDx="0"
+            android:shadowDy="4"
+            android:textColor="@color/black"
+            android:textColorHint="#777777"
+            app:layout_constraintEnd_toEndOf="@+id/nameSignup"
+            app:layout_constraintStart_toStartOf="@+id/nameSignup"
+            app:layout_constraintTop_toBottomOf="@+id/nameSignup" />
+        <EditText
+            android:id="@+id/retypeAdmn"
+            android:layout_width="325dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/edit_text_shape"
+            android:elevation="10dp"
+            android:fontFamily="@font/kurale"
+            android:hint="Retype Admn. No."
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:paddingLeft="18dp"
+            android:shadowColor="@color/black"
+            android:shadowDx="0"
+            android:shadowDy="4"
+            android:textColorHint="#777777"
+            app:layout_constraintEnd_toEndOf="@+id/admnNo"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/admnNo"
+            app:layout_constraintTop_toBottomOf="@+id/admnNo" />
+    </LinearLayout>
+    </ScrollView>
 
     <Button
         android:id="@+id/logInButton"
@@ -273,9 +282,10 @@
         android:layout_marginStart="192dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="192dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/block" />
+        app:layout_constraintBottom_toTopOf="@id/logInButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

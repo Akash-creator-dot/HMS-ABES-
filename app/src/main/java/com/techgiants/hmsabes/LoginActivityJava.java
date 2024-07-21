@@ -40,7 +40,7 @@ public class LoginActivityJava extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         progressBar = binding.progressBarLogin;
         progressBar.setVisibility(View.GONE);
-        forgotTextLink=findViewById(R.id.forgotPasswordText);
+        forgotTextLink = binding.forgotPasswordText;
 
         // Check if user already logged in
         FirebaseUser currentUser = auth.getCurrentUser();
@@ -63,16 +63,18 @@ public class LoginActivityJava extends AppCompatActivity {
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
+                                    progressBar.setVisibility(View.GONE);
                                     if (task.isSuccessful()) {
-                                        progressBar.setVisibility(View.GONE);
-                                        if (currentUser.isEmailVerified()) {
+                                        FirebaseUser user = auth.getCurrentUser();
+                                        if (user != null && user.isEmailVerified()) {
                                             Toast.makeText(LoginActivityJava.this, "Sign-in Successful.", Toast.LENGTH_SHORT).show();
-                                            startActivity(new Intent(LoginActivityJava.this, MainActivity.class));
+                                            startActivity(new Intent(LoginActivityJava.this, ProfileFragment.class));
                                             finish();
+                                        } else {
+                                            Toast.makeText(LoginActivityJava.this, "Please verify your email.", Toast.LENGTH_SHORT).show();
                                         }
-                                        else {
-                                            Toast.makeText(LoginActivityJava.this, "Sign-in Failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                                        }
+                                    } else {
+                                        Toast.makeText(LoginActivityJava.this, "Sign-in Failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });
@@ -87,23 +89,12 @@ public class LoginActivityJava extends AppCompatActivity {
                 finish();
             }
         });
-    }
 
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        // Check if user already logged in
-        FirebaseUser currentUser = auth.getCurrentUser();
-        if (currentUser != null) {
-            startActivity(new Intent(this, MainActivity.class));
-            finish();
-        }
         forgotTextLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText resetMail=new EditText(v.getContext());
-                AlertDialog.Builder passwordResetDialog=new AlertDialog.Builder(v.getContext());
+                EditText resetMail = new EditText(v.getContext());
+                AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(v.getContext());
                 passwordResetDialog.setTitle("Reset Password?");
                 passwordResetDialog.setMessage("Enter your email to receive reset password link.");
                 passwordResetDialog.setView(resetMail);
@@ -111,7 +102,7 @@ public class LoginActivityJava extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         //extract the mail and set reset link
-                        String mail =resetMail.getText().toString();
+                        String mail = resetMail.getText().toString();
                         auth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
@@ -120,7 +111,7 @@ public class LoginActivityJava extends AppCompatActivity {
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(LoginActivityJava.this, "Error! Reset link not sent."+e.getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivityJava.this, "Error! Reset link not sent." + e.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         });
                     }
@@ -134,6 +125,16 @@ public class LoginActivityJava extends AppCompatActivity {
                 passwordResetDialog.create().show();
             }
         });
-        };
+    }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        // Check if user already logged in
+        FirebaseUser currentUser = auth.getCurrentUser();
+        if (currentUser != null) {
+            startActivity(new Intent(this, ProfileFragment.class));
+            finish();
+        }
+    }
 }
