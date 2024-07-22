@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ComplainsFragment extends Fragment {
     CardView cardelect, cardplum, cardcarp, cardpest, cardsweeper;
@@ -85,14 +86,14 @@ public class ComplainsFragment extends Fragment {
 
     private void startComplainsDetailActivity(String complainType) {
         Intent intent = new Intent(getContext(), ComplainsDetail.class);
-        intent.putExtra("complains", complainType);
-        intent.putExtra("gmail", gmail);
-        intent.putExtra("adm", adm);
-        intent.putExtra("pass", pass);
-        intent.putExtra("room", room);
-        intent.putExtra("dept", dept);
-        intent.putExtra("block", block);
-        intent.putExtra("name", name);
+//        intent.putExtra("complains", complainType);
+//        intent.putExtra("gmail", gmail);
+//        intent.putExtra("adm", adm);
+//        intent.putExtra("pass", pass);
+//        intent.putExtra("room", room);
+//        intent.putExtra("dept", dept);
+//        intent.putExtra("block", block);
+//        intent.putExtra("name", name);
         startActivity(intent);
     }
 }

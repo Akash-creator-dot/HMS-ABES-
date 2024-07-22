@@ -51,19 +51,19 @@ public class ComplainsDetail extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction("com.techgiants.admin.RECEIVE_DATA");
-                intent.setPackage("com.techgiants.admin");
-                intent.putExtra("gmail", gmail);
-                intent.putExtra("adm", adm);
-                intent.putExtra("pass", pass);
-                intent.putExtra("room", room);
-                intent.putExtra("dept", dept);
-                intent.putExtra("block", block);
-                intent.putExtra("name", name);
-                intent.putExtra("type", problems_related.getText().toString());
-                intent.putExtra("description", Complains_related_to.getText().toString());
-                startActivity(intent);
+//                Intent intent = new Intent();
+//                intent.setAction("com.techgiants.admin.RECEIVE_DATA");
+//                intent.setPackage("com.techgiants.admin");
+//                intent.putExtra("gmail", gmail);
+//                intent.putExtra("adm", adm);
+//                intent.putExtra("pass", pass);
+//                intent.putExtra("room", room);
+//                intent.putExtra("dept", dept);
+//                intent.putExtra("block", block);
+//                intent.putExtra("name", name);
+//                intent.putExtra("type", problems_related.getText().toString());
+//                intent.putExtra("description", Complains_related_to.getText().toString());
+//                startActivity(intent);
                 Toast.makeText(ComplainsDetail.this, "The Request has been sent", Toast.LENGTH_SHORT).show();
             }
         });
