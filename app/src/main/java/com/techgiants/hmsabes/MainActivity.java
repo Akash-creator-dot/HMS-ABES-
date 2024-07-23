@@ -89,14 +89,16 @@ public class MainActivity extends AppCompatActivity {
                 } else if (id == R.id.complains) {
                     frag(new ComplainsFragment(), false);
                 } else if (id == R.id.profile) {
-                    frag(new ProfileFragment(), true);
-                } else {
+                    frag(new ProfileFragment(), false);
+                } else if(id==R.id.allotment) {
                     frag(new AllotmentFragment(), false);
+                }else{
+                    frag(new WifiFragment(),true);
                 }
                 return true;
             }
         });
-        navigation.setSelectedItemId(R.id.profile);
+        navigation.setSelectedItemId(R.id.wifi);
     }
 
     public void frag(Fragment fragment, boolean flag) {
