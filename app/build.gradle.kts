@@ -49,6 +49,7 @@ dependencies {
     implementation(libs.firebase.firestore)
     implementation(libs.circleimageview)
     implementation(libs.firebase.storage)
+    implementation(libs.constraintlayout)
     androidTestImplementation(libs.ext.junit)
     implementation (libs.play.services.auth) {
         exclude ("com.google.android.gms", "play-services-auth")
