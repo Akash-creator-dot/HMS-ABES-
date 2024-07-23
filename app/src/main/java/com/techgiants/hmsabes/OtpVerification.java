@@ -42,7 +42,7 @@ Button verifybtn;
                         !input5.getText().toString().trim().isEmpty() &&!input6.getText().toString().trim().isEmpty() ){
                     Toast.makeText(OtpVerification.this, "Verify successful", Toast.LENGTH_SHORT).show();
                 }else{
-                    Toast.makeText(OtpVerification.this, "Please enter all numbers", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(OtpVerification.this, "Please Enter Valid OTP.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
