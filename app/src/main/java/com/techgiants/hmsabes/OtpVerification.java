@@ -1,5 +1,6 @@
 package com.techgiants.hmsabes;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -7,139 +8,81 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.PhoneAuthCredential;
+import com.google.firebase.auth.PhoneAuthProvider;
 
 public class OtpVerification extends AppCompatActivity {
-EditText input1,input2,input3,input4,input5,input6;
-Button verifybtn;
+    private String verificationId;
+    private EditText[] otpFields;
+    private Button verifyButton;
+    private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.otpverification);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-        input1=findViewById(R.id.optenter1);
-        input2=findViewById(R.id.optenter2);
-        input3=findViewById(R.id.optenter3);
-        input4=findViewById(R.id.optenter4);
-        input5=findViewById(R.id.optenter5);
-        input6=findViewById(R.id.optenter6);
-        verifybtn=findViewById(R.id.verifybtn);
-        verifybtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(!input1.getText().toString().trim().isEmpty() &&!input2.getText().toString().trim().isEmpty() &&
-                        !input3.getText().toString().trim().isEmpty() &&!input4.getText().toString().trim().isEmpty() &&
-                        !input5.getText().toString().trim().isEmpty() &&!input6.getText().toString().trim().isEmpty() ){
-                    Toast.makeText(OtpVerification.this, "Verify successful", Toast.LENGTH_SHORT).show();
-                }else{
-                    Toast.makeText(OtpVerification.this, "Please Enter Valid OTP.", Toast.LENGTH_SHORT).show();
+
+        mAuth = FirebaseAuth.getInstance();
+        otpFields = new EditText[]{
+                findViewById(R.id.otp_enter_1),
+                findViewById(R.id.otp_enter_2),
+                findViewById(R.id.otp_enter_3),
+                findViewById(R.id.otp_enter_4),
+                findViewById(R.id.otp_enter_5),
+                findViewById(R.id.otp_enter_6)
+        };
+        verifyButton = findViewById(R.id.verify_button);
+
+        verificationId = getIntent().getStringExtra("backend");
+
+        for (int i = 0; i < otpFields.length - 1; i++) {
+            final int index = i;
+            otpFields[i].addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) { }
+
+                @Override
+                public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                    if (charSequence.length() == 1) {
+                        otpFields[index + 1].requestFocus();
+                    }
                 }
-            }
-        });
-        numberotpmove();
-    }
 
-    private void numberotpmove() {
-        input1.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void afterTextChanged(Editable editable) { }
+            });
+        }
+
+        verifyButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-              if(!s.toString().trim().isEmpty()){
-                  input2.requestFocus();
-              }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-        input2.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(!s.toString().trim().isEmpty()){
-                    input3.requestFocus();
+            public void onClick(View view) {
+                String code = "";
+                for (EditText otpField : otpFields) {
+                    code += otpField.getText().toString().trim();
                 }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-        input3.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(!s.toString().trim().isEmpty()){
-                    input4.requestFocus();
+                if (code.length() == 6 && verificationId != null) {
+                    PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, code);
+                    mAuth.signInWithCredential(credential)
+                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(OtpVerification.this,"Verified",Toast.LENGTH_SHORT).show();
+                                    } else {
+                                        Toast.makeText(OtpVerification.this, "Verification Failed", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
+                } else {
+                    Toast.makeText(OtpVerification.this, "Please enter valid OTP", Toast.LENGTH_SHORT).show();
                 }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-        input4.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(!s.toString().trim().isEmpty()){
-                    input5.requestFocus();
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-        input5.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(!s.toString().trim().isEmpty()){
-                    input6.requestFocus();
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
             }
         });
     }
-
 }

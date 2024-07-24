@@ -10,39 +10,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center_horizontal"
-        >
+        android:gravity="center_horizontal">
+
         <ImageView
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_marginTop="90dp"
-            android:src="@drawable/receivemail"
-            />
+            android:src="@drawable/receivemail" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="Otp Verification"
+            android:text="OTP Verification"
             android:textSize="20sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="Please enter the otp send to you"
+            android:text="Please enter the OTP sent to you"
             android:textSize="20sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
+
             <EditText
                 android:layout_marginStart="60dp"
                 android:layout_width="40dp"
-                android:id="@+id/optenter1"
+                android:id="@+id/otp_enter_1"
                 android:layout_height="46dp"
                 android:gravity="center"
                 android:inputType="number"
@@ -50,107 +50,81 @@
                 android:importantForAutofill="no"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                tools:ignore="LabelFor"
-                />
+                tools:ignore="LabelFor" />
 
             <EditText
                 android:layout_width="40dp"
-                android:id="@+id/optenter2"
+                android:id="@+id/otp_enter_2"
                 android:layout_height="46dp"
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="1"
                 android:importantForAutofill="no"
+                android:layout_marginStart="20dp"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                tools:ignore="LabelFor"
-                />
+                tools:ignore="LabelFor" />
 
             <EditText
                 android:layout_width="40dp"
-                android:id="@+id/optenter3"
+                android:id="@+id/otp_enter_3"
                 android:layout_height="46dp"
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="1"
                 android:importantForAutofill="no"
+                android:layout_marginStart="20dp"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                tools:ignore="LabelFor"
-                />
+                tools:ignore="LabelFor" />
 
             <EditText
                 android:layout_width="40dp"
-                android:id="@+id/optenter4"
+                android:id="@+id/otp_enter_4"
                 android:layout_height="46dp"
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="1"
                 android:importantForAutofill="no"
+                android:layout_marginStart="20dp"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                tools:ignore="LabelFor"
-                />
+                tools:ignore="LabelFor" />
 
             <EditText
                 android:layout_width="40dp"
-                android:id="@+id/optenter5"
+                android:id="@+id/otp_enter_5"
                 android:layout_height="46dp"
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="1"
                 android:importantForAutofill="no"
+                android:layout_marginStart="20dp"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                tools:ignore="LabelFor"
-                />
+                tools:ignore="LabelFor" />
 
             <EditText
                 android:layout_width="40dp"
-                android:id="@+id/optenter6"
+                android:id="@+id/otp_enter_6"
                 android:layout_height="46dp"
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="1"
                 android:importantForAutofill="no"
+                android:layout_marginStart="20dp"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                tools:ignore="LabelFor"
-                />
-
+                tools:ignore="LabelFor" />
         </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="30dp"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:layout_marginStart="20dp"
-            android:textStyle="bold"
-            android:text="Didnt receive otp"
-            android:id="@+id/didntreceiveotp"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:layout_marginStart="20dp"
-            android:textStyle="bold"
-            android:text="Send the otp again"
-            android:id="@+id/sendotpagain"
-            />
-    </LinearLayout>
-        <Button
-            android:id="@+id/verifybtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Verify otp"
-        />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginHorizontal="50dp"
+            android:id="@+id/verify_button"
+            android:text="VERIFY OTP"
+            android:backgroundTint="@color/black" />
     </LinearLayout>
 </ScrollView>

@@ -47,18 +47,8 @@ public class LeaveFragment extends Fragment {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent();
-//                intent.setAction("com.techgiants.admin.RECEIVE_DATA");
-//                intent.setPackage("com.techgiants.admin");
-//                intent.putExtra("gmail", gmail);
-//                intent.putExtra("adm", adm);
-//                intent.putExtra("pass", pass);
-//                intent.putExtra("room", room);
-//                intent.putExtra("dept", dept);
-//                intent.putExtra("block", block);
-//                intent.putExtra("name", name);
-//                startActivity(intent);
-                btn.setText("PENDING REQUEST");
+             Intent intent=new Intent(getContext(), OtpSending.class);
+             startActivity(intent);
             }
         });
         // Set listeners for date and time pickers
