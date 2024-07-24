@@ -20,14 +20,6 @@
                 android:exported="false"
                 android:screenOrientation="portrait"/>
             <activity
-                android:name=".LoginToWifiActivity"
-                android:exported="false"
-                android:screenOrientation="portrait"/>
-            <activity
-                android:name=".OtpSending"
-                android:exported="false"
-                android:screenOrientation="portrait"/>
-            <activity
                 android:name=".Complaindata"
                 android:exported="false"
                 android:screenOrientation="portrait"/>
