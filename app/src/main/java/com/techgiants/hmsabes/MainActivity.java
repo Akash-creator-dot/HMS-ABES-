@@ -21,7 +21,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView navigation;
-    String gmails, adm, retyadm, pas, retypas, romno, dept,blockname;
+    String gmails, adm, retyadm, pas, retypas, romno, dept,blockname,names;
     private FirebaseFirestore firestore;
     private FirebaseAuth auth;
 
@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                     .addOnSuccessListener(documentSnapshot -> {
                                 if (documentSnapshot.exists()) {
                                     gmails = documentSnapshot.getString("email");
+                                    names=documentSnapshot.getString("name");
                                     adm = documentSnapshot.getString("admission_no");
                                     retyadm = documentSnapshot.getString("retype_admission_no");
                                     pas = documentSnapshot.getString("password");
@@ -58,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Retrieve values from SharedPreferences
         SharedPreferences sharedPreferences = getSharedPreferences("UserDetails", MODE_PRIVATE);
+        String name=sharedPreferences.getString("name",null);
         String gmail = sharedPreferences.getString("gmail", null);
         String admission = sharedPreferences.getString("adm", null);
         String retypeadm = sharedPreferences.getString("readm", null);
@@ -70,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         gmails = gmail;
+        names=name;
         adm = admission;
         retyadm = retypeadm;
         pas = pass;
@@ -106,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         Bundle bundle = new Bundle();
         bundle.putString("gmail", gmails);
+        bundle.putString("name",names);
         bundle.putString("adm", adm);
         bundle.putString("retyadm", retyadm);
         bundle.putString("pass", pas);
