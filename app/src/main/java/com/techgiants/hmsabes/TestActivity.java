@@ -1,4 +1,4 @@
 package com.techgiants.hmsabes;
 
-public class TestSignup {
+public class TestActivity {
 }
