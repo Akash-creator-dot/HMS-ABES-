@@ -307,56 +307,41 @@
                         </com.google.android.material.textfield.TextInputLayout>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
+                <ProgressBar
+                    android:id="@+id/progressBarSignup"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintBottom_toTopOf="@id/logInButton" />
+                <Button
+                    android:id="@+id/registerButton"
+                    android:layout_width="155dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_height="55dp"
+                    android:layout_marginBottom="30dp"
+                    android:backgroundTint="#85FF0000"
+                    android:text="Register"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="10dp" />
+                <Button
+                    android:id="@+id/logInButton"
+                    android:layout_height="55dp"
+                    android:layout_width="155dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="30dp"
+                    android:backgroundTint="#85FF0000"
+                    android:text="Login"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="10dp" />
             </LinearLayout>
-
         </ScrollView>
-        <Button
-            android:id="@+id/logInButton"
-            android:layout_height="55dp"
-            android:layout_width="155dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="2dp"
-            android:layout_marginBottom="30dp"
-            android:backgroundTint="#85FF0000"
-            android:text="Login"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:cornerRadius="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/registerButton"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/registerButton"
-            android:layout_width="155dp"
-            android:layout_height="55dp"
-            android:layout_marginEnd="25dp"
-            android:layout_marginBottom="30dp"
-            android:backgroundTint="#85FF0000"
-            android:text="Register"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:cornerRadius="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/logInButton" />
-
-        <ProgressBar
-            android:id="@+id/progressBarSignup"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="192dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="192dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/logInButton" />
     </RelativeLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
