@@ -40,6 +40,7 @@
     <string name="buy_2">AT $9.99</string>
     <string name="movie">Movie</string>
     <string name="problemrelatedto">Problem Related to</string>
+    <string name="wifi_note">Note: Please Connect To ABESEC Wifi Network Before Pressing The Connect Button.</string>
 
     <!-- Error messages -->
     <string name="error_fragment_message">An error occurred</string>

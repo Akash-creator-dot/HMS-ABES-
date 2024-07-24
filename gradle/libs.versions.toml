@@ -17,6 +17,7 @@ playServicesAuth = "21.2.0"
 firebaseFirestore = "25.0.0"
 firebaseStorage = "21.0.0"
 constraintlayout = "2.1.4"
+lottie = "6.4.1"
 
 [libraries]
 appcompat-v151 = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
@@ -33,6 +34,7 @@ play-services-auth = { module = "com.google.android.gms:play-services-auth", ver
 firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
 firebase-storage = { group = "com.google.firebase", name = "firebase-storage", version.ref = "firebaseStorage" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+lottie = { group = "com.airbnb.android", name = "lottie", version.ref = "lottie" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
