@@ -30,22 +30,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="Please enter the OTP sent to you"
+            android:text="Please enter the OTP sent to you."
             android:textSize="20sp"
             android:textStyle="bold" />
 
         <LinearLayout
-            android:layout_marginEnd="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="12dp">
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="15dp"
+            android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/otp_enter_1"
                 android:layout_width="40dp"
                 android:layout_height="46dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="40dp"
                 android:gravity="center"
                 android:importantForAutofill="no"
                 android:inputType="number"
@@ -55,66 +55,66 @@
                 tools:ignore="LabelFor" />
 
             <EditText
-                android:layout_width="40dp"
                 android:id="@+id/otp_enter_2"
+                android:layout_width="40dp"
                 android:layout_height="46dp"
+                android:layout_marginStart="20dp"
                 android:gravity="center"
+                android:importantForAutofill="no"
                 android:inputType="number"
                 android:maxLength="1"
-                android:importantForAutofill="no"
-                android:layout_marginStart="20dp"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:ignore="LabelFor" />
 
             <EditText
-                android:layout_width="40dp"
                 android:id="@+id/otp_enter_3"
+                android:layout_width="40dp"
                 android:layout_height="46dp"
+                android:layout_marginStart="20dp"
                 android:gravity="center"
+                android:importantForAutofill="no"
                 android:inputType="number"
                 android:maxLength="1"
-                android:importantForAutofill="no"
-                android:layout_marginStart="20dp"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:ignore="LabelFor" />
 
             <EditText
-                android:layout_width="40dp"
                 android:id="@+id/otp_enter_4"
+                android:layout_width="40dp"
                 android:layout_height="46dp"
+                android:layout_marginStart="20dp"
                 android:gravity="center"
+                android:importantForAutofill="no"
                 android:inputType="number"
                 android:maxLength="1"
-                android:importantForAutofill="no"
-                android:layout_marginStart="20dp"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:ignore="LabelFor" />
 
             <EditText
-                android:layout_width="40dp"
                 android:id="@+id/otp_enter_5"
+                android:layout_width="40dp"
                 android:layout_height="46dp"
+                android:layout_marginStart="20dp"
                 android:gravity="center"
+                android:importantForAutofill="no"
                 android:inputType="number"
                 android:maxLength="1"
-                android:importantForAutofill="no"
-                android:layout_marginStart="20dp"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:ignore="LabelFor" />
 
             <EditText
-                android:layout_width="40dp"
                 android:id="@+id/otp_enter_6"
+                android:layout_width="40dp"
                 android:layout_height="46dp"
+                android:layout_marginStart="20dp"
                 android:gravity="center"
+                android:importantForAutofill="no"
                 android:inputType="number"
                 android:maxLength="1"
-                android:importantForAutofill="no"
-                android:layout_marginStart="20dp"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:ignore="LabelFor" />
