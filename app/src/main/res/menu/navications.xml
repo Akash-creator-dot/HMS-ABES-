@@ -17,8 +17,4 @@
         android:title="Ticket"
         android:icon="@drawable/ic_complains"
         />
-    <item android:id="@+id/allotment"
-        android:title="Allotment"
-        android:icon="@drawable/ic_allotment"
-        />
 </menu>

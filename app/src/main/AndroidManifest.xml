@@ -56,6 +56,10 @@
                 android:exported="false"
                 android:screenOrientation="portrait" />
             <activity
+                android:name=".OtpVerification"
+                android:exported="false"
+                android:screenOrientation="portrait" />
+            <activity
                 android:name=".ComplainsDetail"
                 android:exported="false"
                 android:screenOrientation="portrait"/>

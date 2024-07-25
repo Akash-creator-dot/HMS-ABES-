@@ -94,8 +94,6 @@ public class MainActivity extends AppCompatActivity {
             frag(new ComplainsFragment(), false);
         } else if (id == R.id.leave) {
             frag(new LeaveFragment(), false);
-        } else if(id==R.id.allotment) {
-            frag(new AllotmentFragment(), false);
         }else{
             //profile
             frag(new ProfileFragment(), false);
