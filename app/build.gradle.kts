@@ -51,6 +51,7 @@ dependencies {
     implementation(libs.firebase.storage)
     implementation(libs.constraintlayout)
     implementation(libs.lottie)
+    implementation(libs.firebase.messaging)
     androidTestImplementation(libs.ext.junit)
     implementation (libs.play.services.auth) {
         exclude ("com.google.android.gms", "play-services-auth")

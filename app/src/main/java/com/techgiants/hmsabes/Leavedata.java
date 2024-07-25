@@ -29,8 +29,8 @@ public class Leavedata extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // Adding sample leave history entries
-        arrleave.add(new LeaveHistoryStracture("12/05/2024", "2:00 PM"));
-        arrleave.add(new LeaveHistoryStracture("14/05/2024", "3:00 PM"));
+        arrleave.add(new LeaveHistoryStracture("12/05/2024","2:00 PM"));
+        arrleave.add(new LeaveHistoryStracture("14/05/2024","3:00 PM"));
         arrleave.add(new LeaveHistoryStracture("12/05/2024","2:00 PM"));
         arrleave.add(new LeaveHistoryStracture("14/05/2024","3:00 PM"));
         arrleave.add(new LeaveHistoryStracture("30/05/2024","2:13 PM"));
