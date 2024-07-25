@@ -90,11 +90,17 @@ public class MainActivity extends AppCompatActivity {
         int id = menuItem.getItemId();
         if (id == R.id.wifi) {
             frag(new WifiFragment(),true);
-        } else if (id == R.id.leave) {
+        }
+        else if (id == R.id.leave) {
             frag(new LeaveFragment(), false);
-        } else if (id == R.id.complains) {
+        }
+        else if (id == R.id.dashboard) {
+            frag(new DashboardFragment(), false);
+        }
+        else if (id == R.id.complains) {
             frag(new ComplainsFragment(), false);
-        }else{
+        }
+        else{
             //profile
             frag(new ProfileFragment(), false);
         }

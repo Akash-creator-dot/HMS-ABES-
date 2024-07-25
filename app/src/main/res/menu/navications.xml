@@ -9,6 +9,10 @@
         android:title="Leave"
         android:icon="@drawable/ic_leave"
         />
+    <item android:id="@+id/dashboard"
+        android:title="Dashboard"
+        android:icon="@drawable/dashboardicon"
+        />
     <item android:id="@+id/complains"
         android:title="Ticket"
         android:icon="@drawable/ic_complains"
