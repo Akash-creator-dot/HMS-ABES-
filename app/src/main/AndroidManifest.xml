@@ -20,27 +20,15 @@
                 android:exported="false"
                 android:screenOrientation="portrait"/>
             <activity
+                android:name=".LoginToWifiActivity"
+                android:exported="false"
+                android:screenOrientation="portrait"/>
+            <activity
                 android:name=".Complaindata"
                 android:exported="false"
                 android:screenOrientation="portrait"/>
             <activity
-                android:name=".dnbHostelFloorDetails"
-                android:exported="false"
-                android:screenOrientation="portrait"/>
-            <activity
-                android:name=".dnbHostelFloor"
-                android:exported="false"
-                android:screenOrientation="portrait"/>
-            <activity
                 android:name=".LoginActivityJava"
-                android:exported="false"
-                android:screenOrientation="portrait"/>
-            <activity
-                android:name=".HostelFloor"
-                android:exported="false"
-                android:screenOrientation="portrait"/>
-            <activity
-                android:name=".HostelFloorDetail"
                 android:exported="false"
                 android:screenOrientation="portrait"/>
             <activity
