@@ -209,6 +209,24 @@
                         android:hint="@string/student_mobile_number"
                         android:inputType="number"
                         android:textSize="16sp" />
+                    <EditText
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:textColorHint="#000000"
+                        android:autofillHints="CO Name"
+                        android:hint="CO Name"
+                        android:inputType="text"
+                        android:textSize="16sp" />
+                     <EditText
+                         android:layout_marginTop="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:textColorHint="#000000"
+                    android:autofillHints="Relation Ship"
+                    android:hint="Relation Ship"
+                    android:inputType="text"
+                    android:textSize="16sp" />
                 </LinearLayout>
 
                 <!--                Submit Button-->

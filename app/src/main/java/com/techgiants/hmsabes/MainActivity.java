@@ -21,10 +21,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
-    private ArrayList<Student_Details> arrdetails = new ArrayList<>();
     private BottomNavigationView navigation;
-    private String gmails, adm, retyadm, pas, retypas, romno, dept, blockname;
+    private String gmails, adm, retyadm, pas, retypas, romno, dept, blockname,name;
     private FirebaseFirestore firestore;
     private FirebaseAuth auth;
 
@@ -66,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void fetchUserDetails(DocumentSnapshot documentSnapshot) {
         gmails = documentSnapshot.getString("email");
+        name = documentSnapshot.getString("name");
         adm = documentSnapshot.getString("admission_no");
         retyadm = documentSnapshot.getString("retype_admission_no");
         pas = documentSnapshot.getString("password");
@@ -73,8 +72,6 @@ public class MainActivity extends AppCompatActivity {
         romno = documentSnapshot.getString("room_no");
         dept = documentSnapshot.getString("department");
         blockname = documentSnapshot.getString("block");
-
-        arrdetails.add(new Student_Details("name", romno, blockname, dept, adm));
     }
 
     private void setupBottomNavigationView() {
@@ -109,10 +106,12 @@ public class MainActivity extends AppCompatActivity {
     public void frag(Fragment fragment, boolean flag) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        // Bundle user details
         Bundle bundle = new Bundle();
-        bundle.putParcelableArrayList("array", arrdetails);
+        bundle.putString("name","Akahs");
+        bundle.putString("adm",adm);
+        bundle.putString("roomno",romno);
+        bundle.putString("dept",dept);
+        bundle.putString("blockname",blockname);
         fragment.setArguments(bundle);
 
         if (flag) {

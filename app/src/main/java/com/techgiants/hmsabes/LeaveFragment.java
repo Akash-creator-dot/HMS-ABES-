@@ -19,6 +19,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -37,13 +38,21 @@ public class LeaveFragment extends Fragment {
         timeOfReturnTxt = view.findViewById(R.id.timeOfReturnTxt);
         Button btn = view.findViewById(R.id.leavefragmentbtn);
         Bundle bundle = getArguments();
-            String gmail = bundle.getString("gmail");
-            String adm = bundle.getString("adm");
-            String pass = bundle.getString("pass");
-            String room = bundle.getString("room");
-            String dept = bundle.getString("dept");
-            String block = bundle.getString("block");
+        if (bundle != null) {
             String name = bundle.getString("name");
+            String adm = bundle.getString("adm");
+            String roomno = bundle.getString("roomno");
+            String dept = bundle.getString("dept");
+            String blockname = bundle.getString("blockname");
+        }
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), OtpSending.class);
+                startActivity(intent);
+            }
+        });
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

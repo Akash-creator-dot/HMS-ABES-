@@ -43,7 +43,7 @@
 
             <EditText
                 android:id="@+id/otp_enter_1"
-                android:layout_width="40dp"
+                android:layout_width="30dp"
                 android:layout_height="46dp"
                 android:hint="*"
                 android:layout_marginStart="40dp"
@@ -57,7 +57,7 @@
 
             <EditText
                 android:id="@+id/otp_enter_2"
-                android:layout_width="40dp"
+                android:layout_width="30dp"
                 android:layout_height="46dp"
                 android:layout_marginStart="20dp"
                 android:hint="*"
@@ -71,7 +71,7 @@
 
             <EditText
                 android:id="@+id/otp_enter_3"
-                android:layout_width="40dp"
+                android:layout_width="30dp"
                 android:layout_height="46dp"
                 android:layout_marginStart="20dp"
                 android:hint="*"
@@ -85,7 +85,7 @@
 
             <EditText
                 android:id="@+id/otp_enter_4"
-                android:layout_width="40dp"
+                android:layout_width="30dp"
                 android:layout_height="46dp"
                 android:layout_marginStart="20dp"
                 android:gravity="center"
@@ -99,7 +99,7 @@
 
             <EditText
                 android:id="@+id/otp_enter_5"
-                android:layout_width="40dp"
+                android:layout_width="30dp"
                 android:layout_height="46dp"
                 android:layout_marginStart="20dp"
                 android:gravity="center"
@@ -113,7 +113,7 @@
 
             <EditText
                 android:id="@+id/otp_enter_6"
-                android:layout_width="40dp"
+                android:layout_width="30dp"
                 android:layout_height="46dp"
                 android:layout_marginStart="20dp"
                 android:gravity="center"
@@ -123,6 +123,7 @@
                 android:maxLength="1"
                 android:textSize="24sp"
                 android:textStyle="bold"
+                android:layout_marginEnd="15dp"
                 tools:ignore="LabelFor" />
         </LinearLayout>
 
