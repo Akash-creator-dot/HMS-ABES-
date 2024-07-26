@@ -1,8 +1,8 @@
 package com.techgiants.hmsabes;
 
-public class LeaveHistoryStracture {
+public class LeaveHistoryStructure {
     String date,time;
-    public LeaveHistoryStracture(String date,String time){
+    public LeaveHistoryStructure(String date, String time){
         this.date=date;
         this.time=time;
     }

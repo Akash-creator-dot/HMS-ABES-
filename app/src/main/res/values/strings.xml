@@ -1,19 +1,19 @@
 <resources>
     <string name="app_name">HMS ABES</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="canteen">This fragment will use for canteen</string>
-    <string name="allotment">This fragment will use for allotment</string>
-    <string name="complains">This fragment will use for complains</string>
-    <string name="leave">This fragment will use for leave</string>
-    <string name="select">Select Item</string>
+    <string name="canteen">Canteen</string>
+    <string name="allotment">Allotment</string>
+    <string name="complains">Complains</string>
+    <string name="leave">Leave</string>
+    <string name="select">Select</string>
     <string name="select_department">Select Department</string>
     <string name="admission_no">Admission No.</string>
-    <string name="enter_your_admission_number">Enter Your Admission Number...</string>
-    <string name="enter_your_name">Enter Your Name...</string>
+    <string name="enter_your_admission_number">Enter Your Admission Number…</string>
+    <string name="enter_your_name">Enter Your Name…</string>
     <string name="name">Name</string>
     <string name="select_block">Select Block</string>
     <string name="room_no">Room No.</string>
-    <string name="enter_your_room_no">Enter Your Room No...</string>
+    <string name="enter_your_room_no">Enter Your Room No…</string>
     <string name="date">Date</string>
     <string name="select_date_of_leave">Select Date of Leave</string>
     <string name="select_time_of_leave">Select Time of Leave</string>
@@ -25,7 +25,7 @@
     <string name="date_of_return">Date of Return</string>
     <string name="student_mobile_no">Student Mobile No.</string>
     <string name="student_mobile_number">Student Mobile Number</string>
-    <string name="submit_leave_form">Submit Leave Form</string>
+
     <string name="title_activity_main2">Leanback MainActivity2</string>
     <string name="browse_title">Videos by Your Company</string>
     <string name="related_movies">Related Videos</string>
@@ -42,10 +42,43 @@
     <string name="problemrelatedto">Problem Related to</string>
     <string name="wifi_note">Note: Please Connect To ABESEC Wifi Network Before Pressing The Connect Button.</string>
 
+
+    <!--  Submit Button Strings -->
+    <string name="submit_leave_form">Submit Leave Form</string>
+    <string name="submit_complaint">Submit Complaint</string>
+
+
     <!-- Error messages -->
     <string name="error_fragment_message">An error occurred</string>
     <string name="dismiss_error">Dismiss</string>
     <string name="title_activity_main3">Leanback MainActivity3</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="wi_fi">Wi-fi</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="ticket">Ticket</string>
+    <string name="profile">Profile</string>
+    <string name="todo">TODO</string>
+    <string name="describe_the_problem">Describe the problem…</string>
+    <string name="auto_complete_text_view">Auto Complete Text View</string>
+    <string name="describe_your_problem">Describe your problem...</string>
+    <string name="log_in">LOG-IN</string>
+    <string name="hms_abes">HMS-ABES</string>
+    <string name="email_id">Email Id</string>
+    <string name="password">Password</string>
+    <string name="forgot_password_click_here">Forgot password? Click here.</string>
+    <string name="don_t_have_an_account_click_on_regsiter_below">Don\'t have an account? Click on Regsiter below.</string>
+    <string name="register">Register</string>
+    <string name="sign_up">SIGN-UP</string>
+    <string name="your_email_id">Your Email Id</string>
+    <string name="block">Block</string>
+    <string name="department">Department</string>
+    <string name="admn_no">Admn. No.</string>
+    <string name="retype_admn_no">Retype Admn. No.</string>
+    <string name="account_already_exist_click_on_login_below">Account Already Exist? Click on Login below.</string>
+    <string name="retype_password">Retype Password</string>
+    <string name="abes_engineering">ABES Engineering</string>
+    <string name="college">College</string>
+    <string name="section">Section</string>
+
 </resources>

@@ -1,9 +1,9 @@
 package com.techgiants.hmsabes;
 
-public class ComplainHistoryStracture {
+public class ComplainHistoryStructure {
     String date, section;
 
-    public ComplainHistoryStracture(String date, String section) {
+    public ComplainHistoryStructure(String date, String section) {
         this.date = date;
         this.section = section;
     }

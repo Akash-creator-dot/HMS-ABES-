@@ -33,12 +33,13 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="end"
+                    android:contentDescription="@string/todo"
                     android:src="@drawable/abeslogo1"
                     tools:layout_editor_absoluteX="365dp"
                     tools:layout_editor_absoluteY="16dp" />
 
                 <TextView
-                    android:id="@+id/complaintype"
+                    android:id="@+id/complainType"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
@@ -51,51 +52,56 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="18dp"
                     android:text="@string/name"
-                    android:textColor="#0CA0F0"
+                    android:textColor="@color/black"
                     android:textSize="12sp" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                    android:layout_width="match_parent"
+                    android:layout_width="325dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:hint="@+id/complainsrelatedto">
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:hint="@string/select"
+                    android:layout_margin="16dp">
 
                     <AutoCompleteTextView
-                        android:id="@+id/problemrelatedto_txt_auto"
+                        android:id="@+id/problemRelatedToTextAuto"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="16sp"
-                        />
+                        tools:ignore="LabelFor" />
 
                 </com.google.android.material.textfield.TextInputLayout>
                 <EditText
-                    android:id="@+id/complainsdescription"
+                    android:id="@+id/complainsDescription"
                     android:layout_width="325dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="20dp"
+                    android:autofillHints=""
                     android:background="#1EC1A1"
                     android:ems="10"
+                    android:layout_gravity="center"
                     android:elevation="2dp"
-                    android:fontFamily="@font/kurale"
-                    android:hint="Describe the problem"
+                    android:fontFamily="@font/adamina"
+                    android:hint="@string/describe_the_problem"
                     android:inputType="text"
                     android:textColor="@color/black"
-                    android:paddingLeft="18dp"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
                     android:shadowColor="@color/black"
-                    android:textColorHint="#777777"
+                    android:textColorHint="#000000"
                     />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="wrap_content"
-                    android:id="@+id/complaindetailsbtn"
+                    android:id="@+id/complainDetailsBtn"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
                     android:background="@drawable/button_bg"
                     android:paddingHorizontal="12dp"
-                    android:text="Submit Complaint" />
+                    android:text="@string/submit_complaint" />
 
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>

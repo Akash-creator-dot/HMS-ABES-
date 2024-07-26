@@ -18,17 +18,17 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-
-            android:layout_gravity="right"
+            android:layout_gravity="end"
+            android:contentDescription="@string/todo"
             android:src="@drawable/abeslogo1" />
     </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomnavigation"
+        android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="68dp"
         android:layout_alignParentBottom="true"
         android:background="@drawable/gradient_bg"
         app:labelVisibilityMode="labeled"
-        app:menu="@menu/navications" />
+        app:menu="@menu/navigation_menu" />
 </RelativeLayout>

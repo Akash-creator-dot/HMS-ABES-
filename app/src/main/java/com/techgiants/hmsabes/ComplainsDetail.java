@@ -31,10 +31,10 @@ public class ComplainsDetail extends AppCompatActivity {
                 "Paint",
                 "Pests"
         };
-        TextView txtcmp = findViewById(R.id.complaintype);
-        problems_related = findViewById(R.id.problemrelatedto_txt_auto);
-        Complains_related_to = findViewById(R.id.complainsdescription);
-        Button btn = findViewById(R.id.complaindetailsbtn);
+        TextView txtcmp = findViewById(R.id.complainType);
+        problems_related = findViewById(R.id.problemRelatedToTextAuto);
+        Complains_related_to = findViewById(R.id.complainsDescription);
+        Button btn = findViewById(R.id.complainDetailsBtn);
 
         Intent intent = getIntent();
         String field = intent.getStringExtra("complains");

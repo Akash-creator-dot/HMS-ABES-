@@ -105,7 +105,7 @@ public class LeaveFragment extends Fragment {
 
     // Helper method to update EditText with selected time
     private void updateTimeLabel(EditText editText, Calendar calendar) {
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
+        SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:aa", Locale.getDefault());
         editText.setText(sdf.format(calendar.getTime()));
     }
 }

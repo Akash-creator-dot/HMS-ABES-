@@ -13,7 +13,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/gradient_bg"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -26,6 +27,7 @@
                         android:layout_width="70dp"
                         android:layout_height="110dp"
                         android:layout_gravity="center_horizontal"
+                        android:contentDescription="@string/todo"
                         app:srcCompat="@drawable/logo_removebg_preview"
                         android:layout_marginTop="15dp"/>
 
@@ -33,7 +35,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/krona_one"
-                        android:text="HMS-ABES"
+                        android:text="@string/hms_abes"
                         android:textStyle="bold"
                         android:textColor="@color/white"
                         android:textSize="40sp"
@@ -70,8 +72,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:layout_margin="16dp"
-                            android:fontFamily="@font/kurale"
-                            android:text="LOG-IN"
+                            android:fontFamily="@font/kurale_regular"
+                            android:text="@string/log_in"
                             android:textColor="@color/black"
                             android:textSize="30sp"
                             android:textStyle="bold" />
@@ -90,9 +92,10 @@
                                 android:elevation="10dp"
                                 android:ems="10"
                                 android:textColor="@color/black"
-                                android:hint="Email Id"
+                                android:hint="@string/email_id"
                                 android:inputType="textEmailAddress"
-                                android:paddingLeft="18dp"
+                                android:paddingStart="18dp"
+                                android:paddingEnd="18dp"
                                 android:shadowColor="@color/black"
                                 android:shadowDx="0"
                                 android:shadowDy="4"
@@ -114,9 +117,10 @@
                                 android:elevation="10dp"
                                 android:ems="10"
                                 android:textColor="@color/black"
-                                android:hint="Password"
+                                android:hint="@string/password"
                                 android:inputType="textPassword"
-                                android:paddingLeft="18dp"
+                                android:paddingStart="18dp"
+                                android:paddingEnd="18dp"
                                 android:shadowColor="@color/black"
                                 android:shadowDx="0"
                                 android:shadowDy="4"
@@ -143,10 +147,11 @@
                     android:layout_gravity="center"
                     android:layout_marginEnd="2dp"
                     android:backgroundTint="#85FF0000"
-                    android:text="Login"
+                    android:text="@string/log_in"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
+                    android:contentDescription="@string/log_in"
                     app:cornerRadius="10dp" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -155,7 +160,7 @@
                     android:textSize="12sp"
                     android:textStyle="bold"
                     android:layout_marginTop="12dp"
-                    android:text="Don't have an account? Click on Regsiter below."
+                    android:text="@string/don_t_have_an_account_click_on_regsiter_below"
                     android:layout_gravity="center_horizontal"/>
                 <Button
                     android:id="@+id/registerButton"
@@ -164,7 +169,7 @@
                     android:layout_height="55dp"
                     android:layout_marginBottom="30dp"
                     android:backgroundTint="#85FF0000"
-                    android:text="Register"
+                    android:text="@string/register"
                     android:layout_gravity="center"
                     android:textColor="@color/black"
                     android:textSize="20sp"

@@ -3,11 +3,8 @@ package com.techgiants.hmsabes;
 import static android.app.PendingIntent.getActivity;
 import static android.content.ContentValues.TAG;
 
-import static androidx.core.content.ContextCompat.startActivity;
-
 import android.content.Intent;
 import android.net.Uri;
-import android.nfc.Tag;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -102,7 +99,7 @@ public class ProfileFragment extends Fragment {
 
 
         Intent iLeave = new Intent(getActivity(), Leavedata.class);
-        Intent iComplain = new Intent(getActivity(), Complaindata.class);
+        Intent iComplain = new Intent(getActivity(), ComplainData.class);
 
         btnLeave.setOnClickListener(new View.OnClickListener() {
             @Override

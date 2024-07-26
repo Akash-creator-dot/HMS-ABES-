@@ -2,7 +2,6 @@ package com.techgiants.hmsabes;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -79,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupBottomNavigationView() {
-        navigation = findViewById(R.id.bottomnavigation);
+        navigation = findViewById(R.id.bottomNavigation);
         navigation.setItemIconTintList(null);
         navigation.setOnItemSelectedListener(this::onNavigationItemSelected);
         navigation.setSelectedItemId(R.id.wifi);

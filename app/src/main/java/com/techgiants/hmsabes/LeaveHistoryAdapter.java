@@ -4,8 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -16,9 +14,9 @@ import java.util.ArrayList;
 
 public class LeaveHistoryAdapter extends RecyclerView.Adapter<LeaveHistoryAdapter.ViewHolder> {
     Context context;
-    ArrayList<LeaveHistoryStracture> arrleaves;
+    ArrayList<LeaveHistoryStructure> arrleaves;
 
-    LeaveHistoryAdapter(Context context, ArrayList<LeaveHistoryStracture> arrleaves) {
+    LeaveHistoryAdapter(Context context, ArrayList<LeaveHistoryStructure> arrleaves) {
         this.context = context;
         this.arrleaves = arrleaves;
     }

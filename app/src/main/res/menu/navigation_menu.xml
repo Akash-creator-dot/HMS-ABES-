@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/wifi"
-        android:title="Wifi"
+        android:title="@string/wi_fi"
         android:icon="@drawable/wifi"
         />
     <item android:id="@+id/leave"
-        android:title="Leave"
+        android:title="@string/leave"
         android:icon="@drawable/ic_leave"
         />
     <item android:id="@+id/dashboard"
-        android:title="Dashboard"
+        android:title="@string/dashboard"
         android:icon="@drawable/dashboardicon"
         />
     <item android:id="@+id/complains"
-        android:title="Ticket"
+        android:title="@string/ticket"
         android:icon="@drawable/ic_complains"
         />
     <item android:id="@+id/profile"
-        android:title="Profile"
+        android:title="@string/profile"
         android:icon="@drawable/profile"
         />
 </menu>

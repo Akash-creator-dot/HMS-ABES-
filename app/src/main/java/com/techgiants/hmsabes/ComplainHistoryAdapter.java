@@ -13,9 +13,9 @@ import java.util.ArrayList;
 
 public class ComplainHistoryAdapter extends RecyclerView.Adapter<ComplainHistoryAdapter.ViewHolder> {
     Context context;
-    ArrayList<ComplainHistoryStracture> arrcomplains;
+    ArrayList<ComplainHistoryStructure> arrcomplains;
 
-    public ComplainHistoryAdapter(Context context, ArrayList<ComplainHistoryStracture> arrcomplains) {
+    public ComplainHistoryAdapter(Context context, ArrayList<ComplainHistoryStructure> arrcomplains) {
         this.context = context;
         this.arrcomplains = arrcomplains;
     }
@@ -23,13 +23,13 @@ public class ComplainHistoryAdapter extends RecyclerView.Adapter<ComplainHistory
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.complainslayout, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.complains_layout, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        ComplainHistoryStracture complain = arrcomplains.get(position);
+        ComplainHistoryStructure complain = arrcomplains.get(position);
         holder.txtdate.setText(complain.getdate());
         holder.txtsectin.setText(complain.getsection());
     }
@@ -46,7 +46,7 @@ public class ComplainHistoryAdapter extends RecyclerView.Adapter<ComplainHistory
         public ViewHolder(View itemView) {
             super(itemView);
             txtdate = itemView.findViewById(R.id.complainhistorydate);
-            txtsectin = itemView.findViewById(R.id.complainhistorysection);
+            txtsectin = itemView.findViewById(R.id.complainHistorySection);
         }
     }
 }
