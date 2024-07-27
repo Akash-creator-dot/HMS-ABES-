@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="@drawable/signup_bg"
     android:padding="16dp"
     tools:context=".OtpSending">
     <RelativeLayout
@@ -71,21 +72,22 @@
                     android:textColor="@color/black"
         android:inputType="phone"
         android:padding="10dp" />
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp" />
 
     <Button
         android:id="@+id/get_otp_button"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_gravity="center"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
         android:text="Get OTP" />
-    <ProgressBar
-        android:layout_marginStart="140dp"
-        android:id="@+id/progress_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:layout_marginTop="16dp" />
+
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
