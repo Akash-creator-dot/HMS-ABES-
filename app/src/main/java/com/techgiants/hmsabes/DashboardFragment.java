@@ -36,10 +36,11 @@ public class DashboardFragment extends Fragment {
         List<SlideModel> imageList = new ArrayList<>();
 
         // Add images and titles to the list
-        imageList.add(new SlideModel("https://bit.ly/2YoJ77H", "The animal population decreased by 58 percent in 42 years.", ScaleTypes.CENTER_CROP));
-        imageList.add(new SlideModel("https://bit.ly/2BteuF2", "Elephants and tigers may become extinct.", ScaleTypes.CENTER_CROP));
-        imageList.add(new SlideModel("https://4.bp.blogspot.com/-8U-yeWQyT-g/XvEld2GJKQI/AAAAAAAAAQU/EaqkAB8h8g0kDDDowQ3-2MxvHU1R7S6_QCLcBGAsYHQ/s1600/hands.jpg", "And people do that.", ScaleTypes.FIT));
-
+        imageList.add(new SlideModel("https://www.mappls.com/place/HK7TU9_1675002762189_0.png", "ABES Engineering College Established in 2000.", ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel("https://abes.ac.in/images1/placement2022.jpg", "ABES Engineering College Placement is Better than any other Private College in AKTU", ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel("https://i.ytimg.com/vi/vGoiqOA6O2g/maxresdefault.jpg", "It's is In Ghaziabad", ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel("https://abes.ac.in/images1/ece/g%20(23).jpg", "Abes offers every student Industrial Visit every year.", ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel("https://abes.ac.in/images/life/af3.jpg", "Abes has more than 30 computers lab", ScaleTypes.CENTER_CROP));
         // Find the ImageSlider view and set the image list
         ImageSlider imageSlider = view.findViewById(R.id.image_slider);
         imageSlider.setImageList(imageList);
