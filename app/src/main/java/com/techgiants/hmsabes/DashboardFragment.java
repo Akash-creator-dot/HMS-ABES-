@@ -3,6 +3,8 @@ package com.techgiants.hmsabes;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,15 +17,20 @@ import com.denzcoskun.imageslider.models.SlideModel;
 import java.util.ArrayList;
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class DashboardFragment extends Fragment {
+    private CircleImageView wifilogo, leavelogo, ticketlogo, profilelogo, circulationslogo, eventslogo;
+
     public DashboardFragment() {
         // Required empty public constructor
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_dashboard, container, false);
+        View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
 
         // Create image list
         List<SlideModel> imageList = new ArrayList<>();
@@ -37,6 +44,59 @@ public class DashboardFragment extends Fragment {
         ImageSlider imageSlider = view.findViewById(R.id.image_slider);
         imageSlider.setImageList(imageList);
 
+        // Correctly cast CircleImageView
+        wifilogo = view.findViewById(R.id.dashwifilogo);
+        leavelogo = view.findViewById(R.id.dashleavelogo);
+        ticketlogo = view.findViewById(R.id.dashcomplainslogo);
+        profilelogo = view.findViewById(R.id.dashprofilelogo);
+        circulationslogo = view.findViewById(R.id.dashcirculationslogo);
+        eventslogo = view.findViewById(R.id.dasheventslogo);
+
+        wifilogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                frag(new WifiFragment());
+            }
+        });
+        leavelogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                frag(new LeaveFragment());
+            }
+        });
+        ticketlogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                frag(new ComplainsFragment());
+            }
+        });
+        profilelogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                frag(new ProfileFragment());
+            }
+        });
+        circulationslogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                frag(new WifiFragment());
+            }
+        });
+        eventslogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                frag(new WifiFragment());
+            }
+        });
+
         return view;
+    }
+
+    public void frag(Fragment fragment) {
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.containeer, fragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 }

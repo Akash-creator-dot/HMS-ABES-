@@ -42,10 +42,14 @@
                                     android:gravity="center"
                                     android:layout_marginHorizontal="18dp">
 
-                                        <ImageView
-                                            android:layout_width="30dp"
-                                            android:layout_height="30dp"
-                                            android:src="@drawable/wifi"/>
+                                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:id="@+id/dashwifilogo"
+                                            android:layout_width="36dp"
+                                            android:layout_height="36dp"
+                                            android:layout_marginTop="1dp"
+                                            android:src="@drawable/wifi"
+                                            app:civ_border_color="#FF000000"
+                                            app:civ_border_width="2dp" />
 
                                         <TextView
                                             android:layout_width="wrap_content"
@@ -61,10 +65,14 @@
                                     android:gravity="center"
                                     android:layout_marginHorizontal="18dp">
 
-                                        <ImageView
-                                            android:layout_width="30dp"
-                                            android:layout_height="30dp"
-                                            android:src="@drawable/leavelogo"/>
+                                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:id="@+id/dashleavelogo"
+                                            android:layout_width="36dp"
+                                            android:layout_height="36dp"
+                                            android:layout_marginTop="1dp"
+                                            android:src="@drawable/leavelogo"
+                                            app:civ_border_color="#FF000000"
+                                            app:civ_border_width="2dp" />
 
                                         <TextView
                                             android:layout_width="wrap_content"
@@ -80,10 +88,14 @@
                                     android:gravity="center"
                                     android:layout_marginHorizontal="18dp">
 
-                                        <ImageView
-                                            android:layout_width="30dp"
-                                            android:layout_height="30dp"
-                                            android:src="@drawable/ic_complains"/>
+                                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:id="@+id/dashcomplainslogo"
+                                            android:layout_width="36dp"
+                                            android:layout_height="36dp"
+                                            android:layout_marginTop="1dp"
+                                            android:src="@drawable/ic_complains"
+                                            app:civ_border_color="#FF000000"
+                                            app:civ_border_width="2dp" />
 
                                         <TextView
                                             android:layout_width="wrap_content"
@@ -100,10 +112,14 @@
                                     android:gravity="center"
                                     android:layout_marginHorizontal="18dp">
 
-                                        <ImageView
-                                            android:layout_width="30dp"
-                                            android:layout_height="30dp"
-                                            android:src="@drawable/ic_profile"/>
+                                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:id="@+id/dashprofilelogo"
+                                            android:layout_width="36dp"
+                                            android:layout_height="36dp"
+                                            android:layout_marginTop="1dp"
+                                            android:src="@drawable/ic_profile"
+                                            app:civ_border_color="#FF000000"
+                                            app:civ_border_width="2dp" />
 
                                         <TextView
                                             android:layout_width="wrap_content"
@@ -118,15 +134,19 @@
                                     android:orientation="vertical"
                                     android:layout_marginHorizontal="18dp">
 
-                                        <ImageView
-                                            android:layout_width="30dp"
-                                            android:layout_height="30dp"
-                                            android:src="@mipmap/ic_launcher"/>
+                                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:id="@+id/dashcirculationslogo"
+                                            android:layout_width="36dp"
+                                            android:layout_height="36dp"
+                                            android:layout_marginTop="1dp"
+                                            android:src="@mipmap/ic_launcher"
+                                            app:civ_border_color="#FF000000"
+                                            app:civ_border_width="2dp" />
 
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Events"/>
+                                            android:text="Circulation"/>
 
                                 </LinearLayout>
 
@@ -136,10 +156,14 @@
                                     android:orientation="vertical"
                                     android:layout_marginHorizontal="18dp">
 
-                                        <ImageView
-                                            android:layout_width="30dp"
-                                            android:layout_height="30dp"
-                                            android:src="@mipmap/ic_launcher"/>
+                                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:id="@+id/dasheventslogo"
+                                            android:layout_width="36dp"
+                                            android:layout_height="36dp"
+                                            android:layout_marginTop="1dp"
+                                            android:src="@mipmap/ic_launcher"
+                                            app:civ_border_color="#FF000000"
+                                            app:civ_border_width="2dp" />
 
                                         <TextView
                                             android:layout_width="wrap_content"
@@ -147,41 +171,6 @@
                                             android:text="Events"/>
 
                                 </LinearLayout>
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="vertical"
-                                    android:layout_marginHorizontal="18dp">
-
-                                        <ImageView
-                                            android:layout_width="30dp"
-                                            android:layout_height="30dp"
-                                            android:src="@mipmap/ic_launcher"/>
-
-                                        <TextView
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:text="Events"/>
-
-                                </LinearLayout>
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="vertical"
-                                    android:layout_marginHorizontal="18dp">
-
-                                        <ImageView
-                                            android:layout_width="30dp"
-                                            android:layout_height="30dp"
-                                            android:src="@mipmap/ic_launcher"/>
-
-                                        <TextView
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:text="Events"/>
-
-                                </LinearLayout>
-
 
                         </LinearLayout>
 
@@ -319,10 +308,6 @@
                                 </LinearLayout>
                         </LinearLayout>
                 </androidx.cardview.widget.CardView>
-
-
-
-
         </LinearLayout>
 
 
