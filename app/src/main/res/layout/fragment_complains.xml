@@ -4,11 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_bg"
+    android:background="#241124"
     android:orientation="vertical"
     tools:context=".ComplainsFragment">
     <!-- TODO: Update blank fragment layout -->
     <ScrollView
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -27,6 +30,7 @@
             app:cardUseCompatPadding="true">
 
             <LinearLayout
+                android:background="#ffffff"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
@@ -42,17 +46,17 @@
                     android:id="@+id/complainsheadingtxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="30dp"
                     android:text="COMPLAINS SECTION"
                     android:textColor="#000000"
-                    android:textSize="30sp" />
+                    android:textSize="28sp" />
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/complainselectrician"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginEnd="12dp"
                     android:layout_marginBottom="30dp"
@@ -86,7 +90,7 @@
                                 android:layout_marginStart="50dp"
                                 android:layout_marginTop="20dp"
                                 android:text="Electrician"
-                                android:textSize="30sp"
+                                android:textSize="20sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
@@ -95,7 +99,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/complainsweeper"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginEnd="12dp"
                     android:layout_marginBottom="30dp"
@@ -129,7 +133,7 @@
                                 android:layout_marginStart="50dp"
                                 android:layout_marginTop="20dp"
                                 android:text="Sweeper"
-                                android:textSize="30sp"
+                                android:textSize="20sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
@@ -138,7 +142,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/complainsarpanter"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginEnd="12dp"
                     android:layout_marginBottom="30dp"
@@ -172,7 +176,7 @@
                                 android:layout_marginStart="50dp"
                                 android:layout_marginTop="20dp"
                                 android:text="Carpanter"
-                                android:textSize="30sp"
+                                android:textSize="20sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
@@ -181,7 +185,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/complainplumber"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginEnd="12dp"
                     android:clickable="true"
@@ -214,7 +218,7 @@
                                 android:layout_marginStart="50dp"
                                 android:layout_marginTop="20dp"
                                 android:text="Plumber"
-                                android:textSize="30sp"
+                                android:textSize="20sp"
                                 android:textStyle="bold" />
 
                         </LinearLayout>
@@ -224,7 +228,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/complainpesticide"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="30dp"
                     android:layout_marginEnd="12dp"
@@ -259,7 +263,7 @@
                                 android:layout_marginStart="50dp"
                                 android:layout_marginTop="20dp"
                                 android:text="Pest Control"
-                                android:textSize="30sp"
+                                android:textSize="20sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
@@ -268,7 +272,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/complainwelder"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="30dp"
                     android:layout_marginEnd="12dp"
@@ -303,7 +307,7 @@
                                 android:layout_marginStart="50dp"
                                 android:layout_marginTop="20dp"
                                 android:text="Welder"
-                                android:textSize="30sp"
+                                android:textSize="20sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
@@ -312,7 +316,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/complainwifiinternet"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="30dp"
                     android:layout_marginEnd="12dp"
@@ -347,7 +351,7 @@
                                 android:layout_marginStart="50dp"
                                 android:layout_marginTop="20dp"
                                 android:text="Wi-Fi Internet"
-                                android:textSize="30sp"
+                                android:textSize="20sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>

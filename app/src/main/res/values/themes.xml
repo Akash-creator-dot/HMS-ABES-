@@ -1,11 +1,15 @@
 
 <resources xmlns:tools="http://schemas.android.com/tools">
 <style name="Base.Theme.HMSABES" parent="Theme.Material3.Light.NoActionBar">
-    <!-- Customize your light theme here. -->
-    <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+     Customize your light theme here.
+     <item name="colorPrimary">#241124</item>
 </style>
+    <style name="Theme.dark" parent="Theme.Material3.Dark.NoActionBar">
+        Customize your Dark theme here.
+        <item name="colorPrimary">#241124</item>
+    </style>
 <style name="Theme.HMSABES" parent="Base.Theme.HMSABES">
-    <!-- Customize your dark theme here. -->
-    <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+     Customize your dark theme here.
+     <item name="colorPrimary">#241124</item>
 </style>
 </resources>

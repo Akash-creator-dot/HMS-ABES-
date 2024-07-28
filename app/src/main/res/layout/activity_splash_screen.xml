@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_bg"
+    android:background="#241124"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".SplashScreen">
@@ -30,7 +30,7 @@
                 android:layout_height="100dp"
                 android:layout_marginBottom="40dp"
                 android:contentDescription="@string/todo"
-                android:src="@drawable/abeslogo1" />
+                android:src="@drawable/logoabesnewabbas" />
 
             <TextView
                 android:layout_width="wrap_content"

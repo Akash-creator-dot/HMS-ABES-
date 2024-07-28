@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".Aboutus"
     android:padding="16dp"
-    android:background="@drawable/backgroundaboutus"
+    android:background="#241124"
     android:gravity="center">
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,11 +23,11 @@
         android:text="Akash Solanki"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="#000000"
-        android:layout_marginBottom="8dp"/>
+        android:textColor="#ffffff"
+        android:layout_marginBottom="30dp"/>
 
     <TextView
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="College: ABES Engineering College"
@@ -35,7 +35,7 @@
         android:layout_marginBottom="16dp"/>
 
     <TextView
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Department: CSE"
@@ -43,74 +43,48 @@
         android:layout_marginBottom="16dp"/>
 
     <TextView
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2026 Batch"
         android:textSize="18sp"
         android:layout_marginBottom="16dp"/>
-
     <TextView
-        android:textColor="#000000"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Instagram: akash_.solanki"
-        android:textSize="16sp"
-        android:layout_marginBottom="4dp"/>
-
-    <TextView
-        android:textColor="#000000"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="GitHub: Akash Solanki"
-        android:textSize="16sp"
-        android:layout_marginBottom="4dp"/>
-
-    <TextView
-        android:textColor="#000000"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="LeetCode: Akash_Solanki"
-        android:textSize="16sp"
-        android:layout_marginBottom="4dp"/>
-
-    <TextView
-        android:textColor="#000000"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="GeeksforGeeks: akashsol7pbv"
-        android:textSize="16sp"
-        android:layout_marginBottom="4dp"/>
-
-    <TextView
-        android:textColor="#000000"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HackerRank: CSEA 22B0101141"
-        android:textSize="16sp"
-        android:layout_marginBottom="4dp"/>
-
-    <TextView
-        android:textColor="#000000"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email: akashsolanki926@gmail.com"
-        android:textSize="16sp"
-        android:layout_marginBottom="16dp"/>
-
-    <TextView
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Team Members: Deepansh gupta and"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:layout_marginBottom="16dp"/>
     <TextView
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="    Ankit prajapati"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:layout_marginBottom="16dp"/>
+        <TextView
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instagram: akash_.solanki"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GitHub: Akash Solanki"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email: akashsolanki926@gmail.com"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"/>
+
     </LinearLayout>
 </LinearLayout>
