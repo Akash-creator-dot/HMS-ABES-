@@ -17,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,6 +39,7 @@ public class ProfileFragment extends Fragment {
     private FirebaseAuth auth;
     private FirebaseFirestore fstore;
     private ImageView profileimageview;
+    private ImageButton aboutus;
     StorageReference storageReference;
     private TextView nm, admission, roomno, depart;
 
@@ -96,7 +98,13 @@ public class ProfileFragment extends Fragment {
         btnLeave = view.findViewById(R.id.profileleave);
         btnComplain = view.findViewById(R.id.profilecomplain);
         btnLogout = view.findViewById(R.id.profilelogutbtn);
-
+        aboutus=view.findViewById(R.id.dashboardaboutus);
+        aboutus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              startActivity(new Intent(getContext(),Aboutus.class));
+            }
+        });
 
         Intent iLeave = new Intent(getActivity(), Leavedata.class);
         Intent iComplain = new Intent(getActivity(), ComplainData.class);
