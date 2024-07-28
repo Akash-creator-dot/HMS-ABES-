@@ -20,6 +20,7 @@ firebaseStorage = "21.0.0"
 constraintlayout = "2.1.4"
 lottie = "6.4.1"
 firebaseMessaging = "24.0.0"
+imageslideshow = "0.1.2"
 
 [libraries]
 appcompat-v151 = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
@@ -39,6 +40,7 @@ firebase-storage = { group = "com.google.firebase", name = "firebase-storage", v
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 lottie = { group = "com.airbnb.android", name = "lottie", version.ref = "lottie" }
 firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging", version.ref = "firebaseMessaging" }
+imageslideshow = { group = "com.github.denzcoskun", name = "ImageSlideshow", version.ref = "imageslideshow" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
