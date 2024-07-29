@@ -17,6 +17,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="300dp"
                     app:iss_auto_cycle="true"
+                    android:layout_marginHorizontal="12dp"
                     app:iss_period="1000"
                     app:iss_delay="1000"
                     app:iss_placeholder="@drawable/ic_launcher_foreground"
@@ -136,6 +137,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:orientation="vertical"
+                                    android:gravity="center"
                                     android:layout_marginHorizontal="18dp">
 
                                         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -159,6 +161,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:orientation="vertical"
+                                    android:gravity="center"
                                     android:layout_marginHorizontal="18dp">
 
                                         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"

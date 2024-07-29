@@ -23,12 +23,20 @@
             android:src="@drawable/abeslogo1" />
     </FrameLayout>
 
+
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="68dp"
         android:layout_alignParentBottom="true"
-        android:background="#2D3035"
+        android:background="@color/white"
         app:labelVisibilityMode="labeled"
-        app:menu="@menu/navigation_menu" />
+        app:menu="@menu/navigation_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
+
 </RelativeLayout>

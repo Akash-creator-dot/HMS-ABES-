@@ -80,5 +80,8 @@
     <string name="abes_engineering">ABES Engineering</string>
     <string name="college">College</string>
     <string name="section">Section</string>
+    <string name="settings">Settings</string>
+    <string name="share">Share</string>
+    <string name="rate_us">Rate us</string>
 
 </resources>

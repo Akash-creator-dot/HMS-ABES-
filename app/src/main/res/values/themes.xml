@@ -1,6 +1,6 @@
 
 <resources xmlns:tools="http://schemas.android.com/tools">
-<style name="Base.Theme.HMSABES" parent="Theme.Material3.Light.NoActionBar">
+<style name="Base.Theme.HMSABES" parent="Theme.MaterialComponents.DayNight.NoActionBar">
      Customize your light theme here.
      <item name="colorPrimary">#241124</item>
 </style>
@@ -12,4 +12,9 @@
      Customize your dark theme here.
      <item name="colorPrimary">#241124</item>
 </style>
+
+    <style name="ThemeOverlay.AppCompat.navTheme">
+        <item name="colorPrimary">@color/white</item>
+
+    </style>
 </resources>

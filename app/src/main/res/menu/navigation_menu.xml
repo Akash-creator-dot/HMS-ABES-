@@ -10,7 +10,7 @@
         />
     <item android:id="@+id/dashboard"
         android:title="@string/dashboard"
-        android:icon="@drawable/dashboardicon"
+        android:icon="@drawable/ic_dashboard"
         />
     <item android:id="@+id/complains"
         android:title="@string/ticket"
