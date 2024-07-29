@@ -52,7 +52,7 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.lottie)
     implementation(libs.firebase.messaging)
-    implementation(libs.imageslideshow)
+    implementation ("com.github.denzcoskun:ImageSlideshow:0.1.0")
     androidTestImplementation(libs.ext.junit)
     implementation (libs.play.services.auth) {
         exclude ("com.google.android.gms", "play-services-auth")
