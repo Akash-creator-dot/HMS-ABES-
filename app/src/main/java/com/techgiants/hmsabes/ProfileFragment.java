@@ -39,7 +39,7 @@ public class ProfileFragment extends Fragment {
     private FirebaseAuth auth;
     private FirebaseFirestore fstore;
     private ImageView profileimageview;
-    private ImageButton aboutus;
+    private ImageView aboutus;
     StorageReference storageReference;
     private TextView nm, admission, roomno, depart;
 
