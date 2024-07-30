@@ -8,6 +8,7 @@
     android:orientation="vertical"
     tools:context=".ComplainsFragment">
     <!-- TODO: Update blank fragment layout -->
+
     <ScrollView
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
@@ -24,33 +25,33 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#1EC1A1"
             app:cardCornerRadius="12dp"
             app:cardElevation="12dp"
             app:cardUseCompatPadding="true">
 
+
             <LinearLayout
-                android:background="#ffffff"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
-
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-
+                    android:layout_width="45dp"
+                    android:layout_height="49dp"
+                    android:layout_marginTop="5dp"
                     android:layout_gravity="right"
-                    android:src="@drawable/abeslogo1" />
+                    android:src="@drawable/logo_removebg_preview" />
 
                 <TextView
                     android:id="@+id/complainsheadingtxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
                     android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="30dp"
-                    android:text="COMPLAINS SECTION"
-                    android:textColor="#000000"
+                    android:fontFamily="@font/kurale_regular"
+                    android:text="COMPLAINTS SECTION"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
                     android:textSize="28sp" />
 
                 <androidx.cardview.widget.CardView
@@ -72,8 +73,8 @@
 
                         <ImageView
                             android:id="@+id/complainselectricianimg"
-                            android:layout_width="80dp"
-                            android:layout_height="90dp"
+                            android:layout_width="58dp"
+                            android:layout_height="64dp"
                             android:src="@drawable/complainselectrician" />
 
                         <LinearLayout
@@ -115,8 +116,8 @@
 
                         <ImageView
                             android:id="@+id/complainssweeperimg"
-                            android:layout_width="80dp"
-                            android:layout_height="90dp"
+                            android:layout_width="58dp"
+                            android:layout_height="66dp"
                             android:src="@drawable/complainssweeper" />
 
                         <LinearLayout
@@ -158,8 +159,8 @@
 
                         <ImageView
                             android:id="@+id/complainsarpanterimg"
-                            android:layout_width="80dp"
-                            android:layout_height="90dp"
+                            android:layout_width="62dp"
+                            android:layout_height="65dp"
                             android:src="@drawable/complainscarpanter" />
 
                         <LinearLayout
@@ -200,8 +201,8 @@
 
                         <ImageView
                             android:id="@+id/complainplumberimg"
-                            android:layout_width="80dp"
-                            android:layout_height="90dp"
+                            android:layout_width="68dp"
+                            android:layout_height="62dp"
                             android:src="@drawable/complainsplumber" />
 
                         <LinearLayout
@@ -232,7 +233,6 @@
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="30dp"
                     android:layout_marginEnd="12dp"
-                    android:layout_marginBottom="30dp"
                     android:clickable="true"
                     android:focusable="true"
                     app:cardCornerRadius="40dp">
@@ -245,8 +245,8 @@
 
                         <ImageView
                             android:id="@+id/complainpesticideimg"
-                            android:layout_width="80dp"
-                            android:layout_height="90dp"
+                            android:layout_width="76dp"
+                            android:layout_height="65dp"
                             android:src="@drawable/complainspest" />
 
                         <LinearLayout
@@ -276,7 +276,6 @@
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="30dp"
                     android:layout_marginEnd="12dp"
-                    android:layout_marginBottom="30dp"
                     android:clickable="true"
                     android:focusable="true"
                     app:cardCornerRadius="40dp">
@@ -289,8 +288,8 @@
 
                         <ImageView
                             android:id="@+id/complainwelderimg"
-                            android:layout_width="80dp"
-                            android:layout_height="90dp"
+                            android:layout_width="73dp"
+                            android:layout_height="67dp"
                             android:src="@drawable/welder" />
 
                         <LinearLayout
@@ -333,9 +332,9 @@
 
                         <ImageView
                             android:id="@+id/complainwifiinternetimg"
-                            android:layout_width="80dp"
-                            android:layout_height="90dp"
-                            android:src="@drawable/wifiinternet" />
+                            android:layout_width="71dp"
+                            android:layout_height="65dp"
+                            android:src="@drawable/wifi" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -356,6 +355,7 @@
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
     </ScrollView>
