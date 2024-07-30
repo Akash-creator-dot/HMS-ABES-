@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:orientation="vertical"
+    android:background="@color/light_gray"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -13,6 +14,7 @@
         android:layout_width="match_parent"
         android:id="@+id/containeer"
         android:layout_height="match_parent"
+        android:background="@color/light_gray"
         android:layout_marginBottom="68dp">
 
         <ImageView
@@ -20,7 +22,7 @@
             android:layout_height="30dp"
             android:layout_gravity="end"
             android:contentDescription="@string/todo"
-            android:src="@drawable/abeslogo1" />
+            android:src="@drawable/logo_removebg_preview" />
     </FrameLayout>
 
 
@@ -30,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="68dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/white"
+        android:background="@color/light_gray"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/navigation_menu">
 
