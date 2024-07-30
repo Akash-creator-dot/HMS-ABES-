@@ -71,6 +71,13 @@
             android:textColor="#ffffff"
             android:textSize="16sp" />
 
+        <View
+            android:layout_width="60dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/gradient_bg" />
+
         <TextView
         android:textColor="#ffffff"
         android:layout_width="wrap_content"
@@ -128,6 +135,13 @@
             android:textColor="#ffffff"
             android:textSize="16sp" />
 
+        <View
+            android:layout_width="60dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/gradient_bg" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -160,7 +174,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
-            android:text="Instagram: akash_.solanki"
+            android:text="Instagram: "
             android:textColor="#ffffff"
             android:textSize="16sp" />
 
@@ -168,7 +182,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
-            android:text="GitHub: Akash Solanki"
+            android:text="GitHub: "
             android:textColor="#ffffff"
             android:textSize="16sp" />
 
@@ -176,7 +190,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="Email: akashsolanki926@gmail.com"
+            android:text="Email: "
             android:textColor="#ffffff"
             android:textSize="16sp" />
 
