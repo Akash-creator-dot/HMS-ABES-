@@ -1,7 +1,9 @@
 package com.techgiants.hmsabes;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -20,7 +22,8 @@ import java.util.List;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class DashboardFragment extends Fragment {
-    private CircleImageView wifilogo, leavelogo, ticketlogo, profilelogo, circulationslogo, eventslogo;
+    private CircleImageView wifilogo, leavelogo, ticketlogo, profilelogo,Help;
+    CardView circulations,messmenu,canteenmenu,academiccalander;
 
     public DashboardFragment() {
         // Required empty public constructor
@@ -50,8 +53,11 @@ public class DashboardFragment extends Fragment {
         leavelogo = view.findViewById(R.id.dashleavelogo);
         ticketlogo = view.findViewById(R.id.dashcomplainslogo);
         profilelogo = view.findViewById(R.id.dashprofilelogo);
-        circulationslogo = view.findViewById(R.id.dashcirculationslogo);
-        eventslogo = view.findViewById(R.id.dasheventslogo);
+        Help = view.findViewById(R.id.dashhelplogo);
+        circulations=view.findViewById(R.id.circulations);
+        academiccalander=view.findViewById(R.id.academiccalander);
+        messmenu=view.findViewById(R.id.messmenu);
+        canteenmenu=view.findViewById(R.id.canteenmenu);
 
         wifilogo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,16 +83,34 @@ public class DashboardFragment extends Fragment {
                 frag(new ProfileFragment());
             }
         });
-        circulationslogo.setOnClickListener(new View.OnClickListener() {
+        Help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 frag(new WifiFragment());
             }
         });
-        eventslogo.setOnClickListener(new View.OnClickListener() {
+        circulations.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                frag(new WifiFragment());
+                startActivity(new Intent(getContext(),Circulations.class));
+            }
+        });
+        academiccalander.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(),AcademicCalander.class));
+            }
+        });
+        messmenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(),MessMenu.class));
+            }
+        });
+        canteenmenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(),CanteenMenu.class));
             }
         });
 
