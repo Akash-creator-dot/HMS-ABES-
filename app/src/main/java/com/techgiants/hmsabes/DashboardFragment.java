@@ -45,8 +45,59 @@ public class DashboardFragment extends Fragment {
         ImageSlider imageSlider = view.findViewById(R.id.image_slider);
         imageSlider.setImageList(imageList);
 
+        // Correctly cast CircleImageView
+        wifilogo = view.findViewById(R.id.dashwifilogo);
+        leavelogo = view.findViewById(R.id.dashleavelogo);
+        ticketlogo = view.findViewById(R.id.dashcomplainslogo);
+        profilelogo = view.findViewById(R.id.dashprofilelogo);
+        circulationslogo = view.findViewById(R.id.dashcirculationslogo);
+        eventslogo = view.findViewById(R.id.dasheventslogo);
 
+        wifilogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                frag(new WifiFragment());
+            }
+        });
+        leavelogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                frag(new LeaveFragment());
+            }
+        });
+        ticketlogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                frag(new ComplainsFragment());
+            }
+        });
+        profilelogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                frag(new ProfileFragment());
+            }
+        });
+        circulationslogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                frag(new WifiFragment());
+            }
+        });
+        eventslogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                frag(new WifiFragment());
+            }
+        });
 
         return view;
+    }
+
+    public void frag(Fragment fragment) {
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.containeer, fragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 }

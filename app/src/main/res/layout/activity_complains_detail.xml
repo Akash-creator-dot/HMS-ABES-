@@ -27,40 +27,33 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#BDC3C2"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="45dp"
-                    android:layout_height="56dp"
-                    android:layout_gravity="right"
-                    android:layout_marginTop="5dp"
-                    android:src="@drawable/logo_removebg_preview" />
-                <TextView
-                    android:id="@+id/complaintHeading"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Complaint Details"
-                    android:layout_gravity="center_horizontal"
-                    android:textColor="#0F1975"
-                    android:textSize="40sp"
-                    android:fontFamily="@font/kurale_regular"/>
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/abeslogo1"
+                    tools:layout_editor_absoluteX="365dp"
+                    tools:layout_editor_absoluteY="16dp" />
+
                 <TextView
                     android:id="@+id/complainType"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="50dp"
                     android:text=""
                     android:textColor="#0F1975"
-                    android:textSize="30sp" />
+                    android:textSize="50sp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="28dp"
+                    android:layout_marginStart="18dp"
                     android:text="@string/name"
                     android:textColor="@color/black"
-                    android:textSize="25sp" />
+                    android:textSize="12sp" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
@@ -69,15 +62,14 @@
                     android:layout_gravity="center_horizontal"
                     android:gravity="center"
                     android:hint="@string/select"
-                    android:background="@color/white"
-                    android:textColorHint="@color/black"
                     android:layout_margin="16dp">
 
                     <AutoCompleteTextView
                         android:id="@+id/problemRelatedToTextAuto"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp"
+                        tools:ignore="LabelFor" />
 
                 </com.google.android.material.textfield.TextInputLayout>
                 <EditText
@@ -86,10 +78,11 @@
                     android:layout_height="50dp"
                     android:layout_marginTop="20dp"
                     android:autofillHints=""
-                    android:background="#ffffff"
+                    android:background="#BDC3C2"
                     android:ems="10"
                     android:layout_gravity="center"
                     android:elevation="2dp"
+                    android:fontFamily="@font/adamina"
                     android:hint="@string/describe_the_problem"
                     android:inputType="text"
                     android:textColor="@color/black"
