@@ -11,6 +11,7 @@
     android:background="#241124"
     android:gravity="center">
     <LinearLayout
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -20,10 +21,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+            android:layout_marginTop="10dp"
             android:text="ABES Engineering College"
             android:textStyle="bold"
             android:fontFamily="@font/adamina"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:autoSizeMinTextSize="15sp"
             android:autoSizeMaxTextSize="30sp"/>
         <TextView
@@ -31,18 +33,18 @@
             android:layout_height="wrap_content"
             android:text="Team Lead:"
             android:textSize="15sp"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Akash Solanki"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:layout_marginBottom="5dp"/>
 
         <TextView
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="(CSE)"
@@ -50,7 +52,7 @@
         android:layout_marginBottom="5dp"/>
 
     <TextView
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2026 Batch"
@@ -62,7 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:text="Instagram: akash_.solanki"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="16sp" />
 
         <TextView
@@ -70,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:text="GitHub: Akash Solanki"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="16sp" />
 
         <TextView
@@ -78,7 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:text="Email: akashsolanki926@gmail.com"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="16sp" />
 
         <View
@@ -89,7 +91,7 @@
             android:background="@drawable/gradient_bg" />
 
         <TextView
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Team Members:"
@@ -97,7 +99,7 @@
         android:textAlignment="center"
         android:layout_marginBottom="5dp"/>
         <TextView
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Deepansh Gupta"
@@ -106,7 +108,7 @@
             android:textAlignment="center"
             android:layout_marginBottom="5dp"/>
         <TextView
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="(IT)"
@@ -114,7 +116,7 @@
             android:textAlignment="center"
             android:layout_marginBottom="5dp"/>
         <TextView
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2027 Batch"
@@ -126,7 +128,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:text="Instagram: _deepansh"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="16sp" />
 
         <TextView
@@ -134,7 +136,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:text="GitHub: @adieu69"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="16sp" />
 
         <TextView
@@ -142,7 +144,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:text="Email: deepansh.gup124@gmail.com"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="16sp" />
 
         <View
@@ -158,7 +160,7 @@
             android:layout_marginBottom="5dp"
             android:text="Ankit Prajapati"
             android:textAlignment="center"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="23sp"
             android:textStyle="bold" />
 
@@ -168,7 +170,7 @@
             android:layout_marginBottom="5dp"
             android:text="(IT)"
             android:textAlignment="center"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="18sp" />
 
         <TextView
@@ -176,7 +178,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:text="2027 Batch"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textAlignment="center"
             android:textSize="16sp" />
 
@@ -185,7 +187,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:text="Instagram: "
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="16sp" />
 
         <TextView
@@ -193,7 +195,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:text="GitHub: "
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="16sp" />
 
         <TextView
@@ -201,7 +203,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:text="Email: "
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="16sp" />
 
 
