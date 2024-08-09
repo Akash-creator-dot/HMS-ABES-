@@ -9,6 +9,7 @@ import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -120,14 +121,19 @@ public class WifiFragment extends Fragment {
             Intent intent = new Intent(Settings.ACTION_WIFI_SETTINGS);
             startActivity(intent);
         } else {
-            // Wifi is Connected then Login to WIFI SERVER
-            // Pass the username and password to another activity
-            String username = sharedPreferences.getString("username", "");
-            String password = sharedPreferences.getString("password", "");
-            Intent intent = new Intent(requireContext(), LoginToWifiActivity.class);
-            intent.putExtra("username", username);
-            intent.putExtra("password", password);
-            startActivity(intent);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    // Wifi is Connected then Login to WIFI SERVER
+                    // Pass the username and password to another activity
+                    String username = sharedPreferences.getString("username", "");
+                    String password = sharedPreferences.getString("password", "");
+                    Intent intent = new Intent(requireContext(), LoginToWifiActivity.class);
+                    intent.putExtra("username", username);
+                    intent.putExtra("password", password);
+                    startActivity(intent);
+                }
+            },1600);
         }
     }
 
