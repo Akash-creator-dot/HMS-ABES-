@@ -24,7 +24,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 public class LeaveFragment extends Fragment {
-    EditText dateOfLeaveTxt, dateOfReturnTxt, timeOfLeaveTxt, timeOfReturnTxt;
+    EditText dateOfLeaveTxt, dateOfReturnTxt, timeOfLeaveTxt, timeOfReturnTxt,studentmobilenumber,coname,relationship;
     final Calendar dateCalendar = Calendar.getInstance();
     final Calendar timeCalendar = Calendar.getInstance();
 
@@ -33,6 +33,9 @@ public class LeaveFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_leave, container, false);
         dateOfLeaveTxt = view.findViewById(R.id.dateOfLeaveTxt);
+        studentmobilenumber=view.findViewById(R.id.student_mobile);
+        coname=view.findViewById(R.id.co_name);
+        relationship=view.findViewById(R.id.relationship);
         dateOfReturnTxt = view.findViewById(R.id.dateOfReturnTxt);
         timeOfLeaveTxt = view.findViewById(R.id.timeOfLeaveTxt);
         timeOfReturnTxt = view.findViewById(R.id.timeOfReturnTxt);
@@ -49,15 +52,20 @@ public class LeaveFragment extends Fragment {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), OtpSending.class);
-                startActivity(intent);
-            }
-        });
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-             Intent intent=new Intent(getContext(), OtpSending.class);
-             startActivity(intent);
+                if (!dateOfLeaveTxt.getText().toString().isEmpty() &&
+                        !dateOfReturnTxt.getText().toString().isEmpty() &&
+                        !timeOfLeaveTxt.getText().toString().isEmpty() &&
+                        !timeOfReturnTxt.getText().toString().isEmpty() &&
+                        !studentmobilenumber.getText().toString().isEmpty() &&
+                        !coname.getText().toString().isEmpty() &&
+                        !relationship.getText().toString().isEmpty()) {
+
+                    Intent intent = new Intent(getContext(), OtpSending.class);
+                    startActivity(intent);
+
+                } else {
+                    Toast.makeText(getContext(), "Please enter all the details", Toast.LENGTH_SHORT).show();
+                }
             }
         });
         // Set listeners for date and time pickers

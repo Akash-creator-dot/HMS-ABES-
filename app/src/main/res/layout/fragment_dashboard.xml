@@ -151,7 +151,7 @@
                                             android:layout_width="36dp"
                                             android:layout_height="36dp"
                                             android:layout_marginTop="1dp"
-                                            android:src="@mipmap/ic_launcher"
+                                            android:src="@drawable/helpandsupport"
                                             app:civ_border_color="#FF000000"
                                             app:civ_border_width="2dp" />
 
@@ -210,7 +210,8 @@
                                             android:layout_marginStart="40dp"
                                             android:layout_marginTop="10dp"
                                             android:text="Circulars"
-                                            android:textSize="30sp"
+                                            android:autoSizeMaxTextSize="40sp"
+                                            android:autoSizeMinTextSize="30sp"
                                             android:textStyle="bold" />
                                 </LinearLayout>
                         </LinearLayout>
@@ -222,7 +223,7 @@
                     android:layout_height="80dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginEnd="12dp"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="20dp"
                     android:clickable="true"
                     android:focusable="true"
                     app:cardCornerRadius="40dp">
@@ -254,7 +255,8 @@
                                             android:layout_marginStart="40dp"
                                             android:layout_marginTop="10dp"
                                             android:text="Mess Menu"
-                                            android:textSize="30sp"
+                                            android:autoSizeMaxTextSize="40sp"
+                                            android:autoSizeMinTextSize="30sp"
                                             android:textStyle="bold" />
                                 </LinearLayout>
                         </LinearLayout>
@@ -265,7 +267,7 @@
                     android:layout_height="80dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginEnd="12dp"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="10dp"
                     android:clickable="true"
                     android:focusable="true"
                     app:cardCornerRadius="40dp">
@@ -297,7 +299,8 @@
                                             android:layout_marginStart="40dp"
                                             android:layout_marginTop="10dp"
                                             android:text="Canteenmenu"
-                                            android:textSize="30sp"
+                                            android:autoSizeMaxTextSize="40sp"
+                                            android:autoSizeMinTextSize="30sp"
                                             android:textStyle="bold" />
                                 </LinearLayout>
                         </LinearLayout>
@@ -308,7 +311,7 @@
             android:layout_marginTop="12dp"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="70dp"
             android:clickable="true"
             android:focusable="true"
             app:cardCornerRadius="40dp">
@@ -337,11 +340,11 @@
                                     android:id="@+id/TextView2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="5dp"
+                                    android:layout_marginStart="40dp"
                                     android:layout_marginTop="10dp"
                                     android:text="Academic Calendar"
-                                    android:autoSizeMaxTextSize="26sp"
-                                    android:autoSizeMinTextSize="20sp"
+                                    android:autoSizeMaxTextSize="40sp"
+                                    android:autoSizeMinTextSize="30sp"
                                     android:textStyle="bold" />
                         </LinearLayout>
                 </LinearLayout>
