@@ -53,6 +53,10 @@ dependencies {
     implementation(libs.lottie)
     implementation(libs.firebase.messaging)
     implementation ("com.github.denzcoskun:ImageSlideshow:0.1.0")
+    implementation(libs.lifecycle.livedata.ktx)
+    implementation(libs.lifecycle.viewmodel.ktx)
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
     androidTestImplementation(libs.ext.junit)
     implementation (libs.play.services.auth) {
         exclude ("com.google.android.gms", "play-services-auth")
