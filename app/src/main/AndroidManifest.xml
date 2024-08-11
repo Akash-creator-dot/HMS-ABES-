@@ -17,6 +17,10 @@
         tools:replace="android:appComponentFactory"
         tools:targetApi="31">
         <activity
+            android:name=".Drawer"
+            android:exported="false"
+            android:label="@string/title_activity_drawer" />
+        <activity
             android:name=".AcademicCalander"
             android:exported="false" />
         <activity
@@ -24,9 +28,6 @@
             android:exported="false" />
         <activity
             android:name=".CanteenMenu"
-            android:exported="false" />
-        <activity
-            android:name=".Events"
             android:exported="false" />
         <activity
             android:name=".Circulations"

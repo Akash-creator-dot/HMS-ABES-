@@ -53,7 +53,10 @@ dependencies {
     implementation(libs.lottie)
     implementation(libs.firebase.messaging)
     implementation ("com.github.denzcoskun:ImageSlideshow:0.1.0")
-    implementation(libs.android.pdf.viewer)
+    implementation(libs.lifecycle.livedata.ktx)
+    implementation(libs.lifecycle.viewmodel.ktx)
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
     androidTestImplementation(libs.ext.junit)
     implementation (libs.play.services.auth) {
         exclude ("com.google.android.gms", "play-services-auth")
@@ -61,6 +64,4 @@ dependencies {
     implementation (libs.core)
     implementation(libs.appcompat.v151)
     implementation (libs.picasso)
-
-    implementation("com.github.barteksc:android-pdf-viewer:2.8.2")
 }

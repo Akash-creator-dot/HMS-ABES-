@@ -1,354 +1,358 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#241124"
+    android:layout_height="match_parent"
     tools:context=".DashboardFragment">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <ImageView
-            android:layout_width="45dp"
-            android:layout_height="49dp"
-            android:layout_gravity="right"
-            android:layout_marginTop="9dp"
-            android:src="@drawable/logo_removebg_preview" />
-
-        <com.denzcoskun.imageslider.ImageSlider
-            android:id="@+id/image_slider"
-            android:layout_width="wrap_content"
-            android:layout_height="300dp"
-            android:layout_marginHorizontal="12dp"
-            app:iss_auto_cycle="true"
-            app:iss_delay="1000"
-            app:iss_period="1000"
-            app:iss_placeholder="@drawable/ic_launcher_foreground"
-            app:iss_text_align="CENTER" />
-
-        <HorizontalScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="70dp"
-            android:gravity="center">
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="18dp"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/dashwifilogo"
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:layout_marginTop="1dp"
-                        android:src="@drawable/wifi"
-                        app:civ_border_color="#FF000000"
-                        app:civ_border_width="2dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Wi-Fi"
-                        android:textColor="#ffffff" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="18dp"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/dashleavelogo"
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:layout_marginTop="1dp"
-                        android:src="@drawable/leavelogo"
-                        app:civ_border_color="#FF000000"
-                        app:civ_border_width="2dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Leave"
-                        android:textColor="#ffffff" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="18dp"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/dashcomplainslogo"
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:layout_marginTop="1dp"
-                        android:src="@drawable/ic_complains"
-                        app:civ_border_color="#FF000000"
-                        app:civ_border_width="2dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Tickets"
-                        android:textColor="#ffffff" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="18dp"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/dashprofilelogo"
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:layout_marginTop="1dp"
-                        android:src="@drawable/ic_profile"
-                        app:civ_border_color="#FF000000"
-                        app:civ_border_width="2dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Profile"
-                        android:textColor="#ffffff" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="18dp"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/dashhelplogo"
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:layout_marginTop="1dp"
-                        android:src="@mipmap/ic_launcher"
-                        app:civ_border_color="#FF000000"
-                        app:civ_border_width="2dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Help and Support"
-                        android:textColor="#ffffff" />
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-
-        </HorizontalScrollView>
-
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/circulations"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"
-            android:clickable="true"
-            android:focusable="true"
-            app:cardCornerRadius="40dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
-
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
                 <ImageView
-                    android:id="@+id/ImageView1"
-                    android:layout_width="83dp"
-                    android:layout_height="68dp"
-                    android:src="@drawable/loudspeaker" />
+                    android:layout_width="45dp"
+                    android:layout_height="49dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="9dp"
+                    android:src="@drawable/logo_removebg_preview" />
 
-                <LinearLayout
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/image_slider"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="16dp"
-                    android:gravity="center_vertical"
-                    android:orientation="vertical">
+                    android:layout_height="300dp"
+                    app:iss_auto_cycle="true"
+                    android:layout_marginHorizontal="12dp"
+                    app:iss_period="1000"
+                    app:iss_delay="1000"
+                    app:iss_placeholder="@drawable/ic_launcher_foreground"
+                    app:iss_text_align="CENTER"/>
 
-                    <TextView
-                        android:id="@+id/TextView1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="10dp"
-                        android:text="Circulars"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/messmenu"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginBottom="30dp"
-            android:clickable="true"
-            android:focusable="true"
-            app:cardCornerRadius="40dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
-
-                <ImageView
-                    android:id="@+id/ImageView3"
-                    android:layout_width="77dp"
-                    android:layout_height="66dp"
-                    android:src="@drawable/menu" />
-
-                <LinearLayout
+                <HorizontalScrollView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="16dp"
-                    android:gravity="center_vertical"
-                    android:orientation="vertical">
+                    android:layout_height="70dp"
+                    android:gravity="center">
 
-                    <TextView
-                        android:id="@+id/TextView3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="10dp"
-                        android:text="Mess Menu"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/canteenmenu"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginBottom="30dp"
-            android:clickable="true"
-            android:focusable="true"
-            app:cardCornerRadius="40dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
 
-                <ImageView
-                    android:id="@+id/ImageView4"
-                    android:layout_width="77dp"
-                    android:layout_height="66dp"
-                    android:src="@drawable/menu" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:layout_marginHorizontal="18dp">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="16dp"
-                    android:gravity="center_vertical"
-                    android:orientation="vertical">
+                                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:id="@+id/dashwifilogo"
+                                            android:layout_width="36dp"
+                                            android:layout_height="36dp"
+                                            android:layout_marginTop="1dp"
+                                            android:src="@drawable/wifi"
+                                            app:civ_border_color="#FF000000"
+                                            app:civ_border_width="2dp" />
 
-                    <TextView
-                        android:id="@+id/TextView4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="10dp"
-                        android:text="Canteen Menu"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="#ffffff"
+                                            android:text="Wi-Fi"/>
 
-        <androidx.cardview.widget.CardView
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:layout_marginHorizontal="18dp">
+
+                                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:id="@+id/dashleavelogo"
+                                            android:layout_width="36dp"
+                                            android:layout_height="36dp"
+                                            android:layout_marginTop="1dp"
+                                            android:src="@drawable/leavelogo"
+                                            app:civ_border_color="#FF000000"
+                                            app:civ_border_width="2dp" />
+
+                                        <TextView
+                                            android:textColor="#ffffff"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Leave"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:layout_marginHorizontal="18dp">
+
+                                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:id="@+id/dashcomplainslogo"
+                                            android:layout_width="36dp"
+                                            android:layout_height="36dp"
+                                            android:layout_marginTop="1dp"
+                                            android:src="@drawable/ic_complains"
+                                            app:civ_border_color="#FF000000"
+                                            app:civ_border_width="2dp" />
+
+                                        <TextView
+                                            android:textColor="#ffffff"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Tickets"/>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:layout_marginHorizontal="18dp">
+
+                                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:id="@+id/dashprofilelogo"
+                                            android:layout_width="36dp"
+                                            android:layout_height="36dp"
+                                            android:layout_marginTop="1dp"
+                                            android:src="@drawable/ic_profile"
+                                            app:civ_border_color="#FF000000"
+                                            app:civ_border_width="2dp" />
+
+                                        <TextView
+                                            android:textColor="#ffffff"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Profile"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:layout_marginHorizontal="18dp">
+
+                                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:id="@+id/dashhelplogo"
+                                            android:layout_width="36dp"
+                                            android:layout_height="36dp"
+                                            android:layout_marginTop="1dp"
+                                            android:src="@drawable/helpandsupport"
+                                            app:civ_border_color="#FF000000"
+                                            app:civ_border_width="2dp" />
+
+                                        <TextView
+                                            android:textColor="#ffffff"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Help and Support"/>
+
+                                </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+
+
+                </HorizontalScrollView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/circulations"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="40dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                                <ImageView
+                                    android:id="@+id/ImageView1"
+                                    android:layout_width="83dp"
+                                    android:layout_height="68dp"
+                                    android:src="@drawable/loudspeaker" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:gravity="center_vertical"
+                                    android:layout_gravity="center_horizontal"
+                                    android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/TextView1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="40dp"
+                                            android:layout_marginTop="10dp"
+                                            android:text="Circulars"
+                                            android:autoSizeMaxTextSize="40sp"
+                                            android:autoSizeMinTextSize="30sp"
+                                            android:textStyle="bold" />
+                                </LinearLayout>
+                        </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/messmenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="40dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                                <ImageView
+                                    android:id="@+id/ImageView3"
+                                    android:layout_width="77dp"
+                                    android:layout_height="66dp"
+                                    android:src="@drawable/menu" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:gravity="center_vertical"
+                                    android:layout_gravity="center_horizontal"
+                                    android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/TextView3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="40dp"
+                                            android:layout_marginTop="10dp"
+                                            android:text="Mess Menu"
+                                            android:autoSizeMaxTextSize="40sp"
+                                            android:autoSizeMinTextSize="30sp"
+                                            android:textStyle="bold" />
+                                </LinearLayout>
+                        </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/canteenmenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="40dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                                <ImageView
+                                    android:id="@+id/ImageView4"
+                                    android:layout_width="77dp"
+                                    android:layout_height="66dp"
+                                    android:src="@drawable/menu" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:gravity="center_vertical"
+                                    android:layout_gravity="center_horizontal"
+                                    android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/TextView4"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="40dp"
+                                            android:layout_marginTop="10dp"
+                                            android:text="Canteenmenu"
+                                            android:autoSizeMaxTextSize="40sp"
+                                            android:autoSizeMinTextSize="30sp"
+                                            android:textStyle="bold" />
+                                </LinearLayout>
+                        </LinearLayout>
+                </androidx.cardview.widget.CardView> <androidx.cardview.widget.CardView
             android:id="@+id/academiccalander"
             android:layout_width="match_parent"
             android:layout_height="80dp"
+            android:layout_marginTop="12dp"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
-            android:layout_marginBottom="80dp"
+            android:layout_marginBottom="70dp"
             android:clickable="true"
             android:focusable="true"
             app:cardCornerRadius="40dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
-
-                <ImageView
-                    android:id="@+id/ImageView2"
-                    android:layout_width="75dp"
-                    android:layout_height="58dp"
-                    android:src="@drawable/calendar" />
-
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="16dp"
-                    android:gravity="center_vertical"
-                    android:orientation="vertical">
+                    android:orientation="horizontal"
+                    android:padding="8dp">
 
-                    <TextView
-                        android:id="@+id/TextView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="10dp"
-                        android:text="Academic Calendar"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
+                        <ImageView
+                            android:id="@+id/ImageView2"
+                            android:layout_width="75dp"
+                            android:layout_height="58dp"
+                            android:src="@drawable/calendar" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/TextView2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="40dp"
+                                    android:layout_marginTop="10dp"
+                                    android:text="Academic Calendar"
+                                    android:autoSizeMaxTextSize="40sp"
+                                    android:autoSizeMinTextSize="30sp"
+                                    android:textStyle="bold" />
+                        </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-    </LinearLayout>
+        </LinearLayout>
+
+
 
 
 </ScrollView>

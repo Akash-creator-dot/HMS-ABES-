@@ -1,5 +1,5 @@
 [versions]
-agp = "8.5.1"
+agp = "8.5.0"
 appcompat = "1.5.1"
 circleimageview = "3.1.0"
 constraintLayoutVersion = "2.0.4"
@@ -21,7 +21,10 @@ constraintlayout = "2.1.4"
 lottie = "6.4.1"
 firebaseMessaging = "24.0.0"
 imageslideshow = "0.1.2"
-androidPdfViewer = "2.8.2"
+lifecycleLivedataKtx = "2.8.3"
+lifecycleViewmodelKtx = "2.8.3"
+navigationFragment = "2.7.7"
+navigationUi = "2.7.7"
 
 [libraries]
 appcompat-v151 = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
@@ -42,7 +45,10 @@ constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayo
 lottie = { group = "com.airbnb.android", name = "lottie", version.ref = "lottie" }
 firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging", version.ref = "firebaseMessaging" }
 imageslideshow = { group = "com.github.denzcoskun", name = "ImageSlideshow", version.ref = "imageslideshow" }
-android-pdf-viewer = { group = "com.github.barteksc", name = "android-pdf-viewer", version.ref = "androidPdfViewer" }
+lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
+lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationFragment" }
+navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navigationUi" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
