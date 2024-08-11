@@ -35,7 +35,7 @@ public class AcademicCalander extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_academic_calander);
 
-        pdfUrl = "https://pdfobject.com/pdf/sample.pdf";
+        pdfUrl = "https://jaipuriamba.edu.in/wp-content/uploads/2023/11/AKTU-Academic-Calendar-20223-24.pdf";
         pdfView = findViewById(R.id.pdfView);
         lottieAnimationView = findViewById(R.id.animationView);
 

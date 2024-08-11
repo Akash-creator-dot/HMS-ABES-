@@ -86,7 +86,7 @@ public class DashboardFragment extends Fragment {
         Help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                frag(new WifiFragment());
+                startActivity(new Intent(getContext(),HelpandSupport.class));
             }
         });
         circulations.setOnClickListener(new View.OnClickListener() {
