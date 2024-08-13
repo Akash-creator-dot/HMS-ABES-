@@ -12,34 +12,44 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+
         <ImageView
             android:layout_width="45dp"
             android:layout_height="49dp"
-            android:layout_gravity="right"
+            android:layout_gravity="end"
             android:layout_marginTop="9dp"
             android:src="@drawable/logo_removebg_preview" />
 
-        <com.denzcoskun.imageslider.ImageSlider
-            android:id="@+id/image_slider"
+        <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="300dp"
             android:layout_marginHorizontal="12dp"
-            app:iss_auto_cycle="true"
-            app:iss_delay="1000"
-            app:iss_period="1000"
-            app:iss_placeholder="@drawable/ic_launcher_foreground"
-            app:iss_text_align="CENTER" />
+            app:cardCornerRadius="18dp">
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/image_slider"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:iss_auto_cycle="true"
+                app:iss_delay="1000"
+                app:iss_period="1000"
+                app:iss_placeholder="@drawable/ic_launcher_foreground"
+                app:iss_text_align="CENTER" />
+
+
+        </androidx.cardview.widget.CardView>
+
 
         <HorizontalScrollView
             android:layout_width="wrap_content"
             android:layout_height="70dp"
+            android:layout_marginTop="30dp"
             android:gravity="center">
 
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:orientation="horizontal">
 
 
@@ -50,19 +60,21 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/dashwifilogo"
                         android:layout_width="36dp"
                         android:layout_height="36dp"
                         android:layout_marginTop="1dp"
                         android:src="@drawable/wifi"
-                        app:civ_border_color="#FF000000"
+                        app:civ_border_color="@color/white"
                         app:civ_border_width="2dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Wi-Fi"
+                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
                         android:textColor="#ffffff" />
 
                 </LinearLayout>
@@ -74,19 +86,21 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/dashleavelogo"
                         android:layout_width="36dp"
                         android:layout_height="36dp"
                         android:layout_marginTop="1dp"
                         android:src="@drawable/leavelogo"
-                        app:civ_border_color="#FF000000"
+                        app:civ_border_color="@color/white"
                         app:civ_border_width="2dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Leave"
+                        android:text="LEAVE"
+                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
                         android:textColor="#ffffff" />
 
                 </LinearLayout>
@@ -98,19 +112,21 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/dashcomplainslogo"
                         android:layout_width="36dp"
                         android:layout_height="36dp"
                         android:layout_marginTop="1dp"
                         android:src="@drawable/ic_complains"
-                        app:civ_border_color="#FF000000"
+                        app:civ_border_color="@color/white"
                         app:civ_border_width="2dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Tickets"
+                        android:text="TICKETS"
+                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
                         android:textColor="#ffffff" />
 
 
@@ -123,19 +139,21 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/dashprofilelogo"
                         android:layout_width="36dp"
                         android:layout_height="36dp"
                         android:layout_marginTop="1dp"
                         android:src="@drawable/ic_profile"
-                        app:civ_border_color="#FF000000"
+                        app:civ_border_color="@color/white"
                         app:civ_border_width="2dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Profile"
+                        android:text="PROFILE"
+                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
                         android:textColor="#ffffff" />
 
                 </LinearLayout>
@@ -147,19 +165,21 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/dashhelplogo"
                         android:layout_width="36dp"
                         android:layout_height="36dp"
                         android:layout_marginTop="1dp"
                         android:src="@drawable/helpandsupport"
-                        app:civ_border_color="#FF000000"
+                        app:civ_border_color="@color/white"
                         app:civ_border_width="2dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Help and Support"
+                        android:text="HELPDESK"
+                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
                         android:textColor="#ffffff" />
 
                 </LinearLayout>
@@ -176,8 +196,8 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
             android:layout_marginTop="30dp"
+            android:layout_marginEnd="12dp"
             android:layout_marginBottom="20dp"
             android:clickable="true"
             android:focusable="true"
@@ -208,8 +228,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:textSize="24sp"
                         android:text="Circulars"
+                        android:textSize="24sp"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
@@ -251,8 +271,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:textSize="24sp"
                         android:text="Mess Menu"
+                        android:textSize="24sp"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
@@ -294,8 +314,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:textSize="24sp"
                         android:text="Canteenmenu"
+                        android:textSize="24sp"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
