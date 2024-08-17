@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#241124"
     tools:context=".DashboardFragment">
 
     <LinearLayout
@@ -66,16 +65,16 @@
                         android:layout_height="36dp"
                         android:layout_marginTop="1dp"
                         android:src="@drawable/wifi"
-                        app:civ_border_color="@color/white"
+                        app:civ_border_color="#032c48"
                         app:civ_border_width="2dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Wi-Fi"
-                        android:textSize="16sp"
                         android:layout_marginTop="4dp"
-                        android:textColor="#ffffff" />
+                        android:text="Wi-Fi"
+                        android:textColor="#032c48"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -92,16 +91,16 @@
                         android:layout_height="36dp"
                         android:layout_marginTop="1dp"
                         android:src="@drawable/leavelogo"
-                        app:civ_border_color="@color/white"
+                        app:civ_border_color="#032c48"
                         app:civ_border_width="2dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="LEAVE"
-                        android:textSize="16sp"
                         android:layout_marginTop="4dp"
-                        android:textColor="#ffffff" />
+                        android:text="LEAVE"
+                        android:textColor="#032c48"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -118,16 +117,16 @@
                         android:layout_height="36dp"
                         android:layout_marginTop="1dp"
                         android:src="@drawable/ic_complains"
-                        app:civ_border_color="@color/white"
+                        app:civ_border_color="#032c48"
                         app:civ_border_width="2dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TICKETS"
-                        android:textSize="16sp"
                         android:layout_marginTop="4dp"
-                        android:textColor="#ffffff" />
+                        android:text="TICKETS"
+                        android:textColor="#032c48"
+                        android:textSize="16sp" />
 
 
                 </LinearLayout>
@@ -145,16 +144,16 @@
                         android:layout_height="36dp"
                         android:layout_marginTop="1dp"
                         android:src="@drawable/ic_profile"
-                        app:civ_border_color="@color/white"
+                        app:civ_border_color="#032c48"
                         app:civ_border_width="2dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="PROFILE"
-                        android:textSize="16sp"
                         android:layout_marginTop="4dp"
-                        android:textColor="#ffffff" />
+                        android:text="PROFILE"
+                        android:textColor="#032c48"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -171,16 +170,16 @@
                         android:layout_height="36dp"
                         android:layout_marginTop="1dp"
                         android:src="@drawable/helpandsupport"
-                        app:civ_border_color="@color/white"
+                        app:civ_border_color="#032c48"
                         app:civ_border_width="2dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="HELPDESK"
-                        android:textSize="16sp"
                         android:layout_marginTop="4dp"
-                        android:textColor="#ffffff" />
+                        android:text="HELPDESK"
+                        android:textColor="#032c48"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -194,30 +193,78 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/circulations"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="12dp"
             android:layout_marginBottom="20dp"
             android:clickable="true"
             android:focusable="true"
-            app:cardCornerRadius="40dp">
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="12dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_rectangle"
                 android:orientation="horizontal"
                 android:padding="8dp">
 
                 <ImageView
                     android:id="@+id/ImageView1"
-                    android:layout_width="83dp"
-                    android:layout_height="68dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:src="@drawable/loudspeaker" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Circulars"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="18dp"
+                        android:drawableEnd="@drawable/ic_arrow_forward"
+                        android:text="Circulars"
+                        android:textColor="#032c48"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/messmenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_rectangle"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/meess_menu"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/menu" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginStart="16dp"
                     android:gravity="center_vertical"
@@ -225,145 +272,111 @@
 
                     <TextView
                         android:id="@+id/TextView1"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Circulars"
-                        android:textSize="24sp"
+                        android:layout_marginEnd="18dp"
+                        android:drawableEnd="@drawable/ic_arrow_forward"
+                        android:text="Mess Menu"
+                        android:textColor="#032c48"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-
         <androidx.cardview.widget.CardView
-            android:id="@+id/messmenu"
+            android:id="@+id/canteenmenu"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
             android:layout_marginBottom="20dp"
             android:clickable="true"
             android:focusable="true"
-            app:cardCornerRadius="40dp">
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="12dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_rectangle"
                 android:orientation="horizontal"
                 android:padding="8dp">
 
                 <ImageView
-                    android:id="@+id/ImageView3"
-                    android:layout_width="77dp"
-                    android:layout_height="66dp"
+                    android:id="@+id/canteen_menu"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:src="@drawable/menu" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginStart="16dp"
                     android:gravity="center_vertical"
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/TextView3"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/Canteen"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Mess Menu"
-                        android:textSize="24sp"
+                        android:layout_marginEnd="18dp"
+                        android:drawableEnd="@drawable/ic_arrow_forward"
+                        android:text="Canteen Menu"
+                        android:textColor="#032c48"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/canteenmenu"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginBottom="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            app:cardCornerRadius="40dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
-
-                <ImageView
-                    android:id="@+id/ImageView4"
-                    android:layout_width="77dp"
-                    android:layout_height="66dp"
-                    android:src="@drawable/menu" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="16dp"
-                    android:gravity="center_vertical"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/TextView4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Canteenmenu"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
         <androidx.cardview.widget.CardView
             android:id="@+id/academiccalander"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="12dp"
             android:layout_marginEnd="12dp"
             android:layout_marginBottom="80dp"
             android:clickable="true"
             android:focusable="true"
-            app:cardCornerRadius="40dp">
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="12dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_rectangle"
                 android:orientation="horizontal"
                 android:padding="8dp">
 
                 <ImageView
-                    android:id="@+id/ImageView2"
-                    android:layout_width="75dp"
-                    android:layout_height="58dp"
+                    android:id="@+id/academic_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:src="@drawable/calendar" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginStart="16dp"
                     android:gravity="center_vertical"
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/TextView2"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/Academic_TextView"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="18dp"
+                        android:drawableEnd="@drawable/ic_arrow_forward"
                         android:text="Academic Calendar"
-                        android:textSize="24sp"
+                        android:textColor="#032c48"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
+
 
     </LinearLayout>
 
