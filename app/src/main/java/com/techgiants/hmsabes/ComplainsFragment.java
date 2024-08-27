@@ -23,7 +23,7 @@ public class ComplainsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_complains, container, false);
-        txtcarpanter = view.findViewById(R.id.complainsarpantertxt);
+        txtcarpanter = view.findViewById(R.id.complainscarpantertxt);
         txtelect = view.findViewById(R.id.complainselectriciantxt);
         textpest = view.findViewById(R.id.complainpesticidetxt);
         txtplum = view.findViewById(R.id.complainplumbertxt);

@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         Fragment selectedFragment = null;
         int id = menuItem.getItemId();
         if (id == R.id.wifi) {
-            frag(new WifiFragment(),true);
+            frag(new WifiFragment(),false);
         }
         else if (id == R.id.leave) {
             frag(new LeaveFragment(), false);

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#241124"
     android:orientation="vertical"
     tools:context=".ComplainsFragment">
     <!-- TODO: Update blank fragment layout -->
@@ -23,12 +22,6 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="12dp"
-            app:cardUseCompatPadding="true">
 
 
             <LinearLayout
@@ -55,309 +48,332 @@
                     android:textColor="@color/black"
                     android:textSize="28sp" />
 
+
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/complainselectrician"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_marginEnd="12dp"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="20dp"
                     android:clickable="true"
                     android:focusable="true"
-                    app:cardCornerRadius="40dp">
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="12dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/button_rectangle"
                         android:orientation="horizontal"
                         android:padding="8dp">
 
                         <ImageView
-                            android:id="@+id/complainselectricianimg"
-                            android:layout_width="58dp"
-                            android:layout_height="64dp"
+                            android:id="@+id/electrician_img"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
                             android:src="@drawable/complainselectrician" />
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
                             android:layout_marginStart="16dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical">
 
                             <TextView
                                 android:id="@+id/complainselectriciantxt"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="50dp"
-                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="18dp"
+                                android:drawableEnd="@drawable/ic_arrow_forward"
                                 android:text="Electrician"
-                                android:textSize="20sp"
+                                android:textColor="#032c48"
+                                android:textSize="18sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/complainsweeper"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_marginEnd="12dp"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="20dp"
                     android:clickable="true"
                     android:focusable="true"
-                    app:cardCornerRadius="40dp">
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="12dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/button_rectangle"
                         android:orientation="horizontal"
                         android:padding="8dp">
 
                         <ImageView
-                            android:id="@+id/complainssweeperimg"
-                            android:layout_width="58dp"
-                            android:layout_height="66dp"
+                            android:id="@+id/sweeper_img"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
                             android:src="@drawable/complainssweeper" />
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
                             android:layout_marginStart="16dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical">
 
                             <TextView
                                 android:id="@+id/complainssweepertxt"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="50dp"
-                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="18dp"
+                                android:drawableEnd="@drawable/ic_arrow_forward"
                                 android:text="Sweeper"
-                                android:textSize="20sp"
+                                android:textColor="#032c48"
+                                android:textSize="18sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/complainsarpanter"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_marginEnd="12dp"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="20dp"
                     android:clickable="true"
                     android:focusable="true"
-                    app:cardCornerRadius="40dp">
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="12dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/button_rectangle"
                         android:orientation="horizontal"
                         android:padding="8dp">
 
                         <ImageView
-                            android:id="@+id/complainsarpanterimg"
-                            android:layout_width="62dp"
-                            android:layout_height="65dp"
+                            android:id="@+id/carpenter_img"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
                             android:src="@drawable/complainscarpanter" />
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
                             android:layout_marginStart="16dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/complainsarpantertxt"
-                                android:layout_width="wrap_content"
+                                android:id="@+id/complainscarpantertxt"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="50dp"
-                                android:layout_marginTop="20dp"
-                                android:text="Carpanter"
-                                android:textSize="20sp"
+                                android:layout_marginEnd="18dp"
+                                android:drawableEnd="@drawable/ic_arrow_forward"
+                                android:text=" Carpenter"
+                                android:textColor="#032c48"
+                                android:textSize="18sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/complainplumber"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="20dp"
                     android:clickable="true"
                     android:focusable="true"
-                    app:cardCornerRadius="40dp">
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="12dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/button_rectangle"
                         android:orientation="horizontal"
                         android:padding="8dp">
 
                         <ImageView
                             android:id="@+id/complainplumberimg"
-                            android:layout_width="68dp"
-                            android:layout_height="62dp"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
                             android:src="@drawable/complainsplumber" />
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
                             android:layout_marginStart="16dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical">
 
                             <TextView
                                 android:id="@+id/complainplumbertxt"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="50dp"
-                                android:layout_marginTop="20dp"
-                                android:text="Plumber"
-                                android:textSize="20sp"
+                                android:layout_marginEnd="18dp"
+                                android:drawableEnd="@drawable/ic_arrow_forward"
+                                android:text=" Plumber"
+                                android:textColor="#032c48"
+                                android:textSize="18sp"
                                 android:textStyle="bold" />
-
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/complainpesticide"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:layout_marginTop="30dp"
                     android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="20dp"
                     android:clickable="true"
                     android:focusable="true"
-                    app:cardCornerRadius="40dp">
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="12dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/button_rectangle"
                         android:orientation="horizontal"
                         android:padding="8dp">
 
                         <ImageView
                             android:id="@+id/complainpesticideimg"
-                            android:layout_width="76dp"
-                            android:layout_height="65dp"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
                             android:src="@drawable/complainspest" />
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
                             android:layout_marginStart="16dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical">
 
                             <TextView
                                 android:id="@+id/complainpesticidetxt"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="50dp"
-                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="18dp"
+                                android:drawableEnd="@drawable/ic_arrow_forward"
                                 android:text="Pest Control"
-                                android:textSize="20sp"
+                                android:textColor="#032c48"
+                                android:textSize="18sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/complainwelder"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:layout_marginTop="30dp"
                     android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="20dp"
                     android:clickable="true"
                     android:focusable="true"
-                    app:cardCornerRadius="40dp">
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="12dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/button_rectangle"
                         android:orientation="horizontal"
                         android:padding="8dp">
 
                         <ImageView
                             android:id="@+id/complainwelderimg"
-                            android:layout_width="73dp"
-                            android:layout_height="67dp"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
                             android:src="@drawable/welder" />
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
                             android:layout_marginStart="16dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical">
 
                             <TextView
                                 android:id="@+id/complainweldertxt"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="50dp"
-                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="18dp"
+                                android:drawableEnd="@drawable/ic_arrow_forward"
                                 android:text="Welder"
-                                android:textSize="20sp"
+                                android:textColor="#032c48"
+                                android:textSize="18sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/complainwifiinternet"
+                    android:id="@+id/complainwifiinternetimg"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:layout_marginTop="30dp"
                     android:layout_marginEnd="12dp"
                     android:layout_marginBottom="20dp"
                     android:clickable="true"
                     android:focusable="true"
-                    app:cardCornerRadius="40dp">
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="12dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/button_rectangle"
                         android:orientation="horizontal"
                         android:padding="8dp">
 
                         <ImageView
-                            android:id="@+id/complainwifiinternetimg"
-                            android:layout_width="71dp"
-                            android:layout_height="65dp"
+                            android:id="@+id/complainwifiimg"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
                             android:src="@drawable/wifi" />
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
                             android:layout_marginStart="16dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical">
 
                             <TextView
                                 android:id="@+id/complainwifiinternettxt"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="50dp"
-                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="18dp"
+                                android:drawableEnd="@drawable/ic_arrow_forward"
                                 android:text="Wi-Fi Internet"
-                                android:textSize="20sp"
+                                android:textColor="#032c48"
+                                android:textSize="18sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
+
     </ScrollView>
 </LinearLayout>

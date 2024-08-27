@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#241124"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ProfileFragment">
 
@@ -34,7 +33,7 @@
                 android:layout_marginTop="1dp"
                 android:textSize="5dp"
                 android:layout_marginHorizontal="20dp"
-                android:textColor="#ffffff"
+                android:textColor="@color/black"
                 />
 
             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -48,7 +47,7 @@
 
             <TextView
                 android:id="@+id/profilename"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -64,7 +63,7 @@
                 android:layout_marginTop="12dp"
                 android:gravity="center_horizontal"
                 android:text=""
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
 
@@ -75,7 +74,7 @@
                 android:layout_marginTop="12dp"
                 android:gravity="center_horizontal"
                 android:text=""
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -86,64 +85,137 @@
                 android:layout_marginTop="12dp"
                 android:gravity="center_horizontal"
                 android:text=""
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <com.google.android.material.card.MaterialCardView
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profileleave"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="12dp"
-                app:cardUseCompatPadding="true">
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="12dp">
 
-                <!--Submit Button-->
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/profileleave"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginHorizontal="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="16dp"
-                    android:paddingHorizontal="12dp"
-                    android:text="Leave History" />
+                    android:background="@drawable/button_rectangle"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
 
+                    <ImageView
+                        android:id="@+id/electrician_img"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_leave" />
 
-            </com.google.android.material.card.MaterialCardView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="16dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
 
-            <com.google.android.material.card.MaterialCardView
+                        <TextView
+                            android:id="@+id/complainselectriciantxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="18dp"
+                            android:drawableEnd="@drawable/ic_arrow_forward"
+                            android:text="Leave History"
+                            android:textColor="#032c48"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profilecomplain"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="12dp"
-                app:cardUseCompatPadding="true">
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="12dp">
 
-                <!--                Submit Button-->
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/profilecomplain"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginHorizontal="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="16dp"
-                    android:paddingVertical="12dp"
-                    android:paddingHorizontal="12dp"
-                    android:text="Complaint History" />
-            </com.google.android.material.card.MaterialCardView>
+                    android:background="@drawable/button_rectangle"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
 
-            <androidx.appcompat.widget.AppCompatButton
+                    <ImageView
+                        android:id="@+id/complaint_img"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_complains" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="16dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="18dp"
+                            android:drawableEnd="@drawable/ic_arrow_forward"
+                            android:text="Complaint History"
+                            android:textColor="#032c48"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/profilelogutbtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="16dp"
-                android:textStyle="bold"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/gradient_bg"
-                android:paddingHorizontal="12dp"
-                android:text="Logout" />
+                android:layout_marginTop="12dp"
+                app:cardBackgroundColor="#032c48"
+                app:cardUseCompatPadding="true"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    android:padding="4dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="#ffff"
+                        android:layout_gravity="center_vertical"
+                        android:text="Logout"/>
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
 
 
 

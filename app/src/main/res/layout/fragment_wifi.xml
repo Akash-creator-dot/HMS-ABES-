@@ -5,7 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#241124"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -29,7 +28,7 @@
             android:text="@string/wifi_note"
             android:textSize="20sp"
             android:gravity="center_horizontal"
-            android:textColor="@color/white"/>
+            android:textColor="#032c48"/>
 
 
         <com.google.android.material.card.MaterialCardView
@@ -63,32 +62,45 @@
                 app:lottie_rawRes="@raw/wifi_connect" />
 
         </com.google.android.material.card.MaterialCardView>
-        <LinearLayout
-            android:id="@+id/saveCredential"
+
+
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
             android:layout_marginTop="12dp"
-            android:padding="8dp"
-            android:background="@drawable/gradient_bg"
-            android:orientation="horizontal">
+            app:cardBackgroundColor="#032c48"
+            app:cardUseCompatPadding="true"
+            >
 
-            <ImageView
-                android:layout_width="70dp"
-                android:layout_height="50dp"
-                android:src="@drawable/credential"
-                android:scaleType="fitCenter"/>
-
-            <TextView
+            <LinearLayout
+                android:id="@+id/saveCredential"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:textColor="#000000"
-                android:layout_gravity="center_vertical"
-                android:text="Save Credentials"/>
-        </LinearLayout>
+                android:gravity="center_horizontal"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/credential"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffff"
+                    android:layout_gravity="center_vertical"
+                    android:text="Save Credentials"/>
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
 
 
     </LinearLayout>
