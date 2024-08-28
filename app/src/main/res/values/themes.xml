@@ -1,8 +1,9 @@
 
 <resources xmlns:tools="http://schemas.android.com/tools">
-<style name="Base.Theme.HMSABES" parent="Theme.Material3.DayNight.NoActionBar">
+<style name="Base.Theme.HMSABES" parent="Theme.Material3.Light.NoActionBar">
      Customize your light theme here.
      <item name="colorPrimary">@color/background</item>
+    <item name="colorPrimaryDark">@color/light_blue</item>
 </style>
     <style name="Theme.dark" parent="Theme.Material3.Dark.NoActionBar">
         Customize your Dark theme here.

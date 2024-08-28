@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <ImageView
@@ -19,6 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
+        android:background="@color/white"
         android:orientation="vertical">
 
 
@@ -83,7 +85,7 @@
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/credential"
+                    android:src="@drawable/ic_credentials"
                     android:scaleType="fitCenter"/>
 
                 <TextView
@@ -93,6 +95,7 @@
                     android:textSize="24sp"
                     android:textStyle="bold"
                     android:textColor="#ffff"
+                    android:paddingHorizontal="12dp"
                     android:layout_gravity="center_vertical"
                     android:text="Save Credentials"/>
             </LinearLayout>

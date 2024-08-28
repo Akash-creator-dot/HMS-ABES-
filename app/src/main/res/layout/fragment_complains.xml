@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#032c48"
     tools:context=".ComplainsFragment">
     <!-- TODO: Update blank fragment layout -->
 
@@ -27,6 +28,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:orientation="vertical">
                 <ImageView
                     android:layout_width="45dp"
@@ -59,6 +61,7 @@
                     android:layout_marginBottom="20dp"
                     android:clickable="true"
                     android:focusable="true"
+                    android:elevation="4dp"
                     app:cardUseCompatPadding="true"
                     app:cardCornerRadius="12dp">
 
@@ -191,6 +194,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/complainplumber"
                     android:layout_width="match_parent"
+
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_marginEnd="12dp"

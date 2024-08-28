@@ -10,13 +10,14 @@
     android:layout_height="wrap_content"
     tools:context=".LeaveFragment">
     <ScrollView
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="?android:attr/actionBarSize"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="0dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:paddingBottom="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -247,7 +248,7 @@
                     android:layout_marginTop="16dp"
                     android:textColor="@color/white"
                     android:id="@+id/leavefragmentbtn"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginBottom="32dp"
                     android:background="#032c48"
                     android:paddingHorizontal="12dp"
                     android:text="@string/submit_leave_form" />
