@@ -12,13 +12,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#241124"
+        android:background="#FFFFFF"
         android:orientation="vertical"
         tools:ignore="UselessParent">
       <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="325dp"
-          android:background="#241124"
+          android:background="#FFFFFF"
           android:orientation="vertical">
 
         <ImageView
@@ -36,7 +36,7 @@
             android:fontFamily="@font/krona_one"
             android:text="@string/hms_abes"
             android:textStyle="bold"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="40sp"
             android:layout_marginTop="20dp"
             android:layout_gravity="center_horizontal"
@@ -47,9 +47,7 @@
             android:background="@drawable/gradient_bg"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"/>
-
       </LinearLayout>
-
       <com.google.android.material.card.MaterialCardView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
@@ -59,13 +57,11 @@
           android:layout_marginBottom="12dp"
           app:cardCornerRadius="5dp"
           app:cardElevation="4dp">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="12dp"
             android:orientation="vertical">
-
           <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
@@ -76,12 +72,10 @@
               android:textColor="@color/black"
               android:textSize="30sp"
               android:textStyle="bold" />
-
           <com.google.android.material.textfield.TextInputLayout
               style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
-
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/usernameLogin"
                 android:layout_width="325dp"
@@ -137,7 +131,7 @@
           android:layout_height="wrap_content"
           android:text="@string/forgot_password_click_here"
           android:id="@+id/forgotPasswordText"
-          android:textColor="@color/white"
+          android:textColor="@color/black"
           android:textSize="15sp"
           android:textStyle="bold"
           android:layout_marginStart="25dp"/>
@@ -155,16 +149,16 @@
           android:layout_width="155dp"
           android:layout_gravity="center"
           android:layout_marginTop="60dp"
-          android:backgroundTint="#85FFFFFF"
+          android:backgroundTint="#032c48"
           android:text="@string/log_in"
-          android:textColor="@color/black"
+          android:textColor="@color/white"
           android:textSize="20sp"
           android:textStyle="bold"
           app:cornerRadius="10dp" />
       <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:textColor="#FFFFFF"
+          android:textColor="#000000"
           android:textSize="12sp"
           android:textStyle="bold"
           android:layout_marginTop="12dp"
@@ -176,7 +170,7 @@
           android:layout_marginTop="12dp"
           android:layout_height="55dp"
           android:layout_marginBottom="30dp"
-          android:backgroundTint="#85FFFFFF"
+          android:backgroundTint="@color/white"
           android:text="@string/register"
           android:layout_gravity="center"
           android:textColor="@color/black"

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#241124"
+    android:background="#FFFFFF"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".SplashScreen">
@@ -21,8 +21,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:gravity="center"
-            >
+            android:background="@color/gray"
+            android:gravity="center">
 
             <ImageView
                 android:layout_width="100dp"
@@ -30,7 +30,7 @@
                 android:layout_height="100dp"
                 android:layout_marginBottom="40dp"
                 android:contentDescription="@string/todo"
-                android:src="@drawable/logoabesnewabbas" />
+                android:src="@drawable/logo_removebg_preview" />
 
             <TextView
                 android:layout_width="wrap_content"

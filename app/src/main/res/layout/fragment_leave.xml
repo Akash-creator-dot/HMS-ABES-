@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="#241124"
+    android:background="#032C48"
     android:layout_width="match_parent"
     android:gravity="center_horizontal"
     android:layout_height="wrap_content"
@@ -26,7 +26,7 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#ffffff"
+            app:cardBackgroundColor="@color/gray"
             app:cardCornerRadius="12dp"
             app:cardElevation="12dp"
             app:cardUseCompatPadding="true">
@@ -245,9 +245,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="16dp"
+                    android:textColor="@color/white"
                     android:id="@+id/leavefragmentbtn"
                     android:layout_marginBottom="16dp"
-                    android:background="@drawable/button_bg"
+                    android:background="#032c48"
                     android:paddingHorizontal="12dp"
                     android:text="@string/submit_leave_form" />
 
