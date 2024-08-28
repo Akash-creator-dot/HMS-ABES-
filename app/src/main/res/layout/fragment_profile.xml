@@ -161,7 +161,7 @@
                         android:id="@+id/complaint_img"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/ic_complains" />
+                        android:src="@drawable/ic_complaints" />
 
                     <LinearLayout
                         android:layout_width="match_parent"

@@ -1,11 +1,30 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.HMSABES" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Base.Theme.HMSABES" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
+
+
+    <style name="Theme.dark" parent="Theme.Material3.Dark.NoActionBar">
+        Customize your Dark theme here.
+        <item name="colorPrimary">@color/background</item>
+    </style>
+
+    <style name="Theme.HMSABES" parent="Base.Theme.HMSABES">
+        Customize your dark theme here.
+        <item name="colorPrimary">@color/background</item>
+    </style>
+
     <style name="ThemeOverlay.AppCompat.navTheme">
         <item name="colorPrimary">@color/white</item>
 
+    </style>
+
+
+    <style name="BottomNavigationViewStyle" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="itemIconTint">@color/bottom_nav_color_selector</item>
+        <item name="itemTextColor">@color/bottom_nav_color_selector</item>
+        <item name="android:background">@color/dark_blue</item>
     </style>
 </resources>
