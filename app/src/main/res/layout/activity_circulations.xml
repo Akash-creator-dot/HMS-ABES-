@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="#241124"
+    android:background="#032c48"
     tools:context=".Circulations">
     <androidx.recyclerview.widget.RecyclerView
         android:layout_height="match_parent"

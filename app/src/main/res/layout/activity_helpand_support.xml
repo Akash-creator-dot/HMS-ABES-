@@ -46,7 +46,7 @@
         android:layout_height="50dp"
        />
     <Button
-        android:background="#A49B9B"
+        android:background="#032c48"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SEND"

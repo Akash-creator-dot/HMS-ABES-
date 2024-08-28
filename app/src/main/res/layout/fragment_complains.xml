@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#032c48"
     tools:context=".ComplainsFragment">
     <!-- TODO: Update blank fragment layout -->
 
@@ -27,6 +28,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:orientation="vertical">
                 <ImageView
                     android:layout_width="45dp"
@@ -60,6 +62,7 @@
                     android:clickable="true"
                     android:focusable="true"
                     app:cardUseCompatPadding="true"
+                    android:background="@color/white"
                     app:cardCornerRadius="12dp">
 
                     <LinearLayout
@@ -67,6 +70,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/button_rectangle"
                         android:orientation="horizontal"
+                        android:backgroundTint="@color/white"
                         android:padding="8dp">
 
                         <ImageView
@@ -99,6 +103,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/complainsweeper"
                     android:layout_width="match_parent"
+                    android:background="@color/white"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_marginEnd="12dp"
@@ -110,6 +115,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
+                        android:backgroundTint="@color/white"
                         android:layout_height="wrap_content"
                         android:background="@drawable/button_rectangle"
                         android:orientation="horizontal"
@@ -145,6 +151,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/complainsarpanter"
                     android:layout_width="match_parent"
+                    android:background="@color/white"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_marginEnd="12dp"
@@ -156,6 +163,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
+                        android:backgroundTint="@color/white"
                         android:layout_height="wrap_content"
                         android:background="@drawable/button_rectangle"
                         android:orientation="horizontal"
@@ -191,6 +199,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/complainplumber"
                     android:layout_width="match_parent"
+                    android:background="@color/white"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_marginEnd="12dp"
@@ -202,6 +211,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
+                        android:backgroundTint="@color/white"
                         android:layout_height="wrap_content"
                         android:background="@drawable/button_rectangle"
                         android:orientation="horizontal"
@@ -236,6 +246,7 @@
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:id="@+id/complainpesticide"
+                    android:background="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
@@ -249,6 +260,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
                         android:background="@drawable/button_rectangle"
                         android:orientation="horizontal"
                         android:padding="8dp">
@@ -285,6 +297,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
+                    android:background="@color/white"
                     android:layout_marginEnd="12dp"
                     android:layout_marginBottom="20dp"
                     android:clickable="true"
@@ -295,6 +308,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
                         android:background="@drawable/button_rectangle"
                         android:orientation="horizontal"
                         android:padding="8dp">
@@ -331,6 +345,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
+                    android:background="@color/white"
                     android:layout_marginEnd="12dp"
                     android:layout_marginBottom="48dp"
                     android:clickable="true"
@@ -343,6 +358,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/button_rectangle"
                         android:orientation="horizontal"
+                        android:backgroundTint="@color/white"
                         android:padding="8dp">
 
                         <ImageView

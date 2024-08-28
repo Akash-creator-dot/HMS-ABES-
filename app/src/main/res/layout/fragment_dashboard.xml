@@ -9,6 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#ffffff"
         android:orientation="vertical">
 
 
@@ -194,6 +195,7 @@
             android:id="@+id/circulations"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:layout_marginStart="12dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="12dp"
@@ -206,6 +208,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
                 android:background="@drawable/button_rectangle"
                 android:orientation="horizontal"
                 android:padding="8dp">
@@ -241,6 +244,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/messmenu"
             android:layout_width="match_parent"
+            android:background="@color/white"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
@@ -252,6 +256,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
+                android:backgroundTint="@color/white"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_rectangle"
                 android:orientation="horizontal"
@@ -293,6 +298,7 @@
             android:layout_marginBottom="20dp"
             android:clickable="true"
             android:focusable="true"
+            android:background="@color/white"
             app:cardUseCompatPadding="true"
             app:cardCornerRadius="12dp">
 
@@ -301,6 +307,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_rectangle"
                 android:orientation="horizontal"
+                android:backgroundTint="@color/white"
                 android:padding="8dp">
 
                 <ImageView
@@ -337,6 +344,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
             android:layout_marginBottom="80dp"
+            android:background="@color/white"
             android:clickable="true"
             android:focusable="true"
             app:cardUseCompatPadding="true"
@@ -347,6 +355,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_rectangle"
                 android:orientation="horizontal"
+                android:backgroundTint="@color/white"
                 android:padding="8dp">
 
                 <ImageView
