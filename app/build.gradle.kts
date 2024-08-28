@@ -2,7 +2,9 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
+
 }
+
 
 android {
 
@@ -52,17 +54,24 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.lottie)
     implementation(libs.firebase.messaging)
-    implementation ("com.github.denzcoskun:ImageSlideshow:0.1.0")
-    implementation(libs.lifecycle.livedata.ktx)
-    implementation(libs.lifecycle.viewmodel.ktx)
-    implementation(libs.navigation.fragment)
-    implementation(libs.navigation.ui)
-    implementation(libs.android.pdf.viewer)
-    androidTestImplementation(libs.ext.junit)
+    implementation(libs.androidx.material)
+    implementation(libs.androidx.appcompat.v170)
+    implementation(libs.material)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.constraintlayout)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx.v284)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx.v251) // ViewModel
+    implementation(libs.androidx.lifecycle.livedata.ktx) // LiveData
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation (libs.denzcoskun.imageslideshow)
     implementation (libs.play.services.auth) {
         exclude ("com.google.android.gms", "play-services-auth")
     }
     implementation (libs.core)
     implementation(libs.appcompat.v151)
     implementation (libs.picasso)
+
+    implementation (libs.dexter)
 }

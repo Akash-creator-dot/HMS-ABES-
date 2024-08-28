@@ -18,10 +18,10 @@ dependencyResolutionManagement {
         mavenCentral()
         maven { url = uri("https://jitpack.io") }
         maven { url = uri("https://jcenter.bintray.com") }
-
     }
-}
 
-rootProject.name = "HMS ABES"
-include(":app")
+
+    rootProject.name = "HMS ABES"
+    include(":app")
+}
  

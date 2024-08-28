@@ -90,38 +90,10 @@
                         android:orientation="horizontal">
 
                         <EditText
-                            android:id="@+id/otp_enter_1"
-                            android:layout_width="30dp"
-                            android:layout_height="46dp"
-                            android:layout_marginStart="40dp"
-                            android:gravity="center"
-                            android:hint="*"
-                            android:importantForAutofill="no"
-                            android:inputType="number"
-                            android:maxLength="1"
-                            android:textSize="24sp"
-                            android:textStyle="bold"
-                            tools:ignore="LabelFor" />
-
-                        <EditText
-                            android:id="@+id/otp_enter_2"
-                            android:layout_width="30dp"
-                            android:layout_height="46dp"
-                            android:layout_marginStart="20dp"
-                            android:gravity="center"
-                            android:hint="*"
-                            android:importantForAutofill="no"
-                            android:inputType="number"
-                            android:maxLength="1"
-                            android:textSize="24sp"
-                            android:textStyle="bold"
-                            tools:ignore="LabelFor" />
-
-                        <EditText
                             android:id="@+id/otp_enter_3"
                             android:layout_width="30dp"
                             android:layout_height="46dp"
-                            android:layout_marginStart="20dp"
+                            android:layout_marginStart="85dp"
                             android:gravity="center"
                             android:hint="*"
                             android:importantForAutofill="no"
@@ -209,10 +181,24 @@
                 android:layout_gravity="center"
                 android:backgroundTint="#85FF0000"
                 android:text="@string/log_in"
+                android:layout_marginTop="10dp"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:cornerRadius="10dp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/fingerprint_scan" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Use Fingerptint to login."/>
+
         </LinearLayout>
     </RelativeLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

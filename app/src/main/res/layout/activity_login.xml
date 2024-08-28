@@ -12,13 +12,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/gradient_bg"
+        android:background="#241124"
         android:orientation="vertical"
         tools:ignore="UselessParent">
       <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="325dp"
-          android:background="@drawable/signup_bg"
+          android:background="#241124"
           android:orientation="vertical">
 
         <ImageView
@@ -99,7 +99,6 @@
                 android:shadowColor="@color/black"
                 android:shadowDx="0"
                 android:shadowDy="4"
-                android:textColorHint="#777777"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/loginText" />
@@ -126,7 +125,6 @@
                 android:shadowColor="@color/black"
                 android:shadowDx="0"
                 android:shadowDy="4"
-                android:textColorHint="#777777"
                 app:layout_constraintEnd_toEndOf="@+id/usernameLogin"
                 app:layout_constraintStart_toStartOf="@+id/usernameLogin"
                 app:layout_constraintTop_toBottomOf="@+id/usernameLogin" />
@@ -139,7 +137,7 @@
           android:layout_height="wrap_content"
           android:text="@string/forgot_password_click_here"
           android:id="@+id/forgotPasswordText"
-          android:textColor="@color/black"
+          android:textColor="@color/white"
           android:textSize="15sp"
           android:textStyle="bold"
           android:layout_marginStart="25dp"/>
@@ -157,7 +155,7 @@
           android:layout_width="155dp"
           android:layout_gravity="center"
           android:layout_marginTop="60dp"
-          android:backgroundTint="#85FF0000"
+          android:backgroundTint="#85FFFFFF"
           android:text="@string/log_in"
           android:textColor="@color/black"
           android:textSize="20sp"
@@ -166,7 +164,7 @@
       <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:textColor="@color/black"
+          android:textColor="#FFFFFF"
           android:textSize="12sp"
           android:textStyle="bold"
           android:layout_marginTop="12dp"
@@ -178,7 +176,7 @@
           android:layout_marginTop="12dp"
           android:layout_height="55dp"
           android:layout_marginBottom="30dp"
-          android:backgroundTint="#85FF0000"
+          android:backgroundTint="#85FFFFFF"
           android:text="@string/register"
           android:layout_gravity="center"
           android:textColor="@color/black"
