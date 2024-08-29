@@ -74,4 +74,5 @@ dependencies {
     implementation (libs.picasso)
 
     implementation (libs.dexter)
+    implementation(libs.android.pdf.viewer)
 }
