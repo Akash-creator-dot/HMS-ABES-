@@ -27,6 +27,8 @@ constraintlayout = "2.1.4"
 lottie = "6.4.1"
 firebaseMessaging = "24.0.0"
 androidPdfViewer = "2.8.2"
+junit = "1.2.1"
+firebaseInappmessagingDisplay = "21.0.0"
 
 [libraries]
 androidx-appcompat-v170 = { module = "androidx.appcompat:appcompat", version.ref = "appcompatVersion" }
@@ -56,6 +58,8 @@ constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayo
 lottie = { group = "com.airbnb.android", name = "lottie", version.ref = "lottie" }
 firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging", version.ref = "firebaseMessaging" }
 android-pdf-viewer = { group = "com.github.barteksc", name = "android-pdf-viewer", version.ref = "androidPdfViewer" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junit" }
+firebase-inappmessaging-display = { group = "com.google.firebase", name = "firebase-inappmessaging-display", version.ref = "firebaseInappmessagingDisplay" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

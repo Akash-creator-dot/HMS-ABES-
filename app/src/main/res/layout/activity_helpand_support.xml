@@ -21,7 +21,7 @@
         android:layout_width="300dp"
         android:id="@+id/spinner"
         android:hint="subject"
-        android:background="@drawable/customedittextbox"
+        android:background="@drawable/boxedt"
         android:paddingStart="13dp"
         android:paddingEnd="13dp"
         android:layout_marginBottom="30dp"
@@ -36,17 +36,17 @@
         android:paddingStart="50dp"
         />
     <EditText
-        android:background="@drawable/customedittextbox"
+        android:background="@drawable/boxedt"
         android:paddingStart="13dp"
         android:hint="State"
         android:paddingEnd="13dp"
         android:layout_width="300dp"
         android:id="@+id/helptext"
         android:layout_marginBottom="40dp"
-        android:layout_height="50dp"
+        android:layout_height="100dp"
        />
     <Button
-        android:background="#032c48"
+        android:background="#5dcad1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SEND"

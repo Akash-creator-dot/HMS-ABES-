@@ -75,4 +75,6 @@ dependencies {
 
     implementation (libs.dexter)
     implementation(libs.android.pdf.viewer)
+    implementation(libs.androidx.junit)
+    implementation(libs.firebase.inappmessaging.display)
 }

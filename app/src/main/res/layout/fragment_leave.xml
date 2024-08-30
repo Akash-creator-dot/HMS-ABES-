@@ -191,6 +191,33 @@
                         android:inputType="none"
                         android:textSize="16sp" />
                 </LinearLayout>
+                <!--            Reason of leave -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="14dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Reason of Leave"
+                        android:textColor="#0CA0F0"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/student_reason"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:textColorHint="#000000"
+                        android:autofillHints="Reason of Leave"
+                        android:drawableEnd="@drawable/ic_mobile"
+                        android:hint="Reason of Leave"
+                        android:inputType="text"
+                        android:textSize="16sp" />
+                </LinearLayout>
 
                 <!--            Student Mobile No -->
                 <LinearLayout
@@ -218,28 +245,115 @@
                         android:hint="@string/student_mobile_number"
                         android:inputType="number"
                         android:textSize="16sp" />
+                </LinearLayout>
+                <!--            Student Current Year of Studying -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="14dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Current Year"
+                        android:textColor="#0CA0F0"
+                        android:textSize="12sp" />
+
                     <EditText
-                        android:id="@+id/co_name"
-                        android:layout_marginTop="12dp"
+                        android:id="@+id/current_year"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:textColorHint="#000000"
+                        android:autofillHints="Year of Studying"
+                        android:drawableEnd="@drawable/ic_date"
+                        android:hint="Year of Studying"
+                        android:inputType="number"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <!--            Student CO NAME -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="14dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CO Name"
+                        android:textColor="#0CA0F0"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/CO_Name"
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
                         android:textColorHint="#000000"
                         android:autofillHints="CO Name"
+                        android:drawableEnd="@drawable/ic_mobile"
                         android:hint="CO Name"
                         android:inputType="text"
                         android:textSize="16sp" />
-                     <EditText
-                         android:id="@+id/relationship"
-                         android:layout_marginTop="12dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:textColorHint="#000000"
-                    android:autofillHints="Relation Ship"
-                    android:hint="Relationship"
-                    android:inputType="text"
-                    android:textSize="16sp" />
                 </LinearLayout>
+                <!--            CO Relationship -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="14dp"
+                    android:orientation="vertical">
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Relationship"
+                        android:textColor="#0CA0F0"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/relationship"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:textColorHint="#000000"
+                        android:autofillHints="CO Name"
+                        android:drawableEnd="@drawable/ic_mobile"
+                        android:hint="Relationship"
+                        android:inputType="text"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <!--            Student ADDRESS -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="14dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Address"
+                        android:textColor="#0CA0F0"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/Address"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:textColorHint="#000000"
+                        android:autofillHints="Address"
+                        android:drawableEnd="@drawable/ic_mobile"
+                        android:hint="Full Address"
+                        android:inputType="text"
+                        android:textSize="16sp" />
+                </LinearLayout>
                 <!--                Submit Button-->
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="wrap_content"
@@ -252,8 +366,6 @@
                     android:background="#032c48"
                     android:paddingHorizontal="12dp"
                     android:text="@string/submit_leave_form" />
-
-
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>

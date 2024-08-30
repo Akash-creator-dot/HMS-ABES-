@@ -17,25 +17,34 @@
         tools:replace="android:appComponentFactory"
         tools:targetApi="31">
         <activity
+            android:name=".LeaveForm"
+            android:exported="false" />
+        <activity
+            android:name=".complaininsidesome"
+            android:exported="false" />
+        <activity
+            android:name=".complaininsideall"
+            android:exported="false" />
+        <activity
             android:name=".AcademicCalander"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MessMenu"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".CanteenMenu"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Circulations"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Aboutus"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Leavedata"
             android:exported="false"
@@ -61,11 +70,11 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".OtpVerification"
+            android:name=".HelpandSupport"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ComplainsDetail"
+            android:name=".OtpVerification"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity

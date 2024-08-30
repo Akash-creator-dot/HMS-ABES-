@@ -35,7 +35,7 @@ public class AcademicCalander extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_academic_calander);
 
-        pdfUrl = "https://pdfobject.com/pdf/sample.pdf";
+        pdfUrl = "https://foaaktu.ac.in/pdfs/academic%20calendar%202024-25%20odd.pdf";
         pdfView = findViewById(R.id.pdfView);
         lottieAnimationView = findViewById(R.id.animationView);
 

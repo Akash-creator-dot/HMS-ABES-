@@ -231,7 +231,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="18dp"
                                 android:drawableEnd="@drawable/ic_arrow_forward"
-                                android:text=" Plumber"
+                                android:text="Plumber"
                                 android:textColor="#032c48"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />

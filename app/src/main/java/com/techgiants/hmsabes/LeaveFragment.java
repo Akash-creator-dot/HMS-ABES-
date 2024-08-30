@@ -34,7 +34,7 @@ public class LeaveFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_leave, container, false);
         dateOfLeaveTxt = view.findViewById(R.id.dateOfLeaveTxt);
         studentmobilenumber=view.findViewById(R.id.student_mobile);
-        coname=view.findViewById(R.id.co_name);
+        coname=view.findViewById(R.id.CO_Name);
         relationship=view.findViewById(R.id.relationship);
         dateOfReturnTxt = view.findViewById(R.id.dateOfReturnTxt);
         timeOfLeaveTxt = view.findViewById(R.id.timeOfLeaveTxt);
