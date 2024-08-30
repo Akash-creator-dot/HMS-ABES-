@@ -12,9 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class ComplainsFragment extends Fragment {
-    CardView cardelect, cardplum, cardcarp, cardpest, cardsweeper;
-    TextView txtcarpanter, textpest, txtplum, txtsweeper, txtelect;
-    private String gmail, adm, pass, room, dept, block, name;
+    CardView cardelect, cardplum, cardcarp, cardpest, cardsweeper,cardwelder,cardwifi;
+    TextView txtcarpanter, textpest, txtplum, txtsweeper, txtelect,txtwelder,txtwifi;
 
     public ComplainsFragment() {
         // Required empty public constructor
@@ -28,72 +27,74 @@ public class ComplainsFragment extends Fragment {
         textpest = view.findViewById(R.id.complainpesticidetxt);
         txtplum = view.findViewById(R.id.complainplumbertxt);
         txtsweeper = view.findViewById(R.id.complainssweepertxt);
-
-        Bundle bundle = getArguments();
-        if (bundle != null) {
-            gmail = bundle.getString("gmail");
-            adm = bundle.getString("adm");
-            pass = bundle.getString("pass");
-            room = bundle.getString("room");
-            dept = bundle.getString("dept");
-            block = bundle.getString("block");
-            name = bundle.getString("name");
-        }
-
         cardcarp = view.findViewById(R.id.complainsarpanter);
         cardplum = view.findViewById(R.id.complainplumber);
         cardelect = view.findViewById(R.id.complainselectrician);
         cardsweeper = view.findViewById(R.id.complainsweeper);
+        cardwelder=view.findViewById(R.id.complainwelder);
+        cardwifi=view.findViewById(R.id.complainwifiinternetimg);
+        txtwelder=view.findViewById(R.id.complainweldertxt);
+        txtwifi=view.findViewById(R.id.complainwifiinternettxt);
         cardpest = view.findViewById(R.id.complainpesticide);
 
         cardcarp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startComplainsDetailActivity(txtcarpanter.getText().toString());
+                startComplainsDetailActivityall(txtcarpanter.getText().toString());
             }
         });
 
         cardplum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startComplainsDetailActivity(txtplum.getText().toString());
+                startComplainsDetailActivityall(txtplum.getText().toString());
             }
         });
 
         cardelect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startComplainsDetailActivity(txtelect.getText().toString());
+                startComplainsDetailActivityall(txtelect.getText().toString());
             }
         });
 
         cardsweeper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startComplainsDetailActivity(txtsweeper.getText().toString());
+                startComplainsDetailActivitysome(txtsweeper.getText().toString());
             }
         });
 
         cardpest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startComplainsDetailActivity(textpest.getText().toString());
+                startComplainsDetailActivitysome(textpest.getText().toString());
+            }
+        });
+        cardwelder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startComplainsDetailActivityall(txtwelder.getText().toString());
+            }
+        });
+        cardwifi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startComplainsDetailActivitysome(txtwifi.getText().toString());
             }
         });
 
         return view;
     }
 
-    private void startComplainsDetailActivity(String complainType) {
-        Intent intent = new Intent(getContext(), ComplainsDetail.class);
-//        intent.putExtra("complains", complainType);
-//        intent.putExtra("gmail", gmail);
-//        intent.putExtra("adm", adm);
-//        intent.putExtra("pass", pass);
-//        intent.putExtra("room", room);
-//        intent.putExtra("dept", dept);
-//        intent.putExtra("block", block);
-//        intent.putExtra("name", name);
+    private void startComplainsDetailActivityall(String complainType) {
+        Intent intent = new Intent(getContext(), complaininsideall.class);
+        intent.putExtra("complains", complainType);
+        startActivity(intent);
+    }
+    private void startComplainsDetailActivitysome(String complainType) {
+        Intent intent = new Intent(getContext(), complaininsidesome.class);
+        intent.putExtra("complains", complainType);
         startActivity(intent);
     }
 }
