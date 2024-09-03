@@ -73,7 +73,8 @@ dependencies {
     implementation (libs.core)
     implementation(libs.appcompat.v151)
     implementation (libs.picasso)
-
+    implementation ("com.github.bumptech.glide:glide:4.15.1")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.15.1")
     implementation (libs.dexter)
     implementation(libs.android.pdf.viewer)
     implementation(libs.androidx.junit)

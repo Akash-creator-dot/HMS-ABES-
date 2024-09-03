@@ -40,7 +40,6 @@ import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 import java.util.Map;
-
 public class ProfileFragment extends Fragment {
     private FirebaseAuth auth;
     private FirebaseFirestore fstore;
@@ -74,7 +73,6 @@ public class ProfileFragment extends Fragment {
         storageReference = FirebaseStorage.getInstance().getReference();
         profileimageview = view.findViewById(R.id.profile_image);
 
-        // Fetch user data from Firestore,
         fetchUserDataWithCaching();
 
         StorageReference profileRef = storageReference.child("users/" + auth.getCurrentUser().getUid() + "/profile.jpg");
