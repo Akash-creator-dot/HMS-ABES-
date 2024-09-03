@@ -75,6 +75,7 @@
     <string name="department">Department</string>
     <string name="admn_no">Admn. No.</string>
     <string name="retype_admn_no">Retype Admn. No.</string>
+    <string name="parentMobileNo">Parent Mobile Number</string>
     <string name="account_already_exist_click_on_login_below">Account Already Exist? Click on Login below.</string>
     <string name="retype_password">Retype Password</string>
     <string name="abes_engineering">ABES Engineering</string>

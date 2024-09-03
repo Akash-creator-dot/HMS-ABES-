@@ -72,6 +72,8 @@ public class LoginActivityJava extends AppCompatActivity {
                                         Toast.makeText(LoginActivityJava.this, "Sign-in Failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                                     }
                                 }
+
+
                             });
                 }
             }
@@ -136,4 +138,6 @@ public class LoginActivityJava extends AppCompatActivity {
             finish();
         }
     }
+
+
 }

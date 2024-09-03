@@ -345,6 +345,34 @@
                                 app:layout_constraintStart_toStartOf="@+id/admnNo"
                                 app:layout_constraintTop_toBottomOf="@+id/admnNo" />
                         </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/parentMobileNo"
+                                android:layout_width="325dp"
+                                android:layout_height="50dp"
+                                android:layout_marginTop="25dp"
+                                android:background="@drawable/edit_text_shape"
+                                android:elevation="2dp"
+                                android:fontFamily="@font/kurale_regular"
+                                android:hint="@string/parentMobileNo"
+                                android:inputType="text"
+                                android:paddingStart="18dp"
+                                android:paddingEnd="18dp"
+                                android:shadowColor="@color/black"
+                                android:shadowDx="0"
+                                android:shadowDy="4"
+                                android:textColor="@color/black"
+                                android:textColorHint="#777777"
+                                app:layout_constraintEnd_toEndOf="@+id/retypeAdmn"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="@+id/retypeAdmn"
+                                app:layout_constraintTop_toBottomOf="@+id/retypeAdmn" />
+                        </com.google.android.material.textfield.TextInputLayout>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
