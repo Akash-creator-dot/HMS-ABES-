@@ -45,11 +45,15 @@
         android:layout_marginBottom="40dp"
         android:layout_height="100dp"
        />
-    <Button
-        android:background="#5dcad1"
+    <androidx.appcompat.widget.AppCompatButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SEND"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"
         android:id="@+id/helpsendbtn"
-        />
+        android:layout_marginBottom="32dp"
+        android:background="#032c48"
+        android:paddingHorizontal="12dp"
+        android:text="SUBMIT" />
 </LinearLayout>

@@ -8,14 +8,12 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.firebase.Firebase;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -41,9 +39,9 @@ public class Circulations extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        recyclerView=findViewById(R.id.recycont);
-        progressbar=findViewById(R.id.progressbar);
-        reference= FirebaseDatabase.getInstance().getReference().child("Notice");
+        recyclerView = findViewById(R.id.recycont);
+        progressbar = findViewById(R.id.progressbar);
+        reference = FirebaseDatabase.getInstance().getReference().child("Notice");
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         recyclerView.setHasFixedSize(true);
         getNotice();
@@ -53,12 +51,12 @@ public class Circulations extends AppCompatActivity {
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                arrayList=new ArrayList<>();
-                for(DataSnapshot snapshot1=snapshot.getChildren()){
-                 circulationsclass data=snapshot1.getValue(circulationsclass.class);
-                 arrayList.add(data);
+                arrayList = new ArrayList<>();
+                for (DataSnapshot snapshot1 : snapshot.getChildren()) {
+                    circulationsclass data = snapshot1.getValue(circulationsclass.class);
+                    arrayList.add(data);
                 }
-                adapter=new circulationsadapter(getApplicationContext(),arrayList);
+                adapter = new circulationsadapter(getApplicationContext(), arrayList);
                 adapter.notifyDataSetChanged();
                 progressbar.setVisibility(View.GONE);
                 recyclerView.setAdapter(adapter);
@@ -66,9 +64,9 @@ public class Circulations extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                 progressbar.setVisibility(View.GONE);
-                Toast.makeText(Circulations.this, databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+                progressbar.setVisibility(View.GONE);
+                Toast.makeText(Circulations.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
-        })
+        });
     }
 }
