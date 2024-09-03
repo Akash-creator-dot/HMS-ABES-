@@ -74,7 +74,7 @@ public class ProfileFragment extends Fragment {
         storageReference = FirebaseStorage.getInstance().getReference();
         profileimageview = view.findViewById(R.id.profile_image);
 
-        // Fetch user data from Firestore, using cache if available
+        // Fetch user data from Firestore,
         fetchUserDataWithCaching();
 
         StorageReference profileRef = storageReference.child("users/" + auth.getCurrentUser().getUid() + "/profile.jpg");
