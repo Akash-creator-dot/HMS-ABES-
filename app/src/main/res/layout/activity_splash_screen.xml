@@ -11,7 +11,7 @@
     tools:context=".SplashScreen">
     <androidx.cardview.widget.CardView
         android:layout_width="300dp"
-        app:cardBackgroundColor="#FFFFFF"
+        app:cardBackgroundColor="@color/gray"
         app:cardCornerRadius="11dp"
         app:cardUseCompatPadding="true"
         android:layout_height="300dp"

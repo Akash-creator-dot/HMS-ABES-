@@ -26,7 +26,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class OtpSending extends AppCompatActivity {
+public class OTPSending extends AppCompatActivity {
     private EditText phoneNumberInput;
     private Button getOtpButton;
     private ProgressBar progressBar;
@@ -43,8 +43,6 @@ public class OtpSending extends AppCompatActivity {
 
         // Initialize Firebase
         FirebaseApp.initializeApp(this);
-
-        phoneNumberInput = findViewById(R.id.phone_number_input);
         getOtpButton = findViewById(R.id.get_otp_button);
         progressBar = findViewById(R.id.progress_bar);
 
@@ -52,11 +50,19 @@ public class OtpSending extends AppCompatActivity {
         handler = new Handler();
         isCooldown = false;
 
+        // Get the parent's phone number passed from the previous activity
+        Intent intent = getIntent();
+        String parentPhoneNumber = intent.getStringExtra("parentPhoneNumber");
+
+        if (parentPhoneNumber != null && !parentPhoneNumber.isEmpty()) {
+            phoneNumberInput.setText(parentPhoneNumber); // Automatically set the parent's phone number
+        }
+
         getOtpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (isInternetAvailable() && !isCooldown) {
-                    String phoneNumber = "+91"+phoneNumberInput.getText().toString().trim();
+                    String phoneNumber = phoneNumberInput.getText().toString().trim();
                     if (isValidPhoneNumber(phoneNumber)) {
                         startCooldown();
                         progressBar.setVisibility(View.VISIBLE);
@@ -66,7 +72,7 @@ public class OtpSending extends AppCompatActivity {
                                 phoneNumber,
                                 60,
                                 TimeUnit.SECONDS,
-                                OtpSending.this,
+                                OTPSending.this,
                                 new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
                                     @Override
                                     public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
@@ -78,7 +84,7 @@ public class OtpSending extends AppCompatActivity {
                                     public void onVerificationFailed(@NonNull FirebaseException e) {
                                         progressBar.setVisibility(View.GONE);
                                         getOtpButton.setVisibility(View.VISIBLE);
-                                        Toast.makeText(OtpSending.this, "Verification Failed: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                                        Toast.makeText(OTPSending.this, "Verification Failed: " + e.getMessage(), Toast.LENGTH_LONG).show();
                                         Log.e("OTP", "Verification Failed", e);
                                     }
 
@@ -87,20 +93,20 @@ public class OtpSending extends AppCompatActivity {
                                         progressBar.setVisibility(View.GONE);
                                         getOtpButton.setVisibility(View.VISIBLE);
                                         verificationId = s;
-                                        Intent intent = new Intent(OtpSending.this, com.techgiants.hmsabes.OtpVerification.class);
+                                        Intent intent = new Intent(OTPSending.this, com.techgiants.hmsabes.OtpVerification.class);
                                         intent.putExtra("backend", verificationId);
                                         startActivity(intent);
                                     }
                                 }
                         );
                     } else {
-                        Toast.makeText(OtpSending.this, "Enter a valid phone number", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(OTPSending.this, "Enter a valid phone number", Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     if (isCooldown) {
-                        Toast.makeText(OtpSending.this, "Please wait before requesting another OTP", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(OTPSending.this, "Please wait before requesting another OTP", Toast.LENGTH_SHORT).show();
                     } else {
-                        Toast.makeText(OtpSending.this, "Check Internet Connection", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(OTPSending.this, "Check Internet Connection", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
