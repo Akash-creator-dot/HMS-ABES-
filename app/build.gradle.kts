@@ -72,7 +72,7 @@ dependencies {
     implementation (libs.core)
     implementation(libs.appcompat.v151)
     implementation (libs.picasso)
-
+    implementation(libs.glide)
     implementation (libs.dexter)
     implementation(libs.android.pdf.viewer)
     implementation(libs.androidx.junit)

@@ -6,6 +6,7 @@ circleimageview = "3.1.0"
 core = "1.13.1"
 dexter = "6.2.3"
 
+glide = "4.16.0"
 imageslideshowVersion = "0.1.2"
 lifecycleRuntimeKtx = "2.8.4"
 lifecycleViewmodelKtx = "2.8.4"
@@ -45,6 +46,7 @@ circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circ
 core = { module = "androidx.core:core", version.ref = "core" }
 denzcoskun-imageslideshow = { module = "com.github.denzcoskun:ImageSlideshow", version.ref = "imageslideshowVersion" }
 dexter = { module = "com.karumi:dexter", version.ref = "dexter" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }

@@ -1,15 +1,35 @@
 package com.techgiants.hmsabes;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.firebase.Firebase;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 public class Circulations extends AppCompatActivity {
+    private RecyclerView recyclerView;
+    private ProgressBar progressbar;
+    private ArrayList<circulationsclass> arrayList;
+    private circulationsadapter adapter;
+    private DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,13 +41,34 @@ public class Circulations extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        recyclerView=findViewById(R.id.recycont);
+        progressbar=findViewById(R.id.progressbar);
+        reference= FirebaseDatabase.getInstance().getReference().child("Notice");
+        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        recyclerView.setHasFixedSize(true);
+        getNotice();
+    }
 
-        // Enable the back button in the action bar
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back); // Optional, you can provide a custom back arrow icon
-        }
+    private void getNotice() {
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                arrayList=new ArrayList<>();
+                for(DataSnapshot snapshot1=snapshot.getChildren()){
+                 circulationsclass data=snapshot1.getValue(circulationsclass.class);
+                 arrayList.add(data);
+                }
+                adapter=new circulationsadapter(getApplicationContext(),arrayList);
+                adapter.notifyDataSetChanged();
+                progressbar.setVisibility(View.GONE);
+                recyclerView.setAdapter(adapter);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                 progressbar.setVisibility(View.GONE);
+                Toast.makeText(Circulations.this, databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        })
     }
 }

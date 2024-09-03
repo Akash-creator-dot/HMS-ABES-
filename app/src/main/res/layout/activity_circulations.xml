@@ -5,25 +5,18 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:background="#032c48"
+    android:orientation="vertical"
     tools:context=".Circulations">
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="#5dcad1"
-        android:layout_gravity="top"
-        android:theme="?attr/actionBarTheme" />
-
-    <TextView
+        android:layout_height="wrap_content"
+        android:id="@+id/recycont"
+        />
+    <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Working in it"
-        android:textSize="30sp"
-        android:textColor="#ffffff"
-        android:textStyle="bold"
+        android:id="@+id/progressbar"
         />
 </LinearLayout>

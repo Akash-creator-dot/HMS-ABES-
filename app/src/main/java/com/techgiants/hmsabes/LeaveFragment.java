@@ -77,7 +77,6 @@ public class LeaveFragment extends Fragment {
         return view;
     }
 
-    // Helper method to set up Date Picker dialog
     private void setupDatePicker(final EditText editText) {
         editText.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,7 +95,6 @@ public class LeaveFragment extends Fragment {
         });
     }
 
-    // Helper method to set up Time Picker dialog
     private void setupTimePicker(final EditText editText) {
         editText.setOnClickListener(new View.OnClickListener() {
             @Override
