@@ -9,11 +9,15 @@
     android:layout_height="match_parent"
     tools:context=".MessMenu"
     android:orientation="vertical">
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progresscanteenmenu"
+        />
     <ImageView
         android:layout_width="match_parent"
         android:id="@+id/imgmessmenu"
         android:layout_height="match_parent"
-        android:src="@drawable/sampleimage"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:layout_marginStart="20dp"

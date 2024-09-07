@@ -60,7 +60,7 @@ public class LeaveFragment extends Fragment {
                         !coname.getText().toString().isEmpty() &&
                         !relationship.getText().toString().isEmpty()) {
 
-                    Intent intent = new Intent(getContext(), OtpSending.class);
+                    Intent intent = new Intent(getContext(), OTPSending.class);
                     startActivity(intent);
 
                 } else {

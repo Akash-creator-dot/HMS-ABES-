@@ -3,16 +3,22 @@ package com.techgiants.hmsabes;
 public class circulationsclass{
     private String image;
     private String title;
-    private String date;
+    private String data;
     private String time;
     private String key;
+    private String notice;
 
-    public String getDate() {
-        return date;
+    public String getData() {
+        return data;
     }
-
-    public void setDate(String date) {
-        this.date = date;
+    public String getNotice() {
+        return notice;
+    }
+    public void setNotice(String notice) {
+        this.notice = notice;
+    }
+    public void setData(String data) {
+        this.data = data;
     }
 
     public String getImg() {

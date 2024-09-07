@@ -41,23 +41,28 @@ public class OtpVerification extends AppCompatActivity {
 
         verificationId = getIntent().getStringExtra("backend");
 
-        for (int i = 0; i < otpFields.length - 1; i++) {
+        for (int i = 0; i < otpFields.length; i++) {
             final int index = i;
             otpFields[i].addTextChangedListener(new TextWatcher() {
                 @Override
-                public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) { }
+                public void beforeTextChanged(CharSequence charSequence, int start, int count, int after) {}
 
                 @Override
-                public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                    if (charSequence.length() == 1) {
+                public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
+                    if (charSequence.length() == 1 && index < otpFields.length - 1) {
+                        // Move focus to the next field if a character is entered
                         otpFields[index + 1].requestFocus();
+                    } else if (charSequence.length() == 0 && index > 0) {
+                        // Move focus to the previous field if the character is deleted (backspace)
+                        otpFields[index - 1].requestFocus();
                     }
                 }
 
                 @Override
-                public void afterTextChanged(Editable editable) { }
+                public void afterTextChanged(Editable editable) {}
             });
         }
+
 
         verifyButton.setOnClickListener(new View.OnClickListener() {
             @Override

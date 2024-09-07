@@ -33,8 +33,9 @@ public class circulationsadapter extends RecyclerView.Adapter<circulationsadapte
     @Override
     public void onBindViewHolder(@NonNull NoticeViewAdapter holder, int position) {
         circulationsclass currentitem = list.get(position);
+        holder.notice.setText(currentitem.getNotice());
         holder.title.setText(currentitem.getTitle());
-        holder.date.setText(currentitem.getDate());
+        holder.data.setText(currentitem.getData());
         holder.time.setText(currentitem.getTime());
         try {
             if (currentitem.getImg() != null) {
@@ -51,15 +52,16 @@ public class circulationsadapter extends RecyclerView.Adapter<circulationsadapte
     }
 
     public class NoticeViewAdapter extends RecyclerView.ViewHolder {
-        private TextView title, date, time;
+        private TextView title, data, time,notice;
         private ImageView noticeimage;
 
         public NoticeViewAdapter(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.noticetitle);
-            date = itemView.findViewById(R.id.datechange);
+            data = itemView.findViewById(R.id.datechange);
             time = itemView.findViewById(R.id.timechange);
             noticeimage = itemView.findViewById(R.id.noticeimage);
+            notice=itemView.findViewById(R.id.notice);
         }
     }
 }

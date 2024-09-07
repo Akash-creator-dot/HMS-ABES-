@@ -74,7 +74,7 @@ dependencies {
     implementation (libs.picasso)
     implementation(libs.glide)
     implementation (libs.dexter)
-    implementation(libs.android.pdf.viewer)
+//    implementation(libs.android.pdf.viewer)
     implementation(libs.androidx.junit)
     implementation(libs.firebase.inappmessaging.display)
 }
