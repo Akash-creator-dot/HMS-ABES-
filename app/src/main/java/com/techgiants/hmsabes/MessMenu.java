@@ -28,7 +28,7 @@ public class MessMenu extends AppCompatActivity {
         img = findViewById(R.id.imgmessmenu);
 
         // Reference to the Firebase Storage location
-        storageReference = FirebaseStorage.getInstance().getReference().child("Admin").child("MessMenu");
+        storageReference = FirebaseStorage.getInstance().getReference().child("Admin").child("MessMenu").child("FirstAndSecondYear");
 
         loadLatestMenuImage();
     }
