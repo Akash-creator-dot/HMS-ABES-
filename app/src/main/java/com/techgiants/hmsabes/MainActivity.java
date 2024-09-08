@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         Bundle bundle = new Bundle();
-        bundle.putString("name","Akahs");
+        bundle.putString("name",name);
         bundle.putString("adm",adm);
         bundle.putString("roomno",romno);
         bundle.putString("dept",dept);

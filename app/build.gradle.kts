@@ -62,8 +62,8 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx.v284)
-    implementation(libs.androidx.lifecycle.viewmodel.ktx.v251) // ViewModel
-    implementation(libs.androidx.lifecycle.livedata.ktx) // LiveData
+    implementation(libs.androidx.lifecycle.viewmodel.ktx.v251)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation (libs.denzcoskun.imageslideshow)
     implementation (libs.play.services.auth) {
