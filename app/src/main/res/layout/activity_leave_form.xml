@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,7 +8,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LeaveForm">
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
 <TextView
+    android:textStyle="bold"
     android:autoSizeMinTextSize="10sp"
     android:autoSizeMaxTextSize="14sp"
     android:layout_width="match_parent"
@@ -16,180 +24,474 @@
     android:text="To,"
     />
     <TextView
+        android:textStyle="bold"
         android:autoSizeMinTextSize="10sp"
         android:autoSizeMaxTextSize="14sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="The Warden"
+        android:layout_marginBottom="5dp"
         />
     <!--            First Line-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-    <TextView
-        android:autoSizeMinTextSize="10sp"
-        android:autoSizeMaxTextSize="14sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="I "
-        />
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:textStyle="bold"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name:"
+                />
+            <TextView
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:id="@+id/formname"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+        <!--            Second Line-->
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:textStyle="bold"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Admission number:"
+                />
+            <TextView
+                android:id="@+id/formadmno"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Admission number"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+        <!--            Third Line-->
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:textStyle="bold"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Course:"
+                />
+            <TextView
+                android:id="@+id/formcourse"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Course"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+        <!--            Fourth Line-->
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:textStyle="bold"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Branch:"
+                />
+            <TextView
+                android:id="@+id/formbranch"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Branch"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+        <!--            Fifth Line-->
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:textStyle="bold"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Year:"
+                />
+            <TextView
+                android:id="@+id/formyear"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Year"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+        <!--            Sixth Line-->
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:textStyle="bold"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Block:"
+                />
+            <TextView
+                android:id="@+id/formblock"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Block"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+        <!--            Seventh Line-->
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:textStyle="bold"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Room number:"
+                />
+            <TextView
+                android:id="@+id/formroomno"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Room number"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
         <TextView
-            android:autoSizeMinTextSize="10sp"
-            android:autoSizeMaxTextSize="14sp"
-            android:id="@+id/name"
+            android:layout_marginTop="2dp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:text="Request you to kindly allow me to leave hostel on date"
+            android:layout_height="wrap_content"
+            />
+        <!--Eighth Line   -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:textStyle="bold"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date of leave:"
+                />
+            <TextView
+                android:id="@+id/formdateofleave"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date of leave"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+        <!--            Nineth Line-->
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:textStyle="bold"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time of leave:"
+                />
+            <TextView
+                android:id="@+id/formtimeofleave"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Time of leave"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="2dp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="At my own risk and responsibility"
+            />
+        <!--            Twelveth Line-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:textStyle="bold"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reason:"
+                />
+            <TextView
+                android:id="@+id/formreason"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reason"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="2dp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I assure that I Shall report back to hostel on date"
+            />
+        <!--            Tenth Line-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:textStyle="bold"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date of Return:"
+                />
+            <TextView
+                android:id="@+id/formreturndate"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date of Return"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+        <!--            Eleventh Line-->
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:textStyle="bold"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time of Return:"
+                />
+            <TextView
+                android:id="@+id/formreturntime"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Time of Return"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="2dp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My leave address is as follows"
+            />
+        <!--            thirteen Line-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:textStyle="bold"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Co_name:"
+                />
+            <TextView
+                android:id="@+id/formconame"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Co_name"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+        <!--            fourteen Line-->
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:textStyle="bold"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Relationship:"
+                />
+            <TextView
+                android:id="@+id/formrelationship"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Relationship"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+        <!--            fifteen Line-->
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:textStyle="bold"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parents mobile number:"
+                />
+            <TextView
+                android:id="@+id/formparentsph"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Parents mobile number"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+        <!--            Sixteen Line-->
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:textStyle="bold"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Student mobile number:"
+                />
+            <TextView
+                android:id="@+id/formstudentph"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Student mobile number"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+        <!--            Seventh Line-->
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:textStyle="bold"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address:"
+                />
+            <TextView
+                android:id="@+id/formaddress"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name "
-            />
-        <TextView
-            android:autoSizeMinTextSize="10sp"
-            android:autoSizeMaxTextSize="14sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" Admission Number "
-            />
-        <TextView
-            android:autoSizeMinTextSize="10sp"
-            android:autoSizeMaxTextSize="14sp"
-            android:id="@+id/admissonnumber"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Admission Number "
-            />
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white"
+            android:id="@+id/leaveformpdf"
+            android:layout_marginBottom="32dp"
+            android:background="#032c48"
+            android:paddingHorizontal="12dp"
+            android:text="Download PDF" />
+
     </LinearLayout>
-    <!--            Second Line-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <TextView
-            android:autoSizeMinTextSize="10sp"
-            android:autoSizeMaxTextSize="14sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Student of Course "
-            />
-        <TextView
-            android:autoSizeMinTextSize="10sp"
-            android:autoSizeMaxTextSize="14sp"
-            android:id="@+id/course"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Course "
-            />
-        <TextView
-            android:autoSizeMinTextSize="10sp"
-            android:autoSizeMaxTextSize="14sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" Branch "
-            />
-        <TextView
-            android:autoSizeMinTextSize="10sp"
-            android:autoSizeMaxTextSize="14sp"
-            android:id="@+id/branch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Branch"
-            />
-        <TextView
-            android:autoSizeMinTextSize="10sp"
-            android:autoSizeMaxTextSize="14sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" Year "
-            />
-        <TextView
-            android:autoSizeMinTextSize="10sp"
-            android:autoSizeMaxTextSize="14sp"
-            android:id="@+id/year"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Year"
-            />
-    </LinearLayout>
-    <!--            Third Line-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <TextView
-            android:autoSizeMinTextSize="10sp"
-            android:autoSizeMaxTextSize="14sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="reciding in hostel "
-            />
-        <TextView
-            android:autoSizeMinTextSize="10sp"
-            android:autoSizeMaxTextSize="14sp"
-            android:id="@+id/block"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Block "
-            />
-        <TextView
-            android:autoSizeMinTextSize="10sp"
-            android:autoSizeMaxTextSize="14sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" Room Number "
-            />
-        <TextView
-            android:autoSizeMinTextSize="10sp"
-            android:autoSizeMaxTextSize="14sp"
-            android:id="@+id/roomno"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Room"
-            />
-        <TextView
-            android:autoSizeMinTextSize="10sp"
-            android:autoSizeMaxTextSize="14sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" request to leave on "
-            />
-    </LinearLayout>
-    <!--            Fourth Line-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <TextView
-            android:autoSizeMinTextSize="10sp"
-            android:autoSizeMaxTextSize="14sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Date "
-            />
-        <TextView
-            android:autoSizeMinTextSize="10sp"
-            android:autoSizeMaxTextSize="14sp"
-            android:id="@+id/dateofleave"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Date "
-            />
-        <TextView
-            android:autoSizeMinTextSize="10sp"
-            android:autoSizeMaxTextSize="14sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" to visit my Parents/L.G./Relatives for reason"
-            />
-        <TextView
-            android:autoSizeMinTextSize="10sp"
-            android:autoSizeMaxTextSize="14sp"
-            android:id="@+id/holiday"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Reason"
-            />
-    </LinearLayout>
-</LinearLayout>
+</ScrollView>

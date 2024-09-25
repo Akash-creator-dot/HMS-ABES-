@@ -47,6 +47,7 @@ public class ProfileFragment extends Fragment {
     private ImageView aboutus;
     private StorageReference storageReference;
     private TextView nm, admission, roomno, depart;
+    String name,adm,room,dept;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -72,7 +73,13 @@ public class ProfileFragment extends Fragment {
         fstore = FirebaseFirestore.getInstance();
         storageReference = FirebaseStorage.getInstance().getReference();
         profileimageview = view.findViewById(R.id.profile_image);
-
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            name = bundle.getString("name");
+            adm = bundle.getString("adm");
+            room = bundle.getString("roomno");
+            dept = bundle.getString("dept");
+        }
         fetchUserDataWithCaching();
 
         StorageReference profileRef = storageReference.child("users/" + auth.getCurrentUser().getUid() + "/profile.jpg");
@@ -176,7 +183,7 @@ public class ProfileFragment extends Fragment {
                 });
     }
 
-    // Update UI with user data
+//     Update UI with user data
     private void updateUIWithUserData(DocumentSnapshot documentSnapshot) {
         Map<String, Object> userDetails = documentSnapshot.getData();
         if (userDetails != null) {
@@ -221,7 +228,6 @@ public class ProfileFragment extends Fragment {
                 .addOnSuccessListener(aVoid -> Log.d(TAG, "Profile updated successfully in Firestore"))
                 .addOnFailureListener(e -> Log.e(TAG, "Failed to update profile in Firestore", e));
     }
-
     private void logout() {
         FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent(getActivity(), LoginActivityJava.class);

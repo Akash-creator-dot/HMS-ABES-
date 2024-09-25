@@ -21,6 +21,7 @@ firebaseDatabase = "21.0.0"
 firebaseAnalytics = "22.0.2"
 materialVersion = "1.6.8"
 navigationFragmentKtx = "2.7.7"
+photoview = "2.3.0"
 picasso = "2.8"
 playServicesAuth = "21.2.0"
 firebaseFirestore = "25.0.0"
@@ -30,6 +31,8 @@ lottie = "6.4.1"
 firebaseMessaging = "24.0.0"
 junit = "1.2.1"
 firebaseInappmessagingDisplay = "21.0.0"
+subsamplingScaleImageView = "3.10.0"
+touchimageview = "3.0.4"
 
 [libraries]
 androidx-appcompat-v170 = { module = "androidx.appcompat:appcompat", version.ref = "appcompatVersion" }
@@ -54,6 +57,7 @@ activity = { group = "androidx.activity", name = "activity", version.ref = "acti
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
 firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics", version.ref = "firebaseAnalytics" }
+photoview = { module = "com.github.chrisbanes:photoview", version.ref = "photoview" }
 picasso = { module = "com.squareup.picasso:picasso", version.ref = "picasso" }
 play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
 firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
@@ -63,6 +67,8 @@ lottie = { group = "com.airbnb.android", name = "lottie", version.ref = "lottie"
 firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging", version.ref = "firebaseMessaging" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junit" }
 firebase-inappmessaging-display = { group = "com.google.firebase", name = "firebase-inappmessaging-display", version.ref = "firebaseInappmessagingDisplay" }
+subsampling-scale-image-view = { module = "com.davemorrissey.labs:subsampling-scale-image-view", version.ref = "subsamplingScaleImageView" }
+touchimageview = { module = "com.github.MikeOrtiz:TouchImageView", version.ref = "touchimageview" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

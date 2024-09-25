@@ -1,5 +1,6 @@
 package com.techgiants.hmsabes;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -22,7 +23,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView navigation;
-    private String gmails, adm, retyadm, pas, retypas, romno, dept, blockname,name;
+    private String gmails, adm,romno, dept, blockname,name;
     private FirebaseFirestore firestore;
     private FirebaseAuth auth;
 
@@ -60,9 +61,6 @@ public class MainActivity extends AppCompatActivity {
         gmails = documentSnapshot.getString("email");
         name = documentSnapshot.getString("name");
         adm = documentSnapshot.getString("admission_no");
-        retyadm = documentSnapshot.getString("retype_admission_no");
-        pas = documentSnapshot.getString("password");
-        retypas = documentSnapshot.getString("retype_password");
         romno = documentSnapshot.getString("room_no");
         dept = documentSnapshot.getString("department");
         blockname = documentSnapshot.getString("block");
@@ -96,16 +94,16 @@ public class MainActivity extends AppCompatActivity {
         }
         return true;
     }
-
     public void frag(Fragment fragment, boolean flag) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         Bundle bundle = new Bundle();
-        bundle.putString("name","Akahs");
+        bundle.putString("name",name);
         bundle.putString("adm",adm);
         bundle.putString("roomno",romno);
         bundle.putString("dept",dept);
         bundle.putString("blockname",blockname);
+        bundle.putString("gmails",gmails);
         fragment.setArguments(bundle);
 
         if (flag) {
@@ -114,5 +112,7 @@ public class MainActivity extends AppCompatActivity {
             fragmentTransaction.replace(R.id.containeer, fragment);
         }
         fragmentTransaction.commit();
+
     }
+
 }

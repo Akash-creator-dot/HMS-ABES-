@@ -18,37 +18,57 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.google.firebase.Firebase;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
 
 public class LeaveFragment extends Fragment {
-    EditText dateOfLeaveTxt, dateOfReturnTxt, timeOfLeaveTxt, timeOfReturnTxt,studentmobilenumber,coname,relationship;
+    EditText dateOfLeaveTxt, dateOfReturnTxt, timeOfLeaveTxt,year, timeOfReturnTxt,studentmobilenumber,coname,relationship,reason,address;
     final Calendar dateCalendar = Calendar.getInstance();
     final Calendar timeCalendar = Calendar.getInstance();
+    TextView txt;
+    String name,adm,roomno,dept,blockname;
+    DatabaseReference databaseReference;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_leave, container, false);
         dateOfLeaveTxt = view.findViewById(R.id.dateOfLeaveTxt);
+        year=view.findViewById(R.id.current_year);
         studentmobilenumber=view.findViewById(R.id.student_mobile);
         coname=view.findViewById(R.id.CO_Name);
+        address=view.findViewById(R.id.Address);
+        reason=view.findViewById(R.id.student_reason);
         relationship=view.findViewById(R.id.relationship);
         dateOfReturnTxt = view.findViewById(R.id.dateOfReturnTxt);
         timeOfLeaveTxt = view.findViewById(R.id.timeOfLeaveTxt);
         timeOfReturnTxt = view.findViewById(R.id.timeOfReturnTxt);
         Button btn = view.findViewById(R.id.leavefragmentbtn);
+        Button btnleaveform=view.findViewById(R.id.btnleaveform);
+        btnleaveform.setVisibility(View.VISIBLE);
+        databaseReference=FirebaseDatabase.getInstance().getReference().child("Users");
+        btnleaveform.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(),LeaveForm.class));
+            }
+        });
         Bundle bundle = getArguments();
         if (bundle != null) {
-            String name = bundle.getString("name");
-            String adm = bundle.getString("adm");
-            String roomno = bundle.getString("roomno");
-            String dept = bundle.getString("dept");
-            String blockname = bundle.getString("blockname");
+             name = bundle.getString("name");
+             adm = bundle.getString("adm");
+             roomno = bundle.getString("roomno");
+             dept = bundle.getString("dept");
+             blockname = bundle.getString("blockname");
         }
-
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,10 +79,24 @@ public class LeaveFragment extends Fragment {
                         !studentmobilenumber.getText().toString().isEmpty() &&
                         !coname.getText().toString().isEmpty() &&
                         !relationship.getText().toString().isEmpty()) {
-
                     Intent intent = new Intent(getContext(), OTPSending.class);
-                    startActivity(intent);
-
+                    Intent inten=new Intent(getContext(), LeaveForm.class);
+                    inten.putExtra("name",name);
+                    inten.putExtra("admno",adm);
+                    inten.putExtra("roomno",roomno);
+                    inten.putExtra("dept",dept);
+                    inten.putExtra("blockname",blockname);
+                    inten.putExtra("dateofleave",dateOfLeaveTxt.getText().toString());
+                    inten.putExtra("timeofleave",timeOfLeaveTxt.getText().toString());
+                    inten.putExtra("dateofreturn",dateOfReturnTxt.getText().toString());
+                    inten.putExtra("timeofreturn",timeOfReturnTxt.getText().toString());
+                    inten.putExtra("coname",coname.getText().toString());
+                    inten.putExtra("relationship",relationship.getText().toString());
+                    inten.putExtra("reason",reason.getText().toString());
+                    inten.putExtra("currentyear",year.getText().toString());
+                    inten.putExtra("address",address.getText().toString());
+                    inten.putExtra("studentmo",studentmobilenumber.getText().toString());
+                   startActivity(inten);
                 } else {
                     Toast.makeText(getContext(), "Please enter all the details", Toast.LENGTH_SHORT).show();
                 }
@@ -76,7 +110,13 @@ public class LeaveFragment extends Fragment {
         TextView txt = view.findViewById(R.id.complainsheadingtxt);
         return view;
     }
-
+   private void uploaddata(){
+     Leave_Class leave=new Leave_Class(year.getText().toString(),studentmobilenumber.getText().toString()
+             ,coname.getText().toString(),address.getText().toString(),reason.getText().toString()
+             ,relationship.getText().toString(),dateOfLeaveTxt.getText().toString()
+             ,timeOfLeaveTxt.getText().toString(),dateOfReturnTxt.getText().toString()
+             ,timeOfReturnTxt.getText().toString(),name,adm,roomno,dept,blockname);
+   }
     private void setupDatePicker(final EditText editText) {
         editText.setOnClickListener(new View.OnClickListener() {
             @Override
