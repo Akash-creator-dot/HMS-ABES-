@@ -78,5 +78,6 @@ public class complaininsideall extends AppCompatActivity {
            id=new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,welder);
         }
         spinner.setAdapter(id);
+
     }
 }

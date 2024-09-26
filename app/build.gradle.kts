@@ -74,7 +74,9 @@ dependencies {
     implementation (libs.picasso)
     implementation(libs.glide)
     implementation (libs.dexter)
+    implementation(libs.chrisbanes.photoview)
 //    implementation(libs.android.pdf.viewer)
     implementation(libs.androidx.junit)
     implementation(libs.firebase.inappmessaging.display)
+    implementation(libs.androidx.core.splashscreen)
 }

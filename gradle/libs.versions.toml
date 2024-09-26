@@ -4,6 +4,7 @@ appcompat = "1.5.1"
 appcompatVersion = "1.7.0"
 circleimageview = "3.1.0"
 core = "1.13.1"
+coreSplashscreen = "1.0.1"
 dexter = "6.2.3"
 
 glide = "4.16.0"
@@ -36,6 +37,7 @@ touchimageview = "3.0.4"
 
 [libraries]
 androidx-appcompat-v170 = { module = "androidx.appcompat:appcompat", version.ref = "appcompatVersion" }
+androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
 androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycleViewmodelKtx" }
 androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleViewmodelKtxVersion" }
 androidx-lifecycle-runtime-ktx-v284 = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
@@ -45,6 +47,7 @@ androidx-material = { module = "androidx.compose.material:material", version.ref
 androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
 androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigationFragmentKtx" }
 appcompat-v151 = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+chrisbanes-photoview = { module = "com.github.chrisbanes:PhotoView", version.ref = "photoview" }
 circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circleimageview" }
 compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glideVersion" }
 core = { module = "androidx.core:core", version.ref = "core" }

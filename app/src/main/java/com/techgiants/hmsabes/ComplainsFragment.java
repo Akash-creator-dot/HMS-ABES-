@@ -61,14 +61,14 @@ public class ComplainsFragment extends Fragment {
         cardsweeper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startComplainsDetailActivitysome(txtsweeper.getText().toString());
+                startComplainsDetailActivityall(txtsweeper.getText().toString());
             }
         });
 
         cardpest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startComplainsDetailActivitysome(textpest.getText().toString());
+                startComplainsDetailActivityall(textpest.getText().toString());
             }
         });
         cardwelder.setOnClickListener(new View.OnClickListener() {
@@ -80,7 +80,7 @@ public class ComplainsFragment extends Fragment {
         cardwifi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startComplainsDetailActivitysome(txtwifi.getText().toString());
+                startComplainsDetailActivityall(txtwifi.getText().toString());
             }
         });
 
@@ -89,11 +89,6 @@ public class ComplainsFragment extends Fragment {
 
     private void startComplainsDetailActivityall(String complainType) {
         Intent intent = new Intent(getContext(), complaininsideall.class);
-        intent.putExtra("complains", complainType);
-        startActivity(intent);
-    }
-    private void startComplainsDetailActivitysome(String complainType) {
-        Intent intent = new Intent(getContext(), complaininsidesome.class);
         intent.putExtra("complains", complainType);
         startActivity(intent);
     }

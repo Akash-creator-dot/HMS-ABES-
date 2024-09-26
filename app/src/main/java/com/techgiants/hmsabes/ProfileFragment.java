@@ -209,7 +209,6 @@ public class ProfileFragment extends Fragment {
         fileRef.putFile(imageUri).addOnSuccessListener(taskSnapshot -> fileRef.getDownloadUrl().addOnSuccessListener(uri -> {
             Picasso.get().load(uri).into(profileimageview);
             Toast.makeText(getActivity(), "Upload Successful", Toast.LENGTH_SHORT).show();
-            // Update Firestore document to reflect new profile picture URL if necessary
             updateUserProfileInFirestore(uri.toString());
         }).addOnFailureListener(e -> {
             Log.e(TAG, "Failed to get download URL", e);

@@ -21,8 +21,8 @@ public class LoginToWifiActivity extends AppCompatActivity {
     WebView webView;
     ProgressBar progressBar;
     private boolean isErrorOccurred = false;
-    private boolean isLoginAttempted = false; // Prevent multiple login attempts
-    private AlertDialog errorDialog; // Reference to the error dialog
+    private boolean isLoginAttempted = false;
+    private AlertDialog errorDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
