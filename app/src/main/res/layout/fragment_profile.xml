@@ -79,6 +79,16 @@
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+            <TextView
+                android:id="@+id/profileblock"
+                android:layout_width="212dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/profiledeptname"

@@ -41,7 +41,7 @@ public class Circulations extends AppCompatActivity {
         });
         recyclerView = findViewById(R.id.recycont);
         progressbar = findViewById(R.id.progressbar);
-        reference = FirebaseDatabase.getInstance().getReference().child("Admin").child("Notice");
+        reference = FirebaseDatabase.getInstance().getReference().child("HMS").child("ABES").child("Admin").child("Circulations");
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         recyclerView.setHasFixedSize(true);
         getNotice();

@@ -5,6 +5,7 @@ import static android.widget.Toast.LENGTH_SHORT;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -38,7 +40,6 @@ public class LeaveFragment extends Fragment {
     private ProgressDialog pd;
     private String name, adm, roomNo, dept, blockName;
     private DatabaseReference databaseReferenceForStudent, databaseReferenceForAdmin;
-
     private Calendar dateCalendar = Calendar.getInstance();
     private Calendar timeCalendar = Calendar.getInstance();
     private FirebaseFirestore firestore;
@@ -105,6 +106,33 @@ public class LeaveFragment extends Fragment {
 
         return view;
     }
+
+    private void passdetails() {
+        Intent intent=new Intent(getContext(),LeaveForm.class);
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat currentDateFormat = new SimpleDateFormat("dd-MM-yy");
+        String date = currentDateFormat.format(calendar.getTime());
+        SimpleDateFormat currentTimeFormat = new SimpleDateFormat("hh:mm a");
+        String currentTime = currentTimeFormat.format(calendar.getTime());
+        intent.putExtra("name",name);
+        intent.putExtra("adm",adm);
+        intent.putExtra("room",roomNo);
+        intent.putExtra("dept",dept);
+        intent.putExtra("block",blockName);
+        intent.putExtra("dateofapply",date);
+        intent.putExtra("timeofapply",currentTime);
+        intent.putExtra("Student_no",studentMobileNumber.getText().toString());
+        intent.putExtra("coname",coName.getText().toString());
+        intent.putExtra("address",address.getText().toString());
+        intent.putExtra("reason",reason.getText().toString());
+        intent.putExtra("relationship",relationship.getText().toString());
+        intent.putExtra("dateofleave",dateOfLeaveTxt.getText().toString());
+        intent.putExtra("timeofleave",timeOfLeaveTxt.getText().toString());
+        intent.putExtra("dateofreturn",dateOfReturnTxt.getText().toString());
+        intent.putExtra("timeofreturn",timeOfReturnTxt.getText().toString());
+        intent.putExtra("currentyear",year.getText().toString());
+    }
+
     private void fetchUserDetails(DocumentSnapshot documentSnapshot) {
         name = documentSnapshot.getString("name");
         adm = documentSnapshot.getString("admission_no");
@@ -215,9 +243,13 @@ public class LeaveFragment extends Fragment {
                     if (leaveData != null) {
                         String status = leaveData.getStatus();
                         if ("approved".equals(status)) {
+                            passdetails();
                             Toast.makeText(getContext(), "Your leave is approved !", LENGTH_SHORT).show();
+                            startActivity(new Intent(getContext(),LeaveForm.class));
+
                         } else if ("denied".equals(status)) {
                             Toast.makeText(getContext(), "Your leave is denied.", LENGTH_SHORT).show();
+
                         }
                     }
                 }

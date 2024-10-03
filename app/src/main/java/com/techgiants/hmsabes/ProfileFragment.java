@@ -46,7 +46,7 @@ public class ProfileFragment extends Fragment {
     private ImageView profileimageview;
     private ImageView aboutus;
     private StorageReference storageReference;
-    private TextView nm, admission, roomno, depart;
+    private TextView nm, admission, roomno, depart,block;
     String name,adm,room,dept;
 
     public ProfileFragment() {
@@ -63,6 +63,7 @@ public class ProfileFragment extends Fragment {
         TextView emailVerificationText;
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         auth = FirebaseAuth.getInstance();
+        block=view.findViewById(R.id.profileblock);
         userId = auth.getCurrentUser().getUid();
         FirebaseUser currentUser = auth.getCurrentUser();
         nm = view.findViewById(R.id.profilename);
@@ -189,7 +190,8 @@ public class ProfileFragment extends Fragment {
         if (userDetails != null) {
             nm.setText(userDetails.get("name").toString());
             admission.setText("Admission No.: " + userDetails.get("admission_no").toString());
-            roomno.setText("Room No.: " + userDetails.get("block").toString() + " " + userDetails.get("room_no").toString());
+            roomno.setText("Room No.: "+ userDetails.get("room_no").toString());
+            block.setText("Block.: " + userDetails.get("block").toString());
             depart.setText("Department: " + userDetails.get("department").toString());
         }
     }

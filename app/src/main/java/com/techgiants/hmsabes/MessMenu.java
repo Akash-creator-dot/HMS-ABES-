@@ -1,18 +1,16 @@
 package com.techgiants.hmsabes;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.github.chrisbanes.photoview.PhotoView;
 import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.ListResult;
 import com.google.firebase.storage.StorageReference;
 
 public class MessMenu extends AppCompatActivity {
@@ -29,7 +27,14 @@ public class MessMenu extends AppCompatActivity {
         img = findViewById(R.id.imgmessmenu);
 
         // Reference to the Firebase Storage location
-        storageReference = FirebaseStorage.getInstance().getReference().child("Admin").child("MessMenu").child("FirstAndSecondYear");
+        Intent intent=new Intent();
+        String s=intent.getStringExtra("Year");
+        if(s.equals("First")){
+            storageReference = FirebaseStorage.getInstance().getReference().child("Admin").child("MessMenu").child("FirstAndSecondYear");
+        }else{
+            storageReference = FirebaseStorage.getInstance().getReference().child("Admin").child("MessMenu").child("ThirdAndFourthYear");
+
+        }
 
         loadLatestMenuImage();
     }
