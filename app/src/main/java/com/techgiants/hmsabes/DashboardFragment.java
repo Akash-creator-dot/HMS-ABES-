@@ -98,13 +98,13 @@ public class DashboardFragment extends Fragment {
         academiccalander.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(),LeaveFragment.class));
+                startActivity(new Intent(getContext(),AcademicCalander.class));
             }
         });
         messmenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(),MessMenu.class));
+                startActivity(new Intent(getContext(),YearMess.class));
             }
         });
         canteenmenu.setOnClickListener(new View.OnClickListener() {

@@ -53,7 +53,6 @@ public class Leave_Class {
         this.currentTime = currentTime;
         this.status = status;
     }
-
     // Getters and setters
     public String getStatus() {
         return status;

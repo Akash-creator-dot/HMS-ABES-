@@ -2,6 +2,7 @@ package com.techgiants.hmsabes;
 
 public class MessMenuClass {
     private String imageUrl;
+
     public MessMenuClass(String imageUrl) {
         this.imageUrl = imageUrl;
     }
