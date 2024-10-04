@@ -244,6 +244,7 @@ public class LeaveFragment extends Fragment {
                         String status = leaveData.getStatus();
                         if ("approved".equals(status)) {
                             passdetails();
+                            notification();
                             Toast.makeText(getContext(), "Your leave is approved !", LENGTH_SHORT).show();
                             startActivity(new Intent(getContext(),LeaveForm.class));
 
@@ -261,5 +262,9 @@ public class LeaveFragment extends Fragment {
                 Toast.makeText(getContext(), "Error fetching leave status", LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void notification() {
+
     }
 }
