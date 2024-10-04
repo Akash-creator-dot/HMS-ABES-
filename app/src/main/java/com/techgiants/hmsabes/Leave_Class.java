@@ -54,6 +54,9 @@ public class Leave_Class {
         this.status = status;
     }
 
+    public Leave_Class(String string, String string1, String string2, String string3, String string4, String string5, String string6, String string7, String string8, String string9, String name, String adm, String roomno, String dept, String blockname) {
+    }
+
     // Getters and setters
     public String getStatus() {
         return status;

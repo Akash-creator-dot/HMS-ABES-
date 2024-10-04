@@ -21,11 +21,11 @@
         <activity
             android:name=".complaininsidesome"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="fullSensor"/>
         <activity
             android:name=".complaininsideall"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="fullSensor"/>
         <activity
             android:name=".LeaveForm"
             android:exported="false"
@@ -33,60 +33,60 @@
         <activity
             android:name=".LeaveFragment"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="fullSensor"/>
 
         <activity
             android:name=".MessMenu"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".CanteenMenu"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".Circulations"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".Aboutus"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".Leavedata"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".OTPSending"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".LoginToWifiActivity"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".ComplainData"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".LoginActivityJava"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".SignupActivity"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor"/>
         <activity
             android:name=".HelpandSupport"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".OtpVerification"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".SplashScreen"
             android:exported="true"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="fullSensor" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -96,7 +96,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
 
         <meta-data
             android:name="preloaded_fonts"
