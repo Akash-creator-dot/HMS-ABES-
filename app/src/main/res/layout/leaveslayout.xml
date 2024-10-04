@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/gradient_bg"
+    android:background="#DDDDDD"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -15,7 +15,7 @@
         app:cardUseCompatPadding="true">
             <LinearLayout
                 android:layout_marginTop="15dp"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:id="@+id/leavehistoryll"
@@ -28,16 +28,16 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="160dp"
                     />
+
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Date"
                     android:id="@+id/leavehistorydate"
-                    android:autoSizeMinTextSize="30sp"
-                    android:autoSizeMaxTextSize="45sp"
+                    android:layout_width="179dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="160dp"
-                    />
+                    android:autoSizeMaxTextSize="45sp"
+                    android:autoSizeMinTextSize="30sp"
+                    android:text="Date" />
 
                 <TextView
                     android:layout_width="wrap_content"
