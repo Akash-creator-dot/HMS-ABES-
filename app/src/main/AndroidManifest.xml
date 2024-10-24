@@ -19,10 +19,6 @@
         tools:replace="android:appComponentFactory"
         tools:targetApi="31" >
         <activity
-            android:name=".complaininsidesome"
-            android:exported="false"
-            android:screenOrientation="portrait"/>
-        <activity
             android:name=".complaininsideall"
             android:exported="false"
             android:screenOrientation="portrait"/>
@@ -80,7 +76,7 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".SplashScreenActivity"
             android:exported="true"
             android:screenOrientation="portrait" >
             <intent-filter>
