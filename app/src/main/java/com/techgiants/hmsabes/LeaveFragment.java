@@ -1,5 +1,6 @@
 package com.techgiants.hmsabes;
 
+import static android.content.ContentValues.TAG;
 import static android.widget.Toast.LENGTH_SHORT;
 
 import android.app.DatePickerDialog;
@@ -7,6 +8,7 @@ import android.app.ProgressDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,12 +52,7 @@ public class LeaveFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_leave, container, false);
-
-        // Initialize Firebase references
-        databaseReferenceForStudent = FirebaseDatabase.getInstance().getReference().child("HMS").child("ABES").child("Users").child("Leave");
-        databaseReferenceForAdmin = FirebaseDatabase.getInstance().getReference().child("HMS").child("ABES").child("Admin").child("Leave");
-
-        // Initialize UI components
+        databaseReferenceForAdmin = FirebaseDatabase.getInstance().getReference().child("HMS").child("ABES").child("Admin").child("notifications").child("Leaves");
         dateOfLeaveTxt = view.findViewById(R.id.dateOfLeaveTxt);
         year = view.findViewById(R.id.current_year);
         studentMobileNumber = view.findViewById(R.id.student_mobile);
@@ -78,12 +75,11 @@ public class LeaveFragment extends Fragment {
             firestore.collection("users").document(userId).get()
                     .addOnSuccessListener(documentSnapshot -> {
                         if (documentSnapshot.exists()) {
-                            // Fetch user details
                             fetchUserDetails(documentSnapshot);
                         }
                     })
                     .addOnFailureListener(e -> {
-                        // Handle any errors here
+                        Log.d(TAG, "onCreateView:cant fetch user details");
                     });
         }
         // Button click listener
@@ -219,20 +215,8 @@ public class LeaveFragment extends Fragment {
                 dateOfReturnTxt.getText().toString(),
                 timeOfReturnTxt.getText().toString(),
                 name, adm, roomNo, dept, blockName, uniqueKey, date, currentTime, "pending");
-
-        // Upload leave request to both student and admin databases
-        databaseReferenceForStudent.child(uniqueKey).setValue(leave)
-                .addOnSuccessListener(unused -> {
-                    pd.dismiss();
-                    Toast.makeText(getContext(), "Leave Request Submitted", LENGTH_SHORT).show();
-                })
-                .addOnFailureListener(e -> {
-                    pd.dismiss();
-                    Toast.makeText(getContext(), "Something went wrong... data", LENGTH_SHORT).show();
-                });
-
         // Admin database
-        databaseReferenceForAdmin.child(uniqueKey).setValue(leave);
+        databaseReferenceForAdmin.child(adm).setValue(leave);
 
         // Listener to monitor leave status
         databaseReferenceForStudent.child(uniqueKey).addValueEventListener(new ValueEventListener() {

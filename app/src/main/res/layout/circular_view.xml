@@ -88,19 +88,17 @@
                   android:textStyle="bold" />
           </LinearLayout>
                 <LinearLayout
+                    android:layout_marginTop="30dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     >
                     <TextView
+                        android:layout_gravity="center"
+                        android:textSize="30dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/noticetitle"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/notice"
                         />
                 </LinearLayout>
             </LinearLayout>
@@ -116,6 +114,19 @@
                     android:layout_height="400dp"
                     android:id="@+id/noticeimage"
                     android:src="@drawable/abeslogo1"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:textSize="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/notice"
                     />
             </LinearLayout>
         </LinearLayout>
