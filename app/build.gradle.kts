@@ -27,6 +27,9 @@ android {
         viewBinding=true
 
     }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
