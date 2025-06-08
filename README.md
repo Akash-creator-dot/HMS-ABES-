@@ -40,9 +40,9 @@ The app has separate modules for **students** and **wardens/admins**, connected 
 
 ## 📸 Screenshots
 
-| 👋 Onboarding | 🔐 Login | 📝 Leave Form | 🧾 Complaint Form |
+| 👋 Onboarding | 👋 Onboarding| 🔐 Login | 📝 Leave Form | 🧾 Complaint Form |
 |--------------|----------|---------------|-------------------|
-| ![Image](https://github.com/user-attachments/assets/e3eb7acf-71af-45ab-92f1-ccd97db11fd6) | ![Image](https://github.com/user-attachments/assets/login.png) | ![Image](https://github.com/user-attachments/assets/leave_form.png) | ![Image](https://github.com/user-attachments/assets/complaint_form.png) |
+| ![Image](https://github.com/user-attachments/assets/e3eb7acf-71af-45ab-92f1-ccd97db11fd6) | ![Image](https://github.com/user-attachments/assets/50bcf045-0fc3-40cb-b635-e74f3e9d7247) | ![Image](https://github.com/user-attachments/assets/leave_form.png) | ![Image](https://github.com/user-attachments/assets/complaint_form.png) |
 
 | 📄 Menu View | 📢 Circular List | 🧑 Admin Dashboard | ✅ Leave Approval |
 |--------------|------------------|-------------------|------------------|
